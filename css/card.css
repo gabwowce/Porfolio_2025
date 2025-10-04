@@ -1,0 +1,707 @@
+/* animated card */
+.container-canva {
+  position: relative;
+  width: 100%;
+  height: clamp(540px, 56vw, 900px);
+  transition: 200ms;
+  margin-bottom: clamp(20px, 26vw, 40px);
+}
+@media (max-width: 440px) {
+  .container-canva {
+    height: clamp(300px, 56vw, 900px);
+  }
+}
+
+#card {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px;
+  transition: 700ms;
+  background: transparent;
+}
+/* Karuselė per visą #card */
+#card {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  border-radius: 20px;
+}
+#card .carousel {
+  position: relative;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  border-radius: inherit;
+}
+#card .slides {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.55s ease;
+}
+#card .slides img {
+  flex: 0 0 100%;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+@media (min-width: 1280px) {
+  #card .slides img {
+    width: 85%;
+    height: 85%;
+  }
+} /* xl */
+/* UI sluoksnis virš tracker'io */
+.carousel-ui {
+  position: absolute;
+  inset: 0;
+  z-index: 400;
+  pointer-events: none;
+}
+.carousel-ui .dots {
+  pointer-events: auto;
+  position: absolute;
+  left: 50%;
+  bottom: -5px;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 8px;
+}
+.carousel-ui .dots button {
+  width: 8px;
+  height: 8px;
+  border-radius: 999px;
+  border: none;
+  cursor: pointer;
+  background: var(--text);
+  transition: transform 0.15s ease, background-color 0.15s ease;
+}
+.carousel-ui .dots button[aria-current="true"] {
+  background: var(--link);
+  transform: scale(1.2);
+}
+
+/* įeina iš dešinės */
+#card img.is-entering {
+  opacity: 0;
+  transform: translateX(6004px);
+}
+
+.tracker {
+  position: absolute;
+  z-index: 200;
+  width: 90%;
+  height: 90%;
+}
+
+.tracker:hover ~ #card #prompt {
+  opacity: 0;
+}
+
+.tracker:hover ~ #card {
+  transition: 300ms;
+  /* filter: brightness(1.1); */
+}
+
+.container:hover #card::before {
+  transition: 200ms;
+  content: "";
+  opacity: 80%;
+}
+
+.canvas {
+  perspective: 2500px;
+  inset: 0;
+  z-index: 200;
+  position: absolute;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+  gap: 0px 0px;
+  grid-template-areas:
+    "tr-1 tr-2 tr-3 tr-4 tr-5"
+    "tr-6 tr-7 tr-8 tr-9 tr-10"
+    "tr-11 tr-12 tr-13 tr-14 tr-15"
+    "tr-16 tr-17 tr-18 tr-19 tr-20"
+    "tr-21 tr-22 tr-23 tr-24 tr-25";
+}
+
+#card::before {
+  content: "";
+  background: transparent;
+  filter: blur(2rem);
+  opacity: 30%;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: -1;
+  transition: 200ms;
+}
+
+.tr-1 {
+  grid-area: tr-1;
+}
+
+.tr-2 {
+  grid-area: tr-2;
+}
+
+.tr-3 {
+  grid-area: tr-3;
+}
+
+.tr-4 {
+  grid-area: tr-4;
+}
+
+.tr-5 {
+  grid-area: tr-5;
+}
+
+.tr-6 {
+  grid-area: tr-6;
+}
+
+.tr-7 {
+  grid-area: tr-7;
+}
+
+.tr-8 {
+  grid-area: tr-8;
+}
+
+.tr-9 {
+  grid-area: tr-9;
+}
+
+.tr-10 {
+  grid-area: tr-10;
+}
+
+.tr-11 {
+  grid-area: tr-11;
+}
+
+.tr-12 {
+  grid-area: tr-12;
+}
+
+.tr-13 {
+  grid-area: tr-13;
+}
+
+.tr-14 {
+  grid-area: tr-14;
+}
+
+.tr-15 {
+  grid-area: tr-15;
+}
+
+.tr-16 {
+  grid-area: tr-16;
+}
+
+.tr-17 {
+  grid-area: tr-17;
+}
+
+.tr-18 {
+  grid-area: tr-18;
+}
+
+.tr-19 {
+  grid-area: tr-19;
+}
+
+.tr-20 {
+  grid-area: tr-20;
+}
+
+.tr-21 {
+  grid-area: tr-21;
+}
+
+.tr-22 {
+  grid-area: tr-22;
+}
+
+.tr-23 {
+  grid-area: tr-23;
+}
+
+.tr-24 {
+  grid-area: tr-24;
+}
+
+.tr-25 {
+  grid-area: tr-25;
+}
+
+.tr-1:hover ~ #card {
+  transition: 125ms ease-in-out;
+  transform: rotateX(20deg) rotateY(-10deg) rotateZ(0deg);
+}
+
+.tr-2:hover ~ #card {
+  transition: 125ms ease-in-out;
+  transform: rotateX(20deg) rotateY(-5deg) rotateZ(0deg);
+}
+
+.tr-3:hover ~ #card {
+  transition: 125ms ease-in-out;
+  transform: rotateX(20deg) rotateY(0deg) rotateZ(0deg);
+}
+
+.tr-4:hover ~ #card {
+  transition: 125ms ease-in-out;
+  transform: rotateX(20deg) rotateY(5deg) rotateZ(0deg);
+}
+
+.tr-5:hover ~ #card {
+  transition: 125ms ease-in-out;
+  transform: rotateX(20deg) rotateY(10deg) rotateZ(0deg);
+}
+
+.tr-6:hover ~ #card {
+  transition: 125ms ease-in-out;
+  transform: rotateX(10deg) rotateY(-10deg) rotateZ(0deg);
+}
+
+.tr-7:hover ~ #card {
+  transition: 125ms ease-in-out;
+  transform: rotateX(10deg) rotateY(-5deg) rotateZ(0deg);
+}
+
+.tr-8:hover ~ #card {
+  transition: 125ms ease-in-out;
+  transform: rotateX(10deg) rotateY(0deg) rotateZ(0deg);
+}
+
+.tr-9:hover ~ #card {
+  transition: 125ms ease-in-out;
+  transform: rotateX(10deg) rotateY(5deg) rotateZ(0deg);
+}
+
+.tr-10:hover ~ #card {
+  transition: 125ms ease-in-out;
+  transform: rotateX(10deg) rotateY(10deg) rotateZ(0deg);
+}
+
+.tr-11:hover ~ #card {
+  transition: 125ms ease-in-out;
+  transform: rotateX(0deg) rotateY(-10deg) rotateZ(0deg);
+}
+
+.tr-12:hover ~ #card {
+  transition: 125ms ease-in-out;
+  transform: rotateX(0deg) rotateY(-5deg) rotateZ(0deg);
+}
+
+.tr-13:hover ~ #card {
+  transition: 125ms ease-in-out;
+  transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+}
+
+.tr-14:hover ~ #card {
+  transition: 125ms ease-in-out;
+  transform: rotateX(0deg) rotateY(5deg) rotateZ(0deg);
+}
+
+.tr-15:hover ~ #card {
+  transition: 125ms ease-in-out;
+  transform: rotateX(0deg) rotateY(10deg) rotateZ(0deg);
+}
+
+.tr-16:hover ~ #card {
+  transition: 125ms ease-in-out;
+  transform: rotateX(-10deg) rotateY(-10deg) rotateZ(0deg);
+}
+
+.tr-17:hover ~ #card {
+  transition: 125ms ease-in-out;
+  transform: rotateX(-10deg) rotateY(-5deg) rotateZ(0deg);
+}
+
+.tr-18:hover ~ #card {
+  transition: 125ms ease-in-out;
+  transform: rotateX(-10deg) rotateY(0deg) rotateZ(0deg);
+}
+
+.tr-19:hover ~ #card {
+  transition: 125ms ease-in-out;
+  transform: rotateX(-10deg) rotateY(5deg) rotateZ(0deg);
+}
+
+.tr-20:hover ~ #card {
+  transition: 125ms ease-in-out;
+  transform: rotateX(-10deg) rotateY(10deg) rotateZ(0deg);
+}
+
+.tr-21:hover ~ #card {
+  transition: 125ms ease-in-out;
+  transform: rotateX(-20deg) rotateY(-10deg) rotateZ(0deg);
+}
+
+.tr-22:hover ~ #card {
+  transition: 125ms ease-in-out;
+  transform: rotateX(-20deg) rotateY(-5deg) rotateZ(0deg);
+}
+
+.tr-23:hover ~ #card {
+  transition: 125ms ease-in-out;
+  transform: rotateX(-20deg) rotateY(0deg) rotateZ(0deg);
+}
+
+.tr-24:hover ~ #card {
+  transition: 125ms ease-in-out;
+  transform: rotateX(-20deg) rotateY(5deg) rotateZ(0deg);
+}
+
+.tr-25:hover ~ #card {
+  transition: 125ms ease-in-out;
+  transform: rotateX(-20deg) rotateY(10deg) rotateZ(0deg);
+}
+
+.noselect {
+  -webkit-touch-callout: none;
+  /* iOS Safari */
+  -webkit-user-select: none;
+  /* Safari */
+  /* Konqueror HTML */
+  -moz-user-select: none;
+  /* Old versions of Firefox */
+  -ms-user-select: none;
+  /* Internet Explorer/Edge */
+  user-select: none;
+  /* Non-prefixed version, currently
+									supported by Chrome, Edge, Opera and Firefox */
+}
+
+/* Card */
+.card {
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  padding: clamp(22px, 3.2vw, 32px);
+  
+  /* box-shadow:0 6px 22px rgba(15,23,42,.07); */
+  display: grid;
+  color: var(--card-text);
+  transition: box-shadow 0.2s ease, transform 0.2s ease, border-color 0.2s ease;
+}
+.card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 28px rgba(15, 23, 42, 0.1);
+  border-color: var(--border);;
+  color: var(--card-text-hover);
+}
+
+/* ====== SECTION: About ====== */
+.about-cards {
+  padding: clamp(56px, 9vw, 110px) 0;
+}
+
+/* Grid (4 kortelės) */
+.about-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: clamp(22px, 3.2vw, 36px);
+}
+@media (max-width: 1280px) {
+  .about-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 768px) {
+  .about-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Icon */
+.about-ico {
+  width: 40px;
+  height: 40px;
+  border-radius: 12px;
+  background: var(--accent-elements);
+  display: grid;
+  place-items: center;
+  color: var(--dot-accent);
+}
+.about-ico svg {
+  width: 22px;
+  height: 22px;
+  fill: currentColor;
+}
+
+.about-grid .card:hover .about-ico,
+.about-grid .card:focus-within .about-ico {
+  color: var(--dot-hover);
+}
+
+/* Titles & text */
+.card h3 {
+  margin: 24px 0 8px 0;
+}
+
+/* ====== Subsection: Ko galite tikėtis iš manęs ====== */
+.about-expect {
+  margin-top: clamp(48px, 8vw, 96px);
+  text-align: center;
+}
+.about-expect h3 {
+  margin-bottom: clamp(18px, 3vw, 28px);
+}
+
+.expect-grid {
+  list-style: none;
+  padding: 0;
+  margin: 0 auto;
+  display: grid;
+  gap: clamp(12px, 2.2vw, 20px);
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  max-width: 1080px;
+}
+@media (max-width: 1280px) {
+  .expect-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 768px) {
+  .expect-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.expect-item {
+  color: var(--card-text);c
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  padding: clamp(18px, 2vw, 24px) clamp(22px, 2.4vw, 32px);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  transition: box-shadow 0.2s ease, transform 0.2s ease, border-color 0.2s ease;
+}
+
+.expect-item:hover {
+  color: var(--card-text-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 28px rgba(15, 23, 42, 0.1);
+  border-color: var(--border);
+}
+
+.expect-item i {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: var(--dot-accent);
+  box-shadow: 0 0 0 4px var(--accent-elements);
+  display: inline-block;
+  flex: 0 0 auto;
+}
+.expect-item i:hover {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: var(--dot-hover);
+  box-shadow: 0 0 0 4px var(--accent-elements);
+  display: inline-block;
+  flex: 0 0 auto;
+}
+
+/* sklandus perėjimas tik taškui */
+.expect-item i {
+  transition: background-color 0.2s ease, transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+/* kai hover ant viso item, keičiasi tik taško spalva */
+.expect-item:hover i,
+.expect-item:focus-within i {
+  background: var(--dot-hover);
+}
+
+/* klaviatūros fokusas pačiam item (jei suteiksi tabindex="0") */
+.expect-item:focus-visible i {
+  background: var(--dot-hover);
+  transform: scale(1.06);
+}
+
+/* ------------------------------------------------------- */
+
+/* Stack (Tools + Certs) */
+.stack {
+  padding: clamp(56px, 9vw, 110px) 0;
+}
+.stack-head {
+  text-align: center;
+  max-width: 900px;
+  margin: 0 auto clamp(20px, 4.5vw, 40px);
+}
+.stack-head p {
+  color: var(--muted);
+}
+
+.stack-sub {
+  font-size: clamp(18px, 2.2vw, 22px);
+  margin-top: clamp(68px, 3vw, 156px);
+  margin-bottom: clamp(18px, 3vw, 36px);
+  color: var(--text);
+}
+
+/
+
+/* Tool card vidus (naudoja .card) */
+.tool-card {
+  place-items: center;
+  text-align: center;
+  gap: 0;
+  padding: clamp(16px, 2.2vw, 22px);
+  width: auto;
+}
+.tool-card h4 {
+  color: var(--card-text, #3a3a3a);
+  transition: color 0.2s ease;
+  margin-top:1.2rem;
+}
+
+/* hover/focus – pakeičia tik pavadinimo spalvą */
+.tool-card:hover h4,
+.tool-card:focus-within h4 {
+  color: var(--card-text-hover, #111);
+}
+.tool-ico {
+  width: 54px;
+  height: 54px;
+  border-radius: 14px;
+  display: grid;
+  place-items: center;
+  background: var(--accent-elements);
+  box-shadow: 0 0 0 6px
+    color-mix(in srgb, var(--accent-elements) 45%, transparent);
+}
+.other-ico {
+  width: 40px;
+  height: 40px;
+  border-radius: 999px;
+  display: grid;
+  place-items: center;
+  background: var(--accent-elements);
+  box-shadow: 0 0 0 6px
+    color-mix(in srgb, var(--accent-elements) 45%, transparent);
+}
+.tool-ico img {
+  width: 28px;
+  height: 28px;
+  object-fit: contain;
+}
+
+.tool-card .sub {
+  display: block;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+
+.cert-card {
+  text-align: center;
+  align-items: center;
+  gap: 10px;
+  padding: clamp(18px, 2.2vw, 24px);
+}
+
+.cert-ico {
+  width: 64px;
+  height: 64px;
+  border-radius: 14px;
+  display: grid;
+  place-items: center;
+  background: var(--accent-elements);
+  box-shadow: 0 0 0 8px
+    color-mix(in srgb, var(--accent-elements) 45%, transparent);
+}
+.cert-ico img {
+  width: 30px;
+  height: 30px;
+  object-fit: contain;
+}
+.cert-card h4 {
+  font-size: 1rem;
+  color: var(--text);
+}
+.cert-card .issuer {
+  display: block;
+  color: var(--muted);
+  margin-top: 2px;
+}
+.cert-card .year {
+  display: block;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+/* DOT (naudojamas cert-ico ir soft-ico viduje) */
+.dot {
+  --size: 14px; /* default soft skills */
+  width: var(--size);
+  height: var(--size);
+  border-radius: 999px;
+  background: var(--dot-accent);
+
+  transition: background-color 0.2s ease, transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+/* Hover / focus */
+.card:hover .dot,
+.card:focus-within .dot {
+  background: var(--dot-hover);
+}
+
+/* A11y rėmelis kortelei */
+.card:focus-within {
+  outline: 2px solid var(--dot-hover);
+  outline-offset: 4px;
+}
+
+/* Mažiau judesio */
+@media (prefers-reduced-motion: reduce) {
+  .dot {
+    transition: none;
+  }
+}
+.stack-grid{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: clamp(12px, 2.2vw, 20px);   /* vienodas aukštis eilutėje */
+}
+
+/* Įrankių kortelės: elastingas plotis */
+.tool-card{
+  /* min 175px, patogu ~22vw, max 240px */
+  flex: 1 1 clamp(175px, 22vw, 240px);
+  display: grid;               /* jau turi vietoje; paliekam */
+  place-items: center;
+  text-align: center;
+  gap: 0;
+  padding: clamp(16px, 2.2vw, 22px);
+}
+
+/* Soft skills – gali būti siauresnės */
+.stack-grid--soft .tool-card{
+  flex-basis: clamp(160px, 26vw, 220px);
+}
+
+/* Certs – šiek tiek platesnės, jei reikia */
+.stack-grid--certs .tool-card{
+  flex-basis: clamp(200px, 28vw, 320px);
+}

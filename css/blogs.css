@@ -1,0 +1,292 @@
+/* ===== Article page ===== */
+/* 
+blog-posts grid */
+
+/* breadcrumbs */
+.breadcrumbs {
+  font-size: 1.5rem;
+  font-weight: 300;
+}
+.breadcrumbs a {
+  color: var(--text);
+  text-decoration: none;
+}
+.breadcrumbs a {
+  color: var(--text);
+  text-decoration: none;
+}
+.breadcrumbs a:hover {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+.crumb-sep {
+  width: 14px;
+  height: 14px;
+  opacity: 0.7;
+}
+.post-head h1 {
+  font-size: clamp(1.8rem, 1.2rem + 2.4vw, 2.6rem);
+  line-height: 1.15;
+  letter-spacing: -0.015em;
+  margin: 0 0 0.35em;
+}
+.post-head .small {
+  color: var(--muted);
+}
+.post-head .cover {
+  width: 100%;
+  height: auto;
+  border-radius: 16px;
+  margin: clamp(14px, 2.4vw, 22px) 0;
+  box-shadow: var(--shadow);
+}
+
+/* Body copy */
+.post-body {
+  color: var(--card-text);
+}
+.post-body h2 {
+  font-size: clamp(1.35rem, 1.05rem + 1.4vw, 1.9rem);
+  line-height: 1.22;
+  margin: 1.6em 0 0.5em;
+  color: var(--text);
+}
+.post-body h3 {
+  font-size: clamp(1.15rem, 1rem + 0.6vw, 1.35rem);
+  margin: 1.3em 0 0.4em;
+}
+.post-body p {
+  margin: 0.85em 0;
+}
+.post-body ul,
+.post-body ol {
+  margin: 0.8em 0 0.8em 1.25em;
+}
+.post-body li {
+  margin: 0.28em 0;
+}
+.post-body em {
+  font-style: italic;
+}
+.post-body strong {
+  font-weight: 700;
+  color: var(--text);
+}
+
+/* Code blocks */
+.post-body pre {
+  background: color-mix(in srgb, var(--card) 92%, transparent);
+  border: 1px solid color-mix(in srgb, var(--border) 75%, transparent);
+  border-radius: 14px;
+  padding: 14px 16px;
+  overflow: auto;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.04);
+}
+.post-body code {
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: 0.95em;
+}
+.post-body pre code {
+  display: block;
+  white-space: pre;
+}
+
+/* Notes / callouts (optional) */
+.post-body .note {
+  padding: 12px 14px;
+  border-radius: 14px;
+  margin: 1em 0;
+  background: color-mix(in srgb, var(--accent-elements) 65%, transparent);
+  border: 1px solid color-mix(in srgb, var(--border) 70%, transparent);
+}
+
+/* Divider */
+.post-body hr {
+  border: 0;
+  height: 1px;
+  background: color-mix(in srgb, var(--border) 80%, transparent);
+  margin: clamp(18px, 3vw, 28px) 0;
+}
+
+/* Prev/Next nav */
+.post-nav {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  margin: clamp(18px, 3vw, 28px) 0 0;
+  padding-top: 14px;
+  border-top: 1px solid color-mix(in srgb, var(--border) 80%, transparent);
+}
+.post-nav a {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 12px;
+  border-radius: 12px;
+  text-decoration: none;
+  color: var(--text);
+  border: 1px solid color-mix(in srgb, var(--border) 70%, transparent);
+  background: color-mix(in srgb, var(--card) 96%, transparent);
+  transition: transform 0.12s ease, border-color 0.15s, background 0.15s;
+}
+.post-nav a:hover {
+  transform: translateY(-1px);
+  border-color: color-mix(in srgb, var(--border) 55%, transparent);
+  background: color-mix(in srgb, var(--card) 98%, transparent);
+}
+
+/* Images inside content */
+.post-body img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: var(--shadow);
+  margin: 12px 0;
+}
+
+/* Small screens */
+@media (max-width: 640px) {
+  .article {
+    padding-inline: 14px;
+  }
+  .post-nav {
+    flex-direction: column;
+  }
+}
+
+/* Optional: better text measure */
+.article {
+  --measure: 70ch;
+}
+.post-body > p,
+.post-body > ul,
+.post-body > ol,
+.post-head > p {
+  max-width: var(--measure);
+}
+/* Container – saugus plotis ir vidaus paraštės */
+.container {
+  width: 100%;
+}
+
+/* MAIN: turinys + aside (2 col) */
+.content.container {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 320px;
+  gap: clamp(16px, 3vw, 24px);
+  align-items: start;
+}
+/* Labai svarbu: neleisti vaikams plėstis už grid’o */
+.content > section,
+.content > aside {
+  min-width: 0;
+}
+
+/* Mobile – į stulpelį */
+@media (max-width: 1280px) {
+  .content.container {
+    grid-template-columns: 1fr;
+  }
+  .sidebar {
+    order: 2;
+  }
+}
+
+/* Kortelė straipsniui */
+.content .card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: clamp(16px, 2.6vw, 22px);
+  box-shadow: var(--shadow);
+}
+
+/* Tipografija straipsnio viduje */
+.content .card h2 {
+  font-size: clamp(1.25rem, 1rem + 1.6vw, 1.7rem);
+  line-height: 1.2;
+  margin: 1.4em 0 0.6em;
+  color: var(--text);
+}
+.content .card p {
+  color: var(--card-text);
+}
+
+/* Vaizdai – niekada neperžengtų */
+.content .card img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 12px;
+}
+
+/* Code blokai – be horizontalaus overflow */
+.content .card pre {
+  overflow: auto;
+  background: color-mix(in srgb, var(--card) 92%, transparent);
+  border: 1px solid color-mix(in srgb, var(--border) 75%, transparent);
+  border-radius: 12px;
+  padding: 12px 14px;
+}
+.content .card pre code {
+  white-space: pre;
+}
+@media (max-width: 640px) {
+  .content .card pre code {
+    white-space: pre-wrap;
+    word-break: break-word;
+  }
+}
+
+/* Sąrašų ženkleliai švelnūs */
+.content .card li::marker {
+  color: color-mix(in srgb, var(--text) 70%, var(--muted));
+}
+
+/* Block look */
+.hljs {
+  background: var(--bg);
+
+  border-radius: 14px;
+  padding: 14px 16px;
+}
+
+/* Token colors (CSS grammar) */
+.hljs-comment {
+  color: #0f7b3a;
+  font-style: italic;
+  opacity: 0.85;
+}
+.hljs-attr,
+.hljs-attribute {
+  color: #e0b100;
+  font-weight: 600;
+} /* --vars */
+.hljs-number {
+  color: #17803f;
+  font-weight: 600;
+} /* 1.25 */
+.hljs-unit,
+.hljs-literal {
+  color: #0ea371;
+  font-weight: 500;
+} /* rem,vw,% */
+.hljs-built_in,
+.hljs-function {
+  color: #2a63ff;
+  font-weight: 600;
+} /* clamp() */
+.hljs-operator,
+.hljs-punctuation {
+  color: #006aff;
+  opacity: 0.9;
+} /* +,:;() */
+.hljs-string {
+  color: #b45309;
+  font-weight: 500;
+}
+
+/* Subtle caret/selection */
+.hljs ::selection {
+  background: color-mix(in srgb, var(--accent) 20%, transparent);
+}

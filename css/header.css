@@ -1,0 +1,512 @@
+/* Header (descendant + inherit demo) */
+.site-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 99999;
+  background: transparent; /* jokio fono */
+  padding: 0 0.9rem;
+  -webkit-backdrop-filter: saturate(1.2) blur(8px);
+}
+/* Kai scrolled ↓ */
+.scrolled .site-header {
+  backdrop-filter: saturate(1.2) blur(8px);
+}
+.header-in {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.8rem 0;
+}
+
+.header-in {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.9rem 0;
+}
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.45rem 0.7rem;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  background: var(--card);
+  box-shadow: var(--shadow);
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+.brand .icon {
+  width: 28px;
+  height: 28px;
+  display: grid;
+  place-items: center;
+  font-size: 0.9rem;
+  border-radius: 999px;
+  background: var(--text);
+  color: var(--bg);
+}
+.icon {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--text);
+}
+
+.main-nav {
+  justify-self: end;
+  display: flex;
+  gap: 0.4rem;
+  flex-wrap: wrap;
+}
+
+.nav-link {
+  padding: 0.5rem 0.8rem;
+  border-radius: 999px;
+  border: 1px solid transparent;
+}
+
+.nav-link:hover {
+  background: var(--bg);
+  border-color: var(--border);
+}
+
+.nav-link.active {
+  background: var(--text);
+  color: var(--bg);
+}
+
+@media (max-width: 1280px) {
+}
+@media (max-width: 1024px) {
+}
+@media (max-width: 768px) {
+}
+@media (max-width: 448px) {
+  .main-nav a {
+    padding: 0.4rem 0.5rem;
+  }
+}
+
+/* Popover – „glass card“ */
+.nav-theme {
+  position: relative;
+}
+.theme-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--link);
+  color: var(--text-on-accent);
+}
+.theme-btn:hover {
+  background: var(--link-hover);
+}
+.theme-btn .swatch {
+  width: 14px;
+  height: 14px;
+  padding: 0.5rem 0.8rem;
+  border-radius: 999px;
+  border: 1px solid transparent;
+  background: var(--accent);
+  box-shadow: inset 0 0 0 2px color-mix(in srgb, var(--bg) 85%, #000);
+}
+
+.theme-list {
+  position: absolute;
+  right: 0;
+  top: calc(100% + 10px);
+  min-width: 260px;
+  margin: 0;
+  padding: 10px;
+  display: none;
+  list-style: none;
+  z-index: 40;
+  background: color-mix(in srgb, var(--secondary-bg) 88%, transparent);
+
+  border-radius: 16px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+  backdrop-filter: blur(10px);
+}
+.nav-theme[aria-expanded="true"] .theme-list {
+  display: block;
+  animation: pop 0.12s ease-out;
+}
+@keyframes pop {
+  from {
+    transform: translateY(4px) scale(0.98);
+    opacity: 0;
+  }
+  to {
+    transform: none;
+    opacity: 1;
+  }
+}
+
+/* Item kortelė */
+.theme-list li {
+  margin: 0;
+}
+.theme-list button {
+  width: 100%;
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  gap: 12px;
+  padding: 10px;
+  border-radius: 12px;
+  text-align: left;
+  transition: background 0.15s ease, transform 0.06s ease;
+}
+.theme-list button:hover {
+  background: color-mix(in srgb, var(--accent) 6%, var(--card));
+  transform: translateY(-1px);
+}
+.theme-list button[aria-current="true"] {
+  outline: px solid color-mix(in srgb, var(--accent) 20%, transparent);
+  outline-offset: 2px;
+}
+
+/* Paletės peržiūra */
+.thumb-pall {
+  display: grid;
+  grid-template-columns: repeat(4, 14px);
+  gap: 6px;
+}
+.sw {
+  width: 14px;
+  height: 14px;
+  border-radius: 6px;
+  box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.06);
+}
+
+.s1 {
+  background: var(--c1);
+}
+.s2 {
+  background: var(--c2);
+}
+.s3 {
+  background: var(--c3);
+}
+.s4 {
+  background: var(--c4);
+}
+
+/* Tekstai */
+.theme-list .meta strong {
+  display: block;
+  font-weight: 700;
+  line-height: 1.1;
+}
+.theme-list .meta small {
+  display: block;
+  color: var(--muted);
+}
+
+/* Check žyma */
+.check {
+  opacity: 0;
+  transition: opacity 0.15s;
+  font-weight: 700;
+}
+.theme-list button[aria-current="true"] .check {
+  opacity: 1;
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+  .theme-list {
+    right: 8px;
+    min-width: 220px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .theme-list {
+    backdrop-filter: none;
+  }
+  .theme-list button:hover {
+    transform: none;
+  }
+}
+
+.theme-list {
+  /* modernesnis „glass“ */
+  background: var(--secondary-bg);
+
+  border-radius: 20px;
+  padding: clamp(22px, 3.2vw, 32px),
+    clamp(22px, 3.2vw, 32px) clamp(22px, 3.2vw, 32px);
+
+  transform-origin: top right;
+}
+.nav-theme[aria-expanded="true"] .theme-list {
+  animation: pop 0.14s ease-out;
+}
+@keyframes pop {
+  from {
+    transform: translateY(4px) scale(0.98);
+    opacity: 0;
+  }
+  to {
+    transform: none;
+    opacity: 1;
+  }
+}
+
+/* item’ai – švelnesnis hover ir aktyvi būsena */
+.theme-list button {
+  grid-template-columns: auto 1fr auto;
+  padding: 10px;
+  transition: background 0.15s ease, transform 0.06s ease, outline-color 0.15s;
+  border-radius: 8px;
+  position: relative;
+  border: 1px solid transparent;
+  background: color-mix(in srgb, var(--secondary-bg) 94%, transparent);
+}
+.theme-list button:hover {
+  background: color-mix(in srgb, var(--accent) 6%, var(--card));
+  transform: translateY(-1px);
+  background: var(--card);
+  border-color: color-mix(in srgb, var(--border) 50%, transparent);
+}
+.theme-list button:focus-visible {
+}
+.theme-list button[aria-current="true"] {
+}
+.check {
+  opacity: 0;
+  transition: opacity 0.15s;
+  font-weight: 800;
+}
+.theme-list button[aria-current="true"] .check {
+  opacity: 1;
+}
+
+@media (max-width: 480px) {
+  .theme-list {
+    min-width: 92vw;
+    right: 4vw;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .theme-list {
+    backdrop-filter: none;
+  }
+  .theme-list button:hover {
+    transform: none;
+  }
+}
+
+/* --- Kortelės vibe --- */
+.theme-list li + li {
+  margin-top: 6px;
+}
+
+/* Pažymėta – be check ikonos, vietoj to badge + juosta kairėje */
+.theme-list button[aria-current="true"] {
+}
+
+/* Swatches – apvalūs, didesni, kaip preview’e */
+.thumb-pall {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: 16px;
+  gap: 8px;
+}
+.sw {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  box-shadow: inset 0 0 0 2px rgba(0, 0, 0, 0.04);
+}
+
+/* Tipografija – švaresnė */
+.theme-list .meta strong {
+  color: var(--text);
+}
+.theme-list .meta small {
+  color: var(--muted);
+}
+/* „Selected“ ženkliukas vietoj varnelės – pernaudojam .check spaną */
+.check {
+  opacity: 0;
+  transition: opacity 0.15s ease;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 1;
+  background: var(--accent);
+  color: var(--accent-fg);
+  padding: 3px 8px;
+  border-radius: 999px;
+  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.08) inset,
+    0 1px 6px rgba(0, 0, 0, 0.08);
+}
+
+/* Hamburger */
+/* base */
+.hamburger {
+  /* mobiliajame rodom – arba į meson media query */
+  display: inline-flex; /* buvo none */
+  flex-direction: column; /* <-- VERTIKALIAI */
+  justify-content: center;
+  align-items: center;
+  row-gap: 6px; /* vietoj gap */
+  width: 42px;
+  height: 42px;
+  padding: 0; /* nuimam button padding */
+  border-radius: 10px;
+  border: 1px solid color-mix(in srgb, var(--border) 70%, transparent);
+  background: color-mix(in srgb, var(--card) 85%, transparent);
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.03);
+  cursor: pointer;
+
+  font-size: 0;
+  line-height: 0; /* jeigu netyčia yra tekstas/“---” */
+}
+
+.hamburger__bar {
+  display: block;
+  width: 22px;
+  height: 2px;
+  border-radius: 2px;
+  background: var(--text);
+  transition: transform 0.18s ease, opacity 0.18s ease;
+}
+
+/* X animacija */
+body.nav-open .hamburger__bar:nth-child(1) {
+  transform: translateY(8px) rotate(45deg);
+}
+body.nav-open .hamburger__bar:nth-child(2) {
+  opacity: 0;
+}
+body.nav-open .hamburger__bar:nth-child(3) {
+  transform: translateY(-8px) rotate(-45deg);
+}
+
+/* Rodyti tik mobile (jei reikia) */
+@media (min-width: 1024px) {
+  .hamburger {
+    display: none;
+  }
+}
+
+/* Overlay */
+.nav-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.35);
+  backdrop-filter: blur(2px);
+  z-index: 40;
+  opacity: 0;
+  transition: opacity 0.18s ease;
+}
+body.nav-open .nav-overlay {
+  opacity: 1;
+}
+body:not(.nav-open) .nav-overlay {
+  pointer-events: none;
+}
+.nav-close {
+  display: none;
+}
+/* Drawer menu (mobile) */
+@media (max-width: 1024px) {
+  .main-nav {
+    position: fixed;
+    top: 0; /* buvo top: var(--header-h) */
+    right: 0;
+    width: min(86vw, 360px);
+    height: 100dvh; /* pilnas aukštis */
+    padding: 18px 14px 14px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    background: var(--card);
+    border-left: 1px solid color-mix(in srgb, var(--border) 80%, transparent);
+    box-shadow: -24px 0 60px rgba(0, 0, 0, 0.2);
+    z-index: 60; /* virš overlay */
+    transform: translateX(100%);
+    transition: transform 0.22s cubic-bezier(0.22, 0.61, 0.36, 1);
+    overflow-y: auto; /* <-- */
+    -webkit-overflow-scrolling: touch;
+    padding-bottom: 16px;
+  }
+
+  body.nav-open .main-nav {
+    transform: translateX(0);
+  }
+
+  /* X mygtukas sheete */
+  .nav-close {
+    align-self: flex-end;
+    width: 38px;
+    height: 38px;
+    border-radius: 10px;
+    border: 1px solid color-mix(in srgb, var(--border) 75%, transparent);
+    background: color-mix(in srgb, var(--card) 85%, transparent);
+    box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.04);
+    color: var(--text);
+    font-size: 18px;
+    line-height: 1;
+    cursor: pointer;
+    display: inline-grid;
+    place-items: center;
+    margin-bottom: 8px;
+  }
+
+  .nav-close:hover {
+    background: color-mix(in srgb, var(--card) 92%, transparent);
+  }
+
+  /* Linkų blokai */
+  .main-nav .nav-link {
+    display: block;
+    padding: 12px 12px;
+    border-radius: 12px;
+    border: 1px solid transparent;
+  }
+  .main-nav .nav-link:hover {
+    background: color-mix(in srgb, var(--accent) 6%, var(--card));
+    border-color: color-mix(in srgb, var(--border) 60%, transparent);
+  }
+
+  .main-nav .nav-theme {
+    align-self: stretch; /* pilnas plotis */
+    width: 100%;
+  }
+  .main-nav .theme-btn {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* tekstas kairėj, swatch dešinėj */
+    gap: 12px;
+    padding: 12px 14px; /* didesnis tap target */
+    min-height: 44px; /* a11y */
+    border-radius: 14px;
+  }
+  .main-nav .theme-btn .swatch {
+    width: 18px;
+    height: 18px;
+    border-radius: 999px;
+    box-shadow: inset 0 0 0 2px color-mix(in srgb, var(--bg) 85%, #000);
+    flex: 0 0 auto;
+  }
+  .main-nav .theme-list {
+    position: absolute;
+    left: 0;
+    right: 0; /* min-width = pilnas mygtuko plotis */
+    top: calc(100% + 8px);
+    min-width: unset;
+  }
+}
+.theme-btn {
+  white-space: nowrap;
+}
+/* No-scroll kai atidaryta */
+body.nav-open {
+  overflow: hidden;
+}

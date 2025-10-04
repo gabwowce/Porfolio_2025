@@ -1,0 +1,448 @@
+/* ===== Contact (sekcija prie footerio) ===== */
+/* .contact {
+  padding: clamp(72px, 9vw, 120px) 0;
+  background: linear-gradient(180deg, var(--bg) 0%, var(--secondary-bg) 100%);
+} */
+.contact-head {
+  text-align: center;
+  max-width: 900px;
+  margin: 0 auto clamp(24px, 4.5vw, 48px);
+}
+.contact-head p {
+  color: var(--muted);
+}
+
+/* Išdėstymas */
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+@media (max-width: 900px) {
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Kairės kortelės turinys */
+.contact-info h3 {
+  margin: 0 0 10px;
+  color: var(--text);
+}
+.contact-list {
+  list-style: none;
+  padding: 0;
+  margin: 8px 0 0 0;
+  display: grid;
+  gap: 10px;
+}
+.contact-list a {
+  text-underline-offset: 3px;
+}
+.social {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 12px;
+}
+.social a {
+  padding: 0.45rem 0.75rem;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  background: var(--bg);
+  color: var(--text);
+}
+
+/* Forma – laukai kaip mažos kortelės */
+.contact-form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+  align-content: start;
+}
+.hp {
+  position: absolute;
+  left: -9999px;
+}
+.fi {
+  display: grid;
+  gap: 6px;
+}
+.fi-full {
+  grid-column: 1 / -1;
+}
+.fi span {
+  color: var(--text);
+  opacity: 0.75;
+  font-size: 0.92rem;
+}
+
+.contact-form input,
+.contact-form textarea,
+.contact-form select {
+  width: 100%;
+  background: var(--bg);
+  color: var(--text);
+  border: 1px solid var(--border);
+  border-radius: var(--radius, 14px);
+  padding: 0.9rem 1rem;
+  outline: none;
+  transition: border-color 0.2s, box-shadow 0.2s, background 0.2s;
+  box-shadow: none;
+}
+.contact-form textarea {
+  resize: vertical;
+  min-height: 150px;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus,
+.contact-form select:focus {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 4px color-mix(in srgb, var(--accent) 22%, transparent);
+}
+
+/* Select – custom rodyklė */
+.contact-form select {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background: linear-gradient(transparent, transparent) padding-box,
+    linear-gradient(transparent, transparent) border-box,
+    url("data:image/svg+xml,%3Csvg viewBox='0 0 24 24' fill='none' stroke='%23666' stroke-width='2' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E")
+      no-repeat right 12px center / 16px 16px;
+  padding-right: 40px; /* vieta rodyklei */
+}
+
+/* Wrapper */
+.c-select {
+  position: relative;
+}
+.c-select[aria-open="true"] .c-select__list {
+  display: block;
+}
+
+/* Button (trigger) */
+.c-select__btn {
+  width: 100%;
+  text-align: left;
+  cursor: pointer;
+  background: var(--bg);
+  color: var(--text);
+  border: 1px solid var(--border);
+  border-radius: var(--radius, 14px);
+  padding: 0.9rem 2.6rem 0.9rem 1rem;
+  position: relative;
+  transition: border-color 0.2s, box-shadow 0.2s, background 0.2s;
+}
+.c-select__btn::after {
+  content: "";
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 16px;
+  height: 16px;
+  background: url("data:image/svg+xml,%3Csvg viewBox='0 0 24 24' fill='none' stroke='%23666' stroke-width='2' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E")
+    no-repeat center/16px;
+}
+.c-select__btn:hover {
+  border-color: color-mix(in srgb, var(--accent) 35%, var(--border));
+}
+.c-select__btn:focus {
+  outline: none;
+  border-color: var(--accent);
+  box-shadow: 0 0 0 4px color-mix(in srgb, var(--accent) 22%, transparent);
+}
+
+/* Dropdown list */
+.c-select__list {
+  display: none;
+  z-index: 20;
+  margin: 6px 0 0;
+  padding: 6px;
+  list-style: none;
+  position: absolute;
+  inset: auto 0 auto 0;
+  background: var(--card);
+  color: var(--text);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+  max-height: 260px;
+  overflow: auto;
+}
+.c-select__list li {
+  padding: 10px 12px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+.c-select__list li:hover,
+.c-select__list li[aria-selected="true"],
+.c-select__list li.is-active {
+  background: color-mix(in srgb, var(--accent-elements) 22%, transparent);
+}
+
+/* Error state (jei tavo JS prideda .invalid ant .fi) */
+.fi.invalid .c-select__btn {
+  border-color: var(--danger, #b00020);
+  box-shadow: 0 0 0 3px
+    color-mix(in srgb, var(--danger, #b00020) 20%, transparent);
+}
+
+/* Sutikimas + mygtukas */
+.consent {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  color: var(--muted);
+}
+.consent input {
+  width: 18px;
+  height: 18px;
+  accent-color: var(--accent);
+}
+
+/* Mini CTA virš footerio */
+.cta-contact {
+  padding: clamp(28px, 5vw, 48px) 0;
+}
+
+.footer-card-flex {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  padding: clamp(22px, 3.2vw, 32px);
+  background: radial-gradient(
+      900px 460px at 18% -120px,
+      color-mix(in srgb, var(--accent-elements) 70%, transparent) 0%,
+      transparent 65%
+    ),
+    var(--bg);
+  transition: box-shadow 0.2s ease, transform 0.2s ease, border-color 0.2s ease;
+}
+/* .footer-card-flex:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 28px rgba(15, 23, 42, 0.1);
+  border-color: #e2e8f0;
+} */
+
+.cta-contact__text {
+  max-width: 60ch;
+}
+.cta-contact__text h3 {
+  font-size: clamp(20px, 2.6vw, 28px);
+  line-height: 1.05;
+}
+.cta-contact__text p {
+  margin-top: 6px;
+  color: var(--muted);
+}
+
+/* Mobile: elementai į stulpelį, mygtukas pilno pločio */
+@media (max-width: 720px) {
+  .footer-card-flex {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .btn-pill {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+/* Softer card + headline pill */
+.contact-info.card--soft {
+  background: radial-gradient(
+      900px 380px at 12% -120px,
+      color-mix(in srgb, var(--accent-elements) 70%, transparent) 0%,
+      transparent 65%
+    ),
+    var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  padding: clamp(16px, 3vw, 22px);
+}
+.contact-headline {
+  margin-bottom: 10px;
+}
+.contact-headline .pill {
+  display: inline-block;
+  padding: 6px 10px;
+  border-radius: 999px;
+  background: color-mix(in srgb, var(--card) 92%, transparent);
+  border: 1px solid color-mix(in srgb, var(--border) 75%, transparent);
+  font-weight: 600;
+}
+
+/* List with inline icons */
+.contact-list--icons {
+  display: grid;
+  gap: 12px;
+  margin: 12px 0 8px;
+}
+.contact-list--icons li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 12px;
+  border-radius: 12px;
+  background: color-mix(in srgb, var(--card) 96%, transparent);
+  border: 1px solid color-mix(in srgb, var(--border) 70%, transparent);
+}
+.contact-list--icons svg {
+  width: 18px;
+  height: 18px;
+  flex: 0 0 auto;
+  color: var(--text);
+  opacity: 0.85;
+}
+.contact-list--icons a {
+  color: var(--text);
+  text-decoration: none;
+}
+.contact-list--icons a:hover {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+/* Socials like footer (pill buttons with icons) */
+.socials--pill {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 14px;
+}
+.socials--pill .soc {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 0.5rem 0.75rem;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  background: var(--bg);
+  color: var(--text);
+  text-decoration: none;
+  font-weight: 600;
+  transition: transform 0.12s ease, background 0.15s ease, border-color 0.15s;
+}
+.socials--pill .soc:hover {
+  transform: translateY(-1px);
+  background: color-mix(in srgb, var(--card) 96%, transparent);
+  border-color: color-mix(in srgb, var(--border) 60%, transparent);
+}
+.socials--pill .soc svg {
+  width: 18px;
+  height: 18px;
+  stroke: currentColor;
+  stroke-width: 1.5;
+  fill: none;
+}
+
+/* Mobile tweaks */
+@media (max-width: 720px) {
+  .contact-info.card--soft {
+    padding: 16px;
+  }
+  .contact-list--icons li {
+    padding: 10px;
+  }
+}
+
+@media (max-width: 1280px) {
+  .contact-form {
+    grid-template-columns: 1fr;
+  }
+}
+
+.chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 22px;
+  border-radius: 999px;
+  background: color-mix(in srgb, var(--accent-elements) 18%, #ffffff2c);
+  border: 1px solid var(--border);
+  color: var(--text);
+
+  transition: transform 0.15s ease, box-shadow 0.2s ease,
+    background-color 0.2s ease;
+  margin: 0 0 0.5rem 0;
+}
+
+/* Būsenos mygtukui */
+.btn-pill.is-sending {
+  background: color-mix(in srgb, var(--accent) 40%, #999);
+  cursor: wait;
+}
+.btn-pill.is-ok {
+  background: var(--ok, #0a7f3f);
+}
+.btn-pill.is-err {
+  background: var(--warn, #b00020);
+}
+
+/* Statuso tekstas po forma */
+.form-note {
+  margin-top: 8px;
+  font-size: 0.95rem;
+}
+.form-note.ok {
+  color: var(--ok, #0a7f3f);
+}
+.form-note.err {
+  color: var(--warn, #b00020);
+}
+
+/* Sukimasis spinneriui */
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+.svg-spin {
+  animation: spin 1s linear infinite;
+  transform-origin: 12px 12px;
+}
+
+/* Klaidos */
+.fi.invalid input,
+.fi.invalid textarea,
+.fi.invalid select {
+  border-color: var(--danger, #b00020);
+  box-shadow: 0 0 0 3px
+    color-mix(in srgb, var(--danger, #b00020) 20%, transparent);
+}
+.error {
+  display: block;
+  font-size: 0.9rem;
+  color: var(--danger, #b00020);
+}
+
+/* Statuso eilutė */
+.form-note {
+  margin-top: 8px;
+  font-size: 0.95rem;
+  color: var(--muted);
+}
+.form-note.ok {
+  color: var(--ok, #0a7f3f);
+}
+.form-note.err {
+  color: var(--warn, #b00020);
+}
+
+/* Mygtuko būsenos (jei naudoji JS setBtnState) */
+.btn-pill.is-sending {
+  background: color-mix(in srgb, var(--accent) 40%, #999);
+  cursor: wait;
+}
+.btn-pill.is-ok {
+  background: var(--ok, #0a7f3f);
+}
+.btn-pill.is-err {
+  background: var(--warn, #b00020);
+}

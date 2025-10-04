@@ -1,0 +1,847 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Services — Gabrielė</title>
+    <meta name="description" content="WordPress websites, React/React Native development, and UI/UX design. Start from scratch or I can join your existing product." />
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Services — Gabrielė" />
+    <meta property="og:description" content="WordPress, React/React Native, and UI/UX services. Request a quote." />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="/img/og-default.jpg" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="preload" href="fonts/clash/ClashGrotesk-Variable.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/about.css" />
+    <link rel="stylesheet" href="css/aside.css" />
+    <link rel="stylesheet" href="css/blog.css" />
+    <link rel="stylesheet" href="css/contact-me.css" />
+    <link rel="stylesheet" href="css/footer.css" />
+    <link rel="stylesheet" href="css/hero.css" />
+    <link rel="stylesheet" href="css/header.css" />
+    <link rel="stylesheet" href="css/card.css" />
+    <link rel="stylesheet" href="css/projects.css" />
+</head>
+
+<body>
+    <!-- HEADER (no aside) -->
+    <header class="site-header">
+        <div class="container header-in">
+            <a id="brand" class="brand" href="/">
+                <span class="icon" aria-hidden="true">GT</span>
+                <span aria-label="Gabrielė Tamaševičiūtė">Gabrielė · Codeart</span>
+            </a>
+            <!-- Hamburger -->
+            <button class="hamburger" id="navToggle" aria-label="Open menu" aria-controls="primaryNav" aria-expanded="false">
+      <span class="hamburger__bar" aria-hidden="true"></span>
+      <span class="hamburger__bar" aria-hidden="true"></span>
+      <span class="hamburger__bar" aria-hidden="true"></span>
+    </button>
+
+            <nav class="main-nav">
+                <button class="nav-close" id="navClose" aria-label="Close menu">✕</button>
+                <a class="nav-link" href="index.html">Home</a>
+                <a class="nav-link" href="about.html">About</a>
+                <a class="nav-link" href="portfolio.html">Portfolio</a>
+                <a class="nav-link active" href="services.html">Services</a>
+                <a class="nav-link" href="blog.html">Blog</a>
+                <a class="nav-link" href="contact.html">Contact</a>
+                <!-- Theme dropdown -->
+                <div class="nav-theme" id="themeMenu">
+                    <button id="themeBtn" class="nav-link theme-btn" aria-haspopup="true" aria-expanded="false">
+      Theme <span class="swatch" aria-hidden="true"></span>
+    </button>
+                    <ul class="theme-list" role="menu" aria-label="Choose theme">
+                        <li>
+                            <button role="menuitem" data-theme="cream" style="--c1:#362f27;--c2:#ffe9d6;--c3:#ffffffff;--c4:#ffaa5fff">
+      <span class="thumb-pall">
+        <span class="sw s1"></span><span class="sw s2"></span>
+        <span class="sw s3"></span><span class="sw s4"></span>
+      </span>
+      <span class="meta">
+        <strong>Cream</strong><small>Warm, editorial</small>
+      </span>
+      <span class="check" aria-hidden="true">✓</span>
+    </button>
+                        </li>
+
+                        <li>
+                            <button role="menuitem" data-theme="ocean" style="--c1:#476eae;--c2:#e6efff;--c3:#ffffff;--c4:#FE7743">
+      <span class="thumb-pall"><span class="sw s1"></span><span class="sw s2"></span><span class="sw s3"></span><span class="sw s4"></span></span>
+      <span class="meta"><strong>Ocean</strong><small>Clean blue</small></span>
+      <span class="check" aria-hidden="true">✓</span>
+    </button>
+                        </li>
+
+                        <li>
+                            <button role="menuitem" data-theme="forest" style="--c1:#5F8B4C;--c2:#e9f6ef;--c3:#ffffff;--c4:#FF9A9A">
+      <span class="thumb-pall"><span class="sw s1"></span><span class="sw s2"></span><span class="sw s3"></span><span class="sw s4"></span></span>
+      <span class="meta"><strong>Forest</strong><small>Fresh green</small></span>
+      <span class="check" aria-hidden="true">✓</span>
+    </button>
+                        </li>
+
+                        <li>
+                            <button role="menuitem" data-theme="rose" style="--c1:#E69DB8;--c2:#fde7ee;--c3:#ffffff;--c4:#80C4E9">
+      <span class="thumb-pall"><span class="sw s1"></span><span class="sw s2"></span><span class="sw s3"></span><span class="sw s4"></span></span>
+      <span class="meta"><strong>Rose</strong><small>Soft pink</small></span>
+      <span class="check" aria-hidden="true">✓</span>
+    </button>
+                        </li>
+
+                        <li>
+                            <button role="menuitem" data-theme="slate" style="--c1:#b664a462;--c2:#262a31ff;--c3:#1c1e22ff;--c4:#60a5fa">
+      <span class="thumb-pall"><span class="sw s1"></span><span class="sw s2"></span><span class="sw s3"></span><span class="sw s4"></span></span>
+      <span class="meta"><strong>Slate</strong><small>Dark, neutral</small></span>
+      <span class="check" aria-hidden="true">✓</span>
+    </button>
+                        </li>
+                    </ul>
+
+                </div>
+            </nav>
+            <!-- Overlay -->
+            <div class="nav-overlay" id="navOverlay" hidden></div>
+        </div>
+    </header>
+
+    <!-- HERO -->
+    <section class="card-hero hero" aria-labelledby="contact-hero-title">
+        <div class="container hero-grid">
+            <div class="hero-copy">
+                <h1 id="contact-hero-title" class="display-l">SRVICES</h1>
+                <p class="muted" style="max-width:70ch">Three core areas: WordPress development, React/React Native apps, and UI/UX design. I can start from scratch or join an existing project to improve performance, UX, and delivery.</p>
+            </div>
+            <figure class="hero-portrait">
+                <img src="img/avatar-porfolio.png" alt="Gabrielė waving – creative designer">
+            </figure>
+        </div>
+    </section>
+
+    <main class="content container">
+
+        <!-- SERVICES GRID -->
+        <section id="services" style="padding: 0;" class="services container">
+            <div class="services-grid page-services">
+                <!-- 1) WordPress -->
+                <article class="service card">
+                    <div class="about-ico" aria-hidden="true">
+                        <!-- WP icon -->
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><circle cx="12" cy="12" r="9"/><path d="M4 12h16M8 4.5l6.5 15M15.5 4.5L9 19.5"/></svg>
+                    </div>
+                    <h3 class="svc-title">WordPress websites & customization</h3>
+                    <p class="svc-sub muted">Theme setup and customization, design updates, creating a new block/FSE theme and ongoing improvements.</p>
+
+
+                    <ul class="tags tags--pill">
+                        <li>Theme adaptation</li>
+                        <li>Custom blocks / patterns</li>
+                        <li>SEO & speed optimization</li>
+                        <li>FSE, ACF, CPT</li>
+                        <li>Migration & handoff</li>
+
+                    </ul>
+
+                    <div class="svc-process">
+                        <span class="chip">1. Analysis</span>
+                        <span class="chip">2. Design</span>
+                        <span class="chip">3. Implementation</span>
+                        <span class="chip">4. Testing</span>
+                        <span class="chip">5. Launch</span>
+                    </div>
+
+
+                </article>
+
+                <!-- 2) React / RN / Figma -->
+                <article class="service card">
+                    <div class="about-ico" aria-hidden="true">
+                        <!-- React icon -->
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><circle cx="12" cy="12" r="2"/><ellipse cx="12" cy="12" rx="9" ry="4.5"/><ellipse cx="12" cy="12" rx="9" ry="4.5" transform="rotate(60 12 12)"/><ellipse cx="12" cy="12" rx="9" ry="4.5" transform="rotate(-60 12 12)"/></svg>
+                    </div>
+                    <h3 class="svc-title">React / React Native + Figma</h3>
+                    <p class="svc-sub muted">Build new apps or contribute to existing ones: design, components, API integration, optimization, and new feature development.</p>
+
+
+                    <ul class="tags tags--pill">
+                        <li>Component libraries</li>
+                        <li>API / data integration</li>
+                        <li>Animations & forms</li>
+                        <li>Performance optimization</li>
+                        <li>Code review & refactor</li>
+
+                    </ul>
+
+                    <div class="svc-process">
+                        <span class="chip">1. Planning</span>
+                        <span class="chip">2. Prototyping</span>
+                        <span class="chip">3. Development</span>
+                        <span class="chip">4. Testing</span>
+                        <span class="chip">5. Handoff</span>
+                    </div>
+
+
+                </article>
+
+                <!-- 3) UI/UX -->
+                <article class="service card">
+                    <div class="about-ico" aria-hidden="true">
+                        <!-- UI frame icon -->
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><rect x="4" y="4" width="16" height="16" rx="3"/><path d="M9 4v16M4 9h16"/></svg>
+                    </div>
+                    <h3 class="svc-title">UI/UX design & prototyping</h3>
+                    <p class="svc-sub muted">Quick prototypes to test ideas, clear user flows, design systems, and smooth handoff to developers.</p>
+
+                    <ul class="tags tags--pill">
+                        <li>Wireframes</li>
+                        <li>UI mockups</li>
+                        <li>Design system</li>
+                        <li>Prototypes</li>
+                    </ul>
+
+
+                    <div class="svc-process">
+                        <span class="chip">1. Discovery</span>
+                        <span class="chip">2. Wireframes</span>
+                        <span class="chip">3. UI design</span>
+                        <span class="chip">4. Prototyping</span>
+                        <span class="chip">5. Handoff</span>
+                    </div>
+
+                </article>
+            </div>
+        </section>
+
+
+
+
+
+        <!-- ASIDE (only here, not in header) -->
+        <aside aria-label="Quick info" class="sidebar hide-when-mobile">
+            <div class="card card--soft profile profile--soft">
+                <div class="avatar-neo-halo">
+                    <img class="avatar-neo" src="img/avatar-profile.png" alt="Gabrielė – profile photo">
+                </div>
+                <h3 class="name t-title" style="margin: 0;">GABRIELĖ</h3>
+                <p class="muted">Creative Designer</p>
+                <p class="muted xsmall">Vilnius, Lithuania</p>
+                <div class="badge-aside" style="margin:10px auto 0; display:inline-block;">Open for new projects</div>
+
+                <div class="cta-stack" style="margin-top:14px">
+                    <a class="btn" href="mailto:gt1230112301@gmail.com">Email Me</a>
+                    <a class="btn outline" href="docs/CV.pdf" download>Download CV</a>
+                </div>
+            </div>
+        </aside>
+    </main>
+    <!-- CONTACT SECTION (separate form specific to services) -->
+    <section id="contact" class="container" style="padding-block:clamp(24px,6vw,56px)">
+        <div class="content container" style="display:grid;grid-template-columns:minmax(0,1fr);gap:clamp(16px,3vw,24px)">
+            <article class="">
+                <h2 class="section-title"><span class="about-ico" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12a7 7 0 0 1-7 7H8l-5 3 2-5a7 7 0 1 1 16-5z"/></svg>
+          </span> Project brief</h2>
+                <p class="chip" style="margin:1rem 0;">Tell me about your project. I typically reply within 24 hours.</p>
+
+                <form class="contact-form" action="https://formspree.io/f/xeorkyne" method="POST" novalidate>
+                    <input type="text" name="company" class="hp" tabindex="-1" aria-hidden="true">
+
+                    <div class="grid" style="display:grid;grid-template-columns:1fr 1fr;gap:12px">
+                        <label class="fi">
+                <span>Name</span>
+                <input type="text" name="name" placeholder="Your name" required>
+                <span class="error" aria-live="polite"></span>
+              </label>
+                        <label class="fi">
+                <span>Email</span>
+                <input type="email" name="email" placeholder="name@email.com" required>
+                <span class="error" aria-live="polite"></span>
+              </label>
+                    </div>
+
+
+                    <div class="grid" style="display:grid;grid-template-columns:1fr 1fr;gap:12px">
+
+                        <label class="fi">
+  <span>Timeline</span>
+
+  <div class="c-select" data-name="timeline">
+    <button type="button" class="c-select__btn" aria-haspopup="listbox" aria-expanded="false">
+      Select
+    </button>
+    <ul class="c-select__list" role="listbox">
+         <li role="option" data-value="No preference">No preference</li>
+      <li role="option" data-value="ASAP">ASAP</li>
+      <li role="option" data-value="2–4 weeks">2–4 weeks</li>
+      <li role="option" data-value="1–3 months">1–3 months</li>
+      <li role="option" data-value="> 3 months">&gt; 3 months</li>
+    </ul>
+    <input type="hidden" name="timeline" value="">
+  </div>
+
+  <span class="error" aria-live="polite"></span>
+</label>
+
+
+                    </div>
+
+                    <label class="fi fi-full">
+              <span>Project description</span>
+              <textarea name="message" rows="7" placeholder="Scope, goals, references, tech stack (if any)…" required></textarea>
+              <span class="error" aria-live="polite"></span>
+            </label>
+
+                    <label class="fi fi-full">
+              <span>Links (optional)</span>
+              <input type="url" name="links" placeholder="https://figma.com/file/... or https://github.com/...">
+            </label>
+
+                    <input type="text" name="_gotcha" style="display:none">
+
+                    <button type="submit" class="btn-pill">Send brief</button>
+                    <p class="form-note" role="status" aria-live="polite"></p>
+                </form>
+            </article>
+        </div>
+    </section>
+
+    <!-- FOOTER (compact) -->
+    <footer class="site-footer" role="contentinfo">
+
+
+        <div class="footer-in container">
+            <div class="footer-top">
+                <!-- Brand / About -->
+                <section>
+                    <a class="brand" href="/">
+                        <span class="icon" aria-hidden="true">GT</span>
+                        <span aria-label="Gabrielė Tamaševičiūtė">Gabrielė · Codeart</span>
+                    </a>
+                    <p class="brand-note">Front-end dev & designer. I build clean, fast and accessible UIs.</p>
+                    <div class="socials" aria-label="Social links">
+                        <a class="soc" href="#" aria-label="GitHub" title="GitHub">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 19c-4 1.5-4-2.5-6-3m12 6v-3.87a3.37 3.37 0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0018 3.77 5.07 5.07 0 0017.91 1S16.73.65 14 2.48a13.38 13.38 0 00-5 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 005 3.77a5.44 5.44 0 00-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 009 18.13V22"/></svg>
+                        </a>
+                        <a class="soc" href="#" aria-label="LinkedIn" title="LinkedIn">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-4 0v7h-4v-7a6 6 0 016-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+                        </a>
+                        <a class="soc" href="#" aria-label="Email" title="Email">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 4h16v16H4z"/><path d="M22 6L12 13 2 6"/></svg>
+                        </a>
+                    </div>
+                </section>
+
+                <!-- Quick links -->
+                <nav class="footer-card" aria-labelledby="flinks">
+                    <h3 id="flinks" class="footer-title">Quick links</h3>
+                    <ul class="footer-list">
+                        <li><a class="footer-link" href="/home.html">Home</a></li>
+                        <li><a class="footer-link" href="/about.html">About</a></li>
+                        <li><a class="footer-link" href="/portfolio.html">Portfolio</a></li>
+                        <li><a class="footer-link" href="/blog.html">Blog</a></li>
+                        <li><a class="footer-link" href="/contact.html">Contact</a></li>
+                        <li><a class="footer-link" href="docs/CV.pdf" download>CV / Resume</a></li>
+                    </ul>
+                </nav>
+
+                <!-- Newsletter / CTA -->
+                <section class="footer-card" aria-labelledby="fnews">
+                    <h3 id="fnews" class="footer-title">Quick message</h3>
+                    <form class="newsletter" action="https://formspree.io/f/xeorkyne" method="POST">
+                        <input class="input" type="email" name="email" placeholder="Email" aria-label="Email" required>
+                        <input class="input" type="text" name="Message" placeholder="Message" aria-label="Message" required>
+                        <input type="text" name="_gotcha" style="display:none">
+                        <!-- honeypot -->
+                        <button class="btn-pill" type="submit">Say hi 👋</button>
+                        <p class="form-note" role="status" aria-live="polite"></p>
+                        <small class="brand-note">Message me — I reply within 24 h.</small>
+                    </form>
+                </section>
+            </div>
+
+            <div class="footer-bottom">
+                <span>© 2025 Gabrielė · Codeart</span>
+                <div class="mini-nav">
+
+                    <a href="mailto:gt1230112301@gmail.com">gt1230112301@gmail.com</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            document.querySelectorAll('.c-select').forEach(function(wrap) {
+                const btn = wrap.querySelector('.c-select__btn');
+                const list = wrap.querySelector('.c-select__list');
+                const items = Array.from(list.querySelectorAll('[role="option"]'));
+                const input = wrap.querySelector('input[type="hidden"]');
+
+                function open() {
+                    wrap.setAttribute('aria-open', 'true');
+                    btn.setAttribute('aria-expanded', 'true');
+                }
+
+                function close() {
+                    wrap.removeAttribute('aria-open');
+                    btn.setAttribute('aria-expanded', 'false');
+                    items.forEach(i => i.classList.remove('is-active'));
+                }
+
+                function choose(li) {
+                    items.forEach(i => i.removeAttribute('aria-selected'));
+                    li.setAttribute('aria-selected', 'true');
+                    btn.textContent = li.textContent;
+                    input.value = li.getAttribute('data-value') || li.textContent;
+                    close();
+                    btn.focus();
+                }
+
+                btn.addEventListener('click', () => {
+                    const isOpen = wrap.getAttribute('aria-open') === 'true';
+                    isOpen ? close() : open();
+                });
+
+                list.addEventListener('click', (e) => {
+                    const li = e.target.closest('[role="option"]');
+                    if (li) choose(li);
+                });
+
+                // Keyboard nav
+                wrap.addEventListener('keydown', (e) => {
+                    const isOpen = wrap.getAttribute('aria-open') === 'true';
+                    const idx = items.findIndex(i => i.classList.contains('is-active'));
+                    if (e.key === 'Escape') {
+                        close();
+                        return;
+                    }
+                    if (!isOpen && (e.key === 'ArrowDown' || e.key === 'Enter' || e.key === ' ')) {
+                        e.preventDefault();
+                        open();
+                        return;
+                    }
+                    if (!isOpen) return;
+                    if (e.key === 'ArrowDown' || e.key === 'ArrowUp') {
+                        e.preventDefault();
+                        let next = idx + (e.key === 'ArrowDown' ? 1 : -1);
+                        if (next < 0) next = items.length - 1;
+                        if (next >= items.length) next = 0;
+                        items.forEach(i => i.classList.remove('is-active'));
+                        items[next].classList.add('is-active');
+                        items[next].scrollIntoView({
+                            block: 'nearest'
+                        });
+                    }
+                    if (e.key === 'Enter') {
+                        e.preventDefault();
+                        choose(items[idx >= 0 ? idx : 0]);
+                    }
+                });
+
+                document.addEventListener('click', (e) => {
+                    if (!wrap.contains(e.target)) close();
+                });
+            });
+        });
+        document.addEventListener('DOMContentLoaded', function() {
+            var forms = document.querySelectorAll('form[action^="https://formspree.io/"]');
+            if (!forms || !forms.length) return;
+
+            var icons = {
+                spinner: '<svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="3" opacity=".25"/><path class="svg-spin" d="M12 3a9 9 0 0 1 9 9" fill="none" stroke="currentColor" stroke-width="3"/></svg>',
+                check: '<svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6L9 17l-5-5" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>',
+                cross: '<svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><path d="M18 6L6 18M6 6l12 12" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"/></svg>'
+            };
+
+            forms.forEach(function(form) {
+                var btn = form.querySelector('button[type="submit"]');
+                var note = form.querySelector('.form-note');
+
+                function setError(field, msg) {
+                    if (!field) return;
+                    var wrap = field.closest('.fi');
+                    if (!wrap) return;
+                    var err = wrap.querySelector('.error');
+                    if (!err) return;
+
+                    if (msg) {
+                        wrap.classList.add('invalid');
+                        err.textContent = msg;
+                    } else {
+                        wrap.classList.remove('invalid');
+                        err.textContent = '';
+                    }
+                }
+
+                function validate() {
+                    var ok = true;
+
+                    var name = form.querySelector('input[name="name"]');
+                    var email = form.querySelector('input[name="email"]');
+                    var budget = form.querySelector('select[name="budget"]');
+                    var timeline = form.querySelector('select[name="timeline"]');
+                    var msg = form.querySelector('textarea[name="message"], input[name="Message"]');
+
+                    if (name && !name.value.trim()) {
+                        setError(name, 'Please enter your name.');
+                        ok = false;
+                    } else setError(name, '');
+
+                    var re = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
+                    if (email && !email.value.trim()) {
+                        setError(email, 'Email is required.');
+                        ok = false;
+                    } else if (email && !re.test(email.value.trim())) {
+                        setError(email, 'Enter a valid email.');
+                        ok = false;
+                    } else setError(email, '');
+
+                    if (budget && !budget.value) {
+                        setError(budget, 'Select a budget.');
+                        ok = false;
+                    } else setError(budget, '');
+                    if (timeline && !timeline.value) {
+                        setError(timeline, 'Select a timeline.');
+                        ok = false;
+                    } else setError(timeline, '');
+
+                    if (msg && (!msg.value.trim() || msg.value.trim().length < 10)) {
+                        setError(msg, 'Please describe your project (10+ chars).');
+                        ok = false;
+                    } else setError(msg, '');
+
+                    if (!ok) {
+                        var firstInvalid = form.querySelector('.fi.invalid input, .fi.invalid textarea, .fi.invalid select');
+                        if (firstInvalid) firstInvalid.focus();
+                    }
+                    return ok;
+                }
+
+                function setBtnState(stateClass, htmlText, noteText, noteKind) {
+                    if (!btn) return;
+                    btn.classList.remove('is-sending', 'is-ok', 'is-err');
+                    if (stateClass) btn.classList.add(stateClass);
+                    btn.innerHTML = htmlText;
+
+                    if (note) {
+                        note.className = 'form-note';
+                        note.textContent = '';
+                        if (noteText) {
+                            note.textContent = noteText;
+                            if (noteKind) note.classList.add(noteKind);
+                        }
+                    }
+                }
+
+                form.addEventListener('input', function(e) {
+                    var el = e.target;
+                    if (el && (el.matches('input') || el.matches('textarea') || el.matches('select'))) {
+                        setError(el, '');
+                    }
+                });
+
+                form.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    if (!validate()) return;
+
+                    // Honeypot
+                    var hp = form.querySelector('input[name="hp"], input[name="company"], input[name="_gotcha"]');
+                    if (hp && hp.value) return;
+
+                    if (btn) {
+                        btn.disabled = true;
+                        setBtnState('is-sending', icons.spinner + ' Sending…');
+                    }
+
+                    fetch(form.action, {
+                            method: 'POST',
+                            body: new FormData(form),
+                            headers: {
+                                'Accept': 'application/json'
+                            }
+                        })
+                        .then(function(res) {
+                            if (res.ok) {
+                                form.reset();
+                                setBtnState('is-ok', icons.check + ' Sent', 'Thanks! Your brief was sent. I will get back to you within 24 hours.', 'ok');
+                            } else {
+                                return res.json().then(function(data) {
+                                    var msg = 'Could not send. Please try again.';
+                                    if (data && data.errors && data.errors[0] && typeof data.errors[0].message === 'string') {
+                                        msg = data.errors[0].message;
+                                    }
+                                    setBtnState('is-err', icons.cross + ' Try again', msg, 'err');
+                                }).catch(function() {
+                                    setBtnState('is-err', icons.cross + ' Try again', 'Could not send. Please try again.', 'err');
+                                });
+                            }
+                        })
+                        .catch(function() {
+                            setBtnState('is-err', icons.cross + ' Try again', 'Network error. Check your connection and try again.', 'err');
+                        })
+                        .finally(function() {
+                            if (btn) {
+                                setTimeout(function() {
+                                    btn.disabled = false;
+                                    setBtnState('', 'Send brief →');
+                                }, 6000);
+                            }
+                        });
+                });
+            });
+        });
+        document.addEventListener('DOMContentLoaded', () => {
+
+
+            const root = document.documentElement;
+            const menu = document.getElementById('themeMenu');
+            const btn = document.getElementById('themeBtn');
+            const list = menu.querySelector('.theme-list');
+            const items = Array.from(list.querySelectorAll('[data-theme]'));
+
+            // apply saved theme
+            const saved = localStorage.getItem('theme') || 'cream';
+            applyTheme(saved);
+
+            // open/close
+            const setOpen = (open) => {
+                menu.setAttribute('aria-expanded', String(open));
+                btn.setAttribute('aria-expanded', String(open));
+            };
+            btn.addEventListener('click', () => setOpen(menu.getAttribute('aria-expanded') !== 'true'));
+
+            // choose theme
+            items.forEach(el => {
+                el.addEventListener('click', () => {
+                    const t = el.dataset.theme;
+                    applyTheme(t);
+                    setOpen(false);
+                    btn.focus();
+                });
+            });
+
+            // a11y: esc / outside click
+            document.addEventListener('keydown', (e) => {
+                if (e.key === 'Escape') setOpen(false);
+            });
+            document.addEventListener('click', (e) => {
+                if (!menu.contains(e.target)) setOpen(false);
+            });
+
+            function applyTheme(theme) {
+                root.setAttribute('data-theme', theme);
+                localStorage.setItem('theme', theme);
+                // update current state
+                items.forEach(i => i.setAttribute('aria-current', i.dataset.theme === theme ? 'true' : 'false'));
+                // recolor header swatch
+                // (nebūtina: rely on CSS var)
+            }
+
+
+            /* Header blur tik kai scroll > 8px */
+            const setScrolled = () => {
+                document.documentElement.classList.toggle('scrolled', window.scrollY > 8);
+            };
+            setScrolled();
+            window.addEventListener('scroll', setScrolled, {
+                passive: true
+            });
+
+            /* Process rail – tik jei yra DOM'e */
+            const rail = document.getElementById('processRail');
+            if (rail) {
+                const updateProgress = () => {
+                    const rect = rail.getBoundingClientRect();
+                    const vh = window.innerHeight || document.documentElement.clientHeight;
+                    const visible = Math.max(0, Math.min(rect.bottom, vh) - Math.max(rect.top, 0));
+                    const ratio = Math.max(0, Math.min(1, visible / Math.min(rect.height, vh)));
+                    rail.style.setProperty('--progress', ratio.toFixed(3));
+                };
+                updateProgress();
+                window.addEventListener('scroll', updateProgress, {
+                    passive: true
+                });
+                window.addEventListener('resize', updateProgress);
+
+                const obs = new IntersectionObserver((entries) => {
+                    entries.forEach(e => {
+                        if (e.isIntersecting) {
+                            rail.style.setProperty('--pct', '100');
+                        }
+                    });
+                }, {
+                    threshold: 0.2
+                });
+                obs.observe(rail);
+            }
+
+            /* Segmented filtras (jei naudojamas) */
+            const seg = document.querySelector('.segmented');
+            if (seg) {
+                const btns = Array.from(seg.querySelectorAll('.seg-btn'));
+                let thumb = seg.querySelector('.seg-thumb');
+                if (!thumb) {
+                    thumb = document.createElement('span');
+                    thumb.className = 'seg-thumb';
+                    seg.prepend(thumb);
+                }
+
+                const moveThumb = (btn) => {
+                    const x = btn.offsetLeft;
+                    const w = btn.offsetWidth;
+                    thumb.style.width = w + 'px';
+                    thumb.style.transform = `translateX(${x}px)`;
+                };
+
+                const setActive = (btn) => {
+                    btns.forEach(b => {
+                        const active = b === btn;
+                        b.classList.toggle('is-active', active);
+                        b.setAttribute('aria-selected', String(active));
+                    });
+                    moveThumb(btn);
+                };
+
+                // init
+                const current = seg.querySelector('.seg-btn.is-active') || btns[0];
+                if (current) setActive(current);
+
+                // click
+                seg.addEventListener('click', (e) => {
+                    const btn = e.target.closest('.seg-btn');
+                    if (!btn) return;
+                    setActive(btn);
+
+                    const f = btn.dataset.filter; // 'all' | 'web' | 'mobile' | 'desktop'
+                    document.querySelectorAll('.featured-grid .project').forEach(card => {
+                        const cats = (card.dataset.cat || '').split(/\s+/); // palaiko 'web desktop'
+                        const show = (f === 'all') || cats.includes(f);
+                        card.classList.toggle('is-hidden', !show);
+                    });
+                });
+
+
+                // responsive – perbraižyti poziciją
+                window.addEventListener('resize', () => moveThumb(seg.querySelector('.seg-btn.is-active') || btns[0]));
+            }
+        });
+
+        (function() {
+            if (window.__navInit) return;
+            window.__navInit = true;
+
+            var body = document.body;
+            var toggle = document.getElementById('navToggle');
+            var nav = document.getElementById('primaryNav');
+            var overlay = document.getElementById('navOverlay');
+            var closeBtn = document.getElementById('navClose');
+
+            function setNavOpen(open) {
+                body.classList.toggle('nav-open', open);
+                if (toggle) toggle.setAttribute('aria-expanded', String(open));
+                if (overlay) overlay.hidden = !open;
+            }
+
+            if (toggle) {
+                toggle.addEventListener('click', function() {
+                    setNavOpen(!body.classList.contains('nav-open'));
+                });
+            }
+            if (overlay) {
+                overlay.addEventListener('click', function() {
+                    setNavOpen(false);
+                });
+            }
+            if (closeBtn) {
+                closeBtn.addEventListener('click', function() {
+                    setNavOpen(false);
+                });
+            }
+            if (nav) {
+                nav.addEventListener('click', function(e) {
+                    if (e && e.target && e.target.closest && e.target.closest('a')) {
+                        setNavOpen(false);
+                    }
+                });
+            }
+            document.addEventListener('keydown', function(e) {
+                if (e.key === 'Escape') setNavOpen(false);
+            });
+        })();
+        /* === Featured image rotator === */
+        (() => {
+            const wrap = document.querySelector('.project-xl .container-canva');
+            if (!wrap) return;
+
+            const track = wrap.querySelector('#card .slides');
+            const slides = Array.from(track ? track.children : []);
+            const dots = wrap.querySelector('.carousel-ui .dots');
+            const carEl = wrap.querySelector('#card .carousel');
+            if (!track || slides.length < 2 || !dots || !carEl) return;
+
+            const intervalMs = Number(carEl.getAttribute('data-auto')) || 3000;
+
+            // sukurti dots
+            slides.forEach((_, idx) => {
+                const b = document.createElement('button');
+                b.type = 'button';
+                b.setAttribute('aria-label', `Go to slide ${idx+1}`);
+                b.addEventListener('click', () => go(idx, true));
+                dots.appendChild(b);
+            });
+
+            let i = 0,
+                timer = null;
+            const update = () => {
+                track.style.transform = `translateX(-${i * 100}%)`;
+                dots.querySelectorAll('button').forEach((b, idx) =>
+                    b.setAttribute('aria-current', String(idx === i))
+                );
+            };
+            const go = (to, user = false) => {
+                i = (to + slides.length) % slides.length;
+                update();
+                if (user) restart();
+            };
+            const nextSlide = () => go(i + 1);
+
+            const start = () => {
+                if (!timer) timer = setInterval(nextSlide, intervalMs);
+            };
+            const stop = () => {
+                if (timer) {
+                    clearInterval(timer);
+                    timer = null;
+                }
+            };
+            const restart = () => {
+                stop();
+                start();
+            };
+
+            // pauzė ant hover
+            wrap.addEventListener('mouseenter', stop);
+            wrap.addEventListener('mouseleave', start);
+
+            // start tik kai matoma
+            const io = new IntersectionObserver(([e]) => {
+                e.isIntersecting ? start() : stop();
+            }, {
+                threshold: 0.2
+            });
+            io.observe(wrap);
+
+            // init
+            update();
+        })();
+    </script>
+
+
+</body>
+
+</html>

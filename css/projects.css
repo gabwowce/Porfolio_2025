@@ -1,0 +1,279 @@
+/* Projects */
+.featured-grid {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+.project {
+  border-radius: 12px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.project .thumb img {
+  width: 80%;
+  height: auto;
+  object-fit: contain;
+  display: block;
+  transition: transform 0.25s;
+}
+.project .thumb.s img {
+  height: 380px;
+  object-fit: contain;
+}
+
+.project .meta {
+  padding: 0.9rem;
+}
+.project .row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0.4rem 0;
+}
+.tag {
+  display: inline-block;
+  background: var(--bg);
+  color: var(--text);
+  padding: 0.25rem 0.6rem;
+  border-radius: 999px;
+  font-size: 0.8rem;
+}
+.case {
+  color: var(--accent);
+  text-decoration: none;
+  border-bottom: 1px dotted var(--accent);
+}
+.project-xl {
+  grid-column: 1/-1;
+  justify-self: center;
+  width: min(100%, 1280px);
+  margin-bottom: 100px 0 0 0;
+}
+
+/* Responsive */
+@media (max-width: 1536px) {
+  .project .thumb img {
+    width: 70%;
+    height: 380px;
+  }
+} /* 2xl */
+
+@media (max-width: 1280px) {
+  .project .thumb img {
+    width: 90%;
+    height: 300px;
+  }
+}
+@media (max-width: 1024px) {
+  .project .thumb img {
+    width: 100%;
+    height: 300px;
+  }
+}
+@media (max-width: 768px) {
+  .project-xl .thumb img {
+    height: 260px;
+  }
+  .featured-grid {
+    grid-template-columns: 1fr;
+    justify-items: center;
+  }
+}
+@media (max-width: 448px) {
+}
+
+/* Meta tweaks */
+.meta .sub {
+  color: var(--muted);
+  margin-bottom: 6px;
+}
+.meta .desc {
+  color: var(--text);
+  max-width: 64ch;
+}
+
+/* Pills */
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 10px;
+  padding: 0;
+}
+.tags li {
+  list-style: none;
+  font-size: 0.85rem;
+  line-height: 1;
+  padding: 7px 12px;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  color: var(--text);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.tags--pill li::before {
+  content: "";
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  border-radius: 999px;
+  background: var(--dot-accent);
+  box-shadow: 0 0 0 4px var(--accent-elements);
+  margin-right: 8px;
+}
+
+/* Hover efektas (subtilus) */
+.tags li:hover {
+  background: var(--secondary-bg);
+  border-color: var(--border);
+}
+
+/* Live demo – pill */
+.btn-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 12px;
+  border-radius: 999px;
+  background: color-mix(in srgb, var(--dot-accent) 10%, #fff);
+  border: 1px solid color-mix(in srgb, var(--dot-accent) 25%, #fff);
+  color: #2b241d;
+  font-weight: 600;
+  text-decoration: none;
+  transition: transform 0.15s ease, background-color 0.2s ease,
+    border-color 0.2s ease, box-shadow 0.2s ease;
+}
+.btn-link:hover,
+.btn-link:focus-visible {
+  background: color-mix(in srgb, var(--dot-accent) 16%, #fff);
+  border-color: color-mix(in srgb, var(--dot-accent) 45%, #fff);
+  transform: translateY(-1px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.06);
+}
+.btn-link:focus-visible {
+  outline: 2px solid color-mix(in srgb, var(--dot-accent) 45%, #fff);
+  outline-offset: 2px;
+}
+
+/* GitHub – švari animuota pabraukimo linija */
+.link-ghost {
+  position: relative;
+  color: var(--link);
+  font-weight: 600;
+  text-decoration: none;
+  background: linear-gradient(currentColor, currentColor) 0 100% / 0 1px
+    no-repeat; /* animuojamas brūkšnis */
+  transition: color 0.2s ease, background-size 0.25s ease;
+  text-underline-offset: 3px;
+}
+.link-ghost:hover,
+.link-ghost:focus-visible {
+  color: var(--link-hover);
+  background-size: 100% 1px; /* nuslysta pabraukimas */
+}
+/* ikoninis linkas į portfolio.html#id */
+.meta-actions {
+  margin-top: 6px;
+  display: flex;
+  gap: 8px;
+}
+
+/* visa eilutė kaip nuoroda */
+.meta-title {
+  margin: 0;
+}
+.meta-title-link {
+  display: inline-flex;
+  align-items: center;
+
+  color: inherit;
+  text-decoration: none;
+
+  transition: color 0.2s ease, background-color 0.2s ease, transform 0.15s ease;
+}
+
+/* didesnė rodyklė */
+.meta-title-ico {
+  width: 24px;
+  height: 24px;
+  stroke-width: 3;
+}
+
+/* hover/focus – subtiliai */
+.meta-title-link:hover,
+.meta-title-link:focus-visible {
+  color: var(--card-text-hover, #201d19);
+
+  transform: translateY(-1px);
+  outline: none;
+}
+
+/* Bendra būsena */
+.featured-grid {
+  position: relative;
+}
+
+/* ĮEJIMAS / IŠEJIMAS */
+.project {
+  will-change: transform, opacity;
+  transform-origin: 50% 40%;
+}
+
+.project.is-exiting {
+  animation: cardOut 220ms ease forwards;
+}
+
+.project.is-entering {
+  animation: cardIn 320ms cubic-bezier(0.2, 0.7, 0.2, 1) forwards;
+  animation-delay: calc(var(--stagger, 0) * 40ms);
+  filter: saturate(0.94) contrast(0.98);
+}
+
+/* Jei slepi per display – tik po animacijos */
+.project.is-hidden {
+  display: none;
+}
+
+/* Keyframes */
+@keyframes cardOut {
+  0% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+    filter: blur(0px);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(8px) scale(0.985);
+    filter: blur(1px);
+  }
+}
+@keyframes cardIn {
+  0% {
+    opacity: 0;
+    transform: translateY(10px) scale(0.985);
+    filter: blur(2px);
+  }
+  70% {
+    opacity: 1;
+    transform: translateY(-2px) scale(1.005);
+    filter: blur(0.3px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+    filter: blur(0);
+  }
+}
+
+/* Mažiau judesio – be animacijų */
+@media (prefers-reduced-motion: reduce) {
+  .project,
+  .project.is-exiting,
+  .project.is-entering {
+    animation: none !important;
+  }
+}

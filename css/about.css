@@ -1,0 +1,438 @@
+/* HERO kitoks nei Home */
+.about-hero {
+  background: var(--bg);;
+  padding: clamp(56px, 8vw, 100px) 0;
+  border-bottom: 1px solid var(--border);
+}
+.hero-grid--about {
+  grid-template-columns: 360px 1fr;
+  gap: clamp(18px, 3vw, 30px);
+}
+.hero-grid--about .hero-portrait {
+  order: 1;
+}
+.hero-grid--about .hero-copy {
+  order: 2;
+  align-self: center;
+}
+.hero-cta {
+  display: flex;
+  gap: 10px;
+  margin-top: 12px;
+}
+.btn-pill.outline {
+  background: var(--bg);
+  color: var(--text);
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow);
+}
+
+.about-main {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: 1fr;
+}
+
+.profile-mini {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+.avatar-circle {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  background: var(--accent-elements);
+  border: 2px solid var(--border)
+  font-weight: 800;
+}
+.badge {
+  display: inline-block;
+  margin-top: 4px;
+  padding: 0.35rem 0.7rem;
+  border-radius: 999px;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow);
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--text);
+}
+
+/* 2) HOW I DELIVER (perkelta iš ankstesnio pasiūlymo) */
+.deliver {
+  background: var(--bg);
+  padding: clamp(52px, 7vw, 100px) 0;
+}
+.display-m {
+  font-size: clamp(28px, 4.5vw, 40px);
+  font-weight: 800;
+  margin: 0 0 6px;
+}
+.deliver__head {
+  text-align: center;
+  max-width: 900px;
+  margin: 0 auto clamp(22px, 3vw, 40px);
+}
+.deliver__head p {
+  color: var(--muted);
+}
+
+.deliver__grid {
+  display: grid;
+  gap: clamp(16px, 2.6vw, 24px);
+  grid-template-columns: repeat(3, 1fr);
+  margin-bottom: clamp(24px, 4.5vw, 48px);
+}
+@media (max-width: 900px) {
+  .deliver__grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.stage {
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  padding: clamp(18px, 2vw, 22px);
+  box-shadow: var(--shadow);
+  transition: transform 0.15s, box-shadow 0.2s, border-color 0.2s;
+}
+.stage:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 14px 34px rgba(0, 0, 0, 0.08);
+  border-color: color-mix(in oklab, var(--accent), #fff 78%);
+}
+.stage__title {
+  display: inline-block;
+  font-weight: 800;
+  color: var(--text);
+  border: 1px solid var(--border);
+  background: var(--bg);
+  border-radius: 999px;
+  padding: 0.5rem 0.9rem;
+  box-shadow: var(--shadow);
+  margin: 0 0 0.6rem;
+}
+
+.checklist {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: 0.6rem;
+}
+.checklist li {
+  position: relative;
+  padding-left: 28px;
+  color: var(--text);
+}
+.checklist li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.35rem;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: var(--accent-elements);
+  box-shadow: inset 0 0 0 2px var(--text), 0 0 0 1px var(--border);
+}
+
+/* pills */
+.pills {
+  display: grid;
+  gap: clamp(12px, 2vw, 18px);
+  grid-template-columns: repeat(4, 1fr);
+}
+@media (max-width: 1100px) {
+  .pills {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 640px) {
+  .pills {
+    grid-template-columns: 1fr;
+  }
+}
+
+.pill {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  padding: 0.9rem 1.1rem;
+  box-shadow: var(--shadow);
+  font-weight: 600;
+  color: var(--text);
+}
+.pill .dot {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: var(--accent-elements);
+  border: 2px solid var(--text);
+  box-shadow: inset 0 0 0 4px #fff;
+}
+
+/* 3) Timeline */
+.timeline {
+  padding: clamp(40px, 6vw, 80px) 0;
+}
+.timeline .display-m {
+  margin-bottom: clamp(12px, 2vw, 18px);
+}
+.timeline-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  position: relative;
+}
+.timeline-list::before {
+  content: "";
+  position: absolute;
+  left: 14px;
+  top: 0;
+  bottom: 0;
+  width: 3px;
+  background: color-mix(in oklab, var(--text), #d7d7d7 85%);
+  opacity: 0.35;
+  border-radius: 999px;
+}
+.timeline-list li {
+  position: relative;
+  padding-left: 44px;
+  margin: 16px 0;
+}
+.t-bullet {
+  position: absolute;
+  left: 6px;
+  top: 0.4rem;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow);
+}
+.t-card {
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 12px 14px;
+  box-shadow: var(--shadow);
+}
+
+.timeline-divider {
+  height: 1px;
+  background: var(--bg);
+  border: 0;
+  margin: 16px 0 14px;
+}
+.section-title--sm {
+  font-size: 1rem;
+  opacity: 0.85;
+  margin-bottom: 8px;
+}
+.pill {
+  display: inline-block;
+  margin-left: 8px;
+  padding: 2px 8px;
+  border-radius: 999px;
+  background: var(--accent-elements, #ffe9d6);
+  color: var(--accent, #362f27);
+  font-size: 0.75rem;
+  line-height: 1.6;
+}
+.edu-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* ----- bendri kortelės patobulinimai ----- */
+.content .card {
+  position: relative;
+  overflow: hidden;
+  border-radius: var(--radius, 18px);
+  border: 1px solid var(--border);
+  background: var(--bg);
+  box-shadow: 0 2px 10px rgba(15, 23, 42, 0.04);
+  transition: transform 0.18s ease, box-shadow 0.18s ease,
+    border-color 0.18s ease;
+}
+
+/* švelni viršutinė juosta (brand) */
+/* .content .card::before {
+  content: "";
+  position: absolute;
+  inset: 0 0 auto 0;
+  height: 6px;
+  background: linear-gradient(90deg, var(--accent-elements), #fff0);
+} */
+
+/* hover – lengvas „lift“ */
+.content .card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 28px rgba(15, 23, 42, 0.08);
+  border-color: var(--border);
+}
+
+/* ----- antraštė su ikonų kapsule ----- */
+.section-title {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--card-text);
+  margin-bottom: 10px;
+}
+.section-title--sm {
+  font-size: 1.05rem;
+}
+
+
+/* ----- About card lead teksto akcentas ----- */
+.about-card .lead {
+  font-size: clamp(1rem, 0.95rem + 0.2vw, 1.05rem);
+ 
+  color: var(--text);
+}
+.about-card .section-title {
+  margin-bottom: 12px;
+}
+
+/* ----- Values – „tick“ bullets + animacija ----- */
+.values-card .values-list {
+  display: grid;
+  gap: 10px;
+  padding-left: 0;
+  margin: 0;
+  list-style: none;
+}
+.values-card .values-list li {
+  position: relative;
+  padding-left: 38px;
+  color: var(--text);
+}
+.values-card .values-list li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.35em;
+  width: 22px;
+  height: 22px;
+  border-radius: 999px;
+  background: color-mix(in srgb, var(--accent-elements) 70%, #fff);
+  box-shadow: inset 0 0 0 3px var(--accent-elements);
+}
+.values-card .values-list li::after {
+  content: "";
+  position: absolute;
+  left: 5px;
+  top: 0.7em;
+  width: 12px;
+  height: 12px;
+  border-radius: 999px;
+  background: var(--dot-accent);
+  transition: transform 0.15s ease, background-color 0.15s ease;
+}
+.values-card .values-list li:hover::after {
+  transform: scale(1.12);
+  background: var(--dot-hover);
+}
+
+/* ----- Soft skills – „chips“ su švelniu hover ----- */
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.chips .chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 12px;
+  border-radius: 999px;
+  background: color-mix(in srgb, var(--accent-elements) 18%, #ffffff2c);
+  border: 1px solid var(--border);
+  color: var(--text);
+  
+  transition: transform 0.15s ease, box-shadow 0.2s ease,
+    background-color 0.2s ease;
+}
+
+
+.chips .chip b{
+  font-weight: 500;
+}
+
+
+.chips .chip::before {
+  content: "";
+  width: 6px;
+  height: 6px;
+  border-radius: 999px;
+  background: var(--dot-accent);
+  box-shadow: 0 0 0 4px
+    color-mix(in srgb, var(--accent-elements) 45%, transparent);
+}
+.chips .chip:hover {
+  transform: translateY(-1px);
+  background: color-mix(in srgb, var(--accent-elements) 40%, #fff);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.06);
+}
+
+/* ----- Timeline – švaresnė linija ir bullets ----- */
+.timeline-card {
+  padding-top: 22px;
+}
+.timeline-list {
+  position: relative;
+  list-style: none;
+  margin: 0;
+  padding-left: 0;
+}
+.timeline-list::before {
+  content: "";
+  position: absolute;
+  left: 13px;
+  top: 6px;
+  bottom: 6px;
+  width: 2px;
+  background: #efe9e1;
+}
+.timeline-list li {
+  position: relative;
+  padding-left: 38px;
+  margin: 14px 0;
+}
+.t-bullet {
+  position: absolute;
+  left: 6px;
+  top: 0.45em;
+  width: 16px;
+  height: 16px;
+  border-radius: 999px;
+  background: var(--bg);
+  border: 3px solid var(--accent-elements);
+  box-shadow: 0 0 0 4px
+    color-mix(in srgb, var(--accent-elements) 35%, transparent);
+}
+.timeline-card .t-row h3 {
+  color: var(--card-text-hover);
+}
+.timeline-card .muted {
+  color: var(--muted);
+}
+
+/* švelni skiriamoji linija tarp exp ir education */
+.timeline-divider {
+  border: 0;
+  height: 1px;
+  margin: 18px 0;
+  background: linear-gradient(90deg, #0000, #e9e2da, #0000);
+}
