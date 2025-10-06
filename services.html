@@ -377,6 +377,79 @@
 
     <script>
         document.addEventListener('DOMContentLoaded', function() {
+            document.querySelectorAll('.c-select').forEach(function(wrap) {
+                const btn = wrap.querySelector('.c-select__btn');
+                const list = wrap.querySelector('.c-select__list');
+                const items = Array.from(list.querySelectorAll('[role="option"]'));
+                const input = wrap.querySelector('input[type="hidden"]');
+
+                function open() {
+                    wrap.setAttribute('aria-open', 'true');
+                    btn.setAttribute('aria-expanded', 'true');
+                }
+
+                function close() {
+                    wrap.removeAttribute('aria-open');
+                    btn.setAttribute('aria-expanded', 'false');
+                    items.forEach(i => i.classList.remove('is-active'));
+                }
+
+                function choose(li) {
+                    items.forEach(i => i.removeAttribute('aria-selected'));
+                    li.setAttribute('aria-selected', 'true');
+                    btn.textContent = li.textContent;
+                    input.value = li.getAttribute('data-value') || li.textContent;
+                    close();
+                    btn.focus();
+                }
+
+                btn.addEventListener('click', () => {
+                    const isOpen = wrap.getAttribute('aria-open') === 'true';
+                    isOpen ? close() : open();
+                });
+
+                list.addEventListener('click', (e) => {
+                    const li = e.target.closest('[role="option"]');
+                    if (li) choose(li);
+                });
+
+                // Keyboard nav
+                wrap.addEventListener('keydown', (e) => {
+                    const isOpen = wrap.getAttribute('aria-open') === 'true';
+                    const idx = items.findIndex(i => i.classList.contains('is-active'));
+                    if (e.key === 'Escape') {
+                        close();
+                        return;
+                    }
+                    if (!isOpen && (e.key === 'ArrowDown' || e.key === 'Enter' || e.key === ' ')) {
+                        e.preventDefault();
+                        open();
+                        return;
+                    }
+                    if (!isOpen) return;
+                    if (e.key === 'ArrowDown' || e.key === 'ArrowUp') {
+                        e.preventDefault();
+                        let next = idx + (e.key === 'ArrowDown' ? 1 : -1);
+                        if (next < 0) next = items.length - 1;
+                        if (next >= items.length) next = 0;
+                        items.forEach(i => i.classList.remove('is-active'));
+                        items[next].classList.add('is-active');
+                        items[next].scrollIntoView({
+                            block: 'nearest'
+                        });
+                    }
+                    if (e.key === 'Enter') {
+                        e.preventDefault();
+                        choose(items[idx >= 0 ? idx : 0]);
+                    }
+                });
+
+                document.addEventListener('click', (e) => {
+                    if (!wrap.contains(e.target)) close();
+                });
+            });
+        });
+        document.addEventListener('DOMContentLoaded', function() {
             var forms = document.querySelectorAll('form[action^="https://formspree.io/"]');
             if (!forms || !forms.length) return;
 
