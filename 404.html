@@ -3,11 +3,27 @@
 <meta charset="utf-8">
 <title>404</title>
 <script>
-    // jei nėra /en/ ar /lt/ kelyje – grąžinti į LT
-    if (!/\/(en|lt)\//.test(location.pathname)) {
-        location.replace("./lt/");
-    }
+    (function() {
+        // jei kelyje jau yra /en/ arba /lt/ – nieko nedaryti
+        if (/\/(en|lt)(\/|$)/.test(location.pathname)) return;
+
+        // rasti projekto bazinį kelią (pvz., /porfolio-2025/)
+        var parts = location.pathname.split('/').filter(Boolean);
+        var base = '/' + (parts.length ? parts[0] + '/' : '');
+
+        // peradresuoti į LT kaip numatytą
+        location.replace(base + 'lt/');
+    })();
 </script>
-<p>Nerasta. <a href="./lt/">Grįžti į pradžią</a></p>
+
+<p>Nerasta. <a id="back" href="#">Grįžti į pradžią</a></p>
+<script>
+    // taisome ir nuorodą puslapyje, kad būtų absoliuti
+    (function() {
+        var parts = location.pathname.split('/').filter(Boolean);
+        var base = '/' + (parts.length ? parts[0] + '/' : '');
+        document.getElementById('back').setAttribute('href', base + 'lt/');
+    })();
+</script>
 
 </html>
