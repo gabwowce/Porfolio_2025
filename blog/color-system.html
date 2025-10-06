@@ -33,6 +33,7 @@
     <script>
         hljs.highlightAll();
     </script>
+    <script src="../js/script.js" defer></script>
 
 
     <!-- CSS (keliai iš /blog/) -->
@@ -47,6 +48,7 @@
     <link rel="stylesheet" href="../css/card.css">
     <link rel="stylesheet" href="../css/projects.css">
     <link rel="stylesheet" href="../css/blogs.css">
+
 </head>
 
 <body>
@@ -128,26 +130,26 @@
         </div>
     </header>
     <!-- HERO -->
-    <section class="card-hero hero">
+    <section class="card-hero hero u-stagger">
         <div class="container hero-grid">
             <div class="hero-copy">
-                <h2 class="display-l">COLOR SYSTEM</h1>
-                    <nav class="breadcrumbs">
-                        <a href="../blog.html">BLOG</a> <svg class="crumb-sep" viewBox="0 0 24 24" aria-hidden="true">
+                <h2 class="display-l u-reveal">COLOR SYSTEM</h2>
+                <nav class="breadcrumbs u-reveal">
+                    <a href="../blog.html">BLOG</a> <svg class="crumb-sep" viewBox="0 0 24 24" aria-hidden="true">
     <path d="M9 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
   </svg> <span aria-current="page">COLOR SYSTEM</span>
-                    </nav>
+                </nav>
 
             </div>
-            <figure class="hero-portrait">
+            <figure class="hero-portrait u-reveal">
                 <img src="../img/avatar-writing.webp" alt="Gabriele – Creative Designer" width="360" height="500" loading="eager" decoding="sync" fetchpriority="high">
             </figure>
         </div>
     </section>
 
     <!-- TURINYS -->
-    <main class="content container">
-        <section>
+    <main class="content container u-stagger">
+        <section class="u-reveal">
 
 
             <article class="card">
@@ -291,7 +293,7 @@ a:hover{ color: var(--link-hover); }
             </nav>
         </section>
         <!-- ASIDE (only here, not in header) -->
-        <aside aria-label="Quick info" class="sidebar">
+        <aside aria-label="Quick info" class="sidebar u-reveal">
             <div class="card card--soft profile profile--soft">
                 <div class="avatar-neo-halo">
                     <img class="avatar-neo" src="../img/avatar-profile.webp" alt="Gabrielė – profile photo" width="72" height="72" loading="lazy" decoding="async" fetchpriority="low">
@@ -387,72 +389,6 @@ a:hover{ color: var(--link-hover); }
 
     <!-- JS: Theme, hamburger, active nav -->
     <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const form = document.querySelector('.newsletter');
-            if (!form) return;
-
-            const btn = form.querySelector('button');
-            const note = form.querySelector('.form-note');
-
-            // Tiny inline SVG icons
-            const icons = {
-                spinner: '<svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="3" opacity=".25"/><path class="svg-spin" d="M12 3a9 9 0 0 1 9 9" fill="none" stroke="currentColor" stroke-width="3"/></svg>',
-                check: '<svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6L9 17l-5-5" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>',
-                cross: '<svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><path d="M18 6L6 18M6 6l12 12" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"/></svg>'
-            };
-
-            const setBtnState = (state, text, noteText = '', noteKind = '') => {
-                btn.classList.remove('is-sending', 'is-ok', 'is-err');
-                note.className = 'form-note';
-                if (state) btn.classList.add(state);
-                note.textContent = '';
-                if (noteText) {
-                    note.textContent = noteText;
-                    if (noteKind) note.classList.add(noteKind);
-                }
-                btn.innerHTML = text; // replace button content (icon + label)
-            };
-
-            form.addEventListener('submit', async(e) => {
-                e.preventDefault();
-
-                // Sending…
-                btn.disabled = true;
-                setBtnState('is-sending', `${icons.spinner} Sending…`);
-
-                try {
-                    const res = await fetch(form.action, {
-                        method: 'POST',
-                        body: new FormData(form),
-                        headers: {
-                            'Accept': 'application/json'
-                        }
-                    });
-
-                    if (res.ok) {
-                        form.reset();
-                        setBtnState('is-ok', `${icons.check} Sent`, 'Thanks! Your message was sent.', 'ok');
-                    } else {
-                        let msg = 'Could not send. Please try again.';
-                        try {
-                            const data = await res.json();
-                            if (data && Array.isArray(data.errors) && data.errors[0] && typeof data.errors[0].message === 'string') {
-                                msg = data.errors[0].message;
-                            }
-                        } catch (_) {}
-                        setBtnState('is-err', `${icons.cross} Try again`, msg, 'err');
-                    }
-                } catch {
-                    setBtnState('is-err', `${icons.cross} Try again`, 'Network error. Check your connection and try again.', 'err');
-                } finally {
-                    // Restore default button after 3.5s
-                    setTimeout(() => {
-                        btn.disabled = false;
-                        setBtnState('', 'Say hi 👋');
-                    }, 8000);
-                }
-            });
-        });
         document.addEventListener('DOMContentLoaded', () => {
 
             const link = document.getElementById('hljs-theme');
@@ -598,115 +534,6 @@ a:hover{ color: var(--link-hover); }
                 window.addEventListener('resize', () => moveThumb(seg.querySelector('.seg-btn.is-active') || btns[0]));
             }
         });
-
-        (function() {
-            if (window.__navInit) return;
-            window.__navInit = true;
-
-            var body = document.body;
-            var toggle = document.getElementById('navToggle');
-            var nav = document.getElementById('primaryNav');
-            var overlay = document.getElementById('navOverlay');
-            var closeBtn = document.getElementById('navClose');
-
-            function setNavOpen(open) {
-                body.classList.toggle('nav-open', open);
-                if (toggle) toggle.setAttribute('aria-expanded', String(open));
-                if (overlay) overlay.hidden = !open;
-            }
-
-            if (toggle) {
-                toggle.addEventListener('click', function() {
-                    setNavOpen(!body.classList.contains('nav-open'));
-                });
-            }
-            if (overlay) {
-                overlay.addEventListener('click', function() {
-                    setNavOpen(false);
-                });
-            }
-            if (closeBtn) {
-                closeBtn.addEventListener('click', function() {
-                    setNavOpen(false);
-                });
-            }
-            if (nav) {
-                nav.addEventListener('click', function(e) {
-                    if (e && e.target && e.target.closest && e.target.closest('a')) {
-                        setNavOpen(false);
-                    }
-                });
-            }
-            document.addEventListener('keydown', function(e) {
-                if (e.key === 'Escape') setNavOpen(false);
-            });
-        })();
-        /* === Featured image rotator === */
-        (() => {
-            const wrap = document.querySelector('.project-xl .container-canva');
-            if (!wrap) return;
-
-            const track = wrap.querySelector('#card .slides');
-            const slides = Array.from(track ? track.children : []);
-            const dots = wrap.querySelector('.carousel-ui .dots');
-            const carEl = wrap.querySelector('#card .carousel');
-            if (!track || slides.length < 2 || !dots || !carEl) return;
-
-            const intervalMs = Number(carEl.getAttribute('data-auto')) || 3000;
-
-            // sukurti dots
-            slides.forEach((_, idx) => {
-                const b = document.createElement('button');
-                b.type = 'button';
-                b.setAttribute('aria-label', `Go to slide ${idx+1}`);
-                b.addEventListener('click', () => go(idx, true));
-                dots.appendChild(b);
-            });
-
-            let i = 0,
-                timer = null;
-            const update = () => {
-                track.style.transform = `translateX(-${i * 100}%)`;
-                dots.querySelectorAll('button').forEach((b, idx) =>
-                    b.setAttribute('aria-current', String(idx === i))
-                );
-            };
-            const go = (to, user = false) => {
-                i = (to + slides.length) % slides.length;
-                update();
-                if (user) restart();
-            };
-            const nextSlide = () => go(i + 1);
-
-            const start = () => {
-                if (!timer) timer = setInterval(nextSlide, intervalMs);
-            };
-            const stop = () => {
-                if (timer) {
-                    clearInterval(timer);
-                    timer = null;
-                }
-            };
-            const restart = () => {
-                stop();
-                start();
-            };
-
-            // pauzė ant hover
-            wrap.addEventListener('mouseenter', stop);
-            wrap.addEventListener('mouseleave', start);
-
-            // start tik kai matoma
-            const io = new IntersectionObserver(([e]) => {
-                e.isIntersecting ? start() : stop();
-            }, {
-                threshold: 0.2
-            });
-            io.observe(wrap);
-
-            // init
-            update();
-        })();
     </script>
 </body>
 

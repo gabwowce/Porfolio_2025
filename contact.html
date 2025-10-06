@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Contact – Gabrielė</title>
     <link rel="preload" href="fonts/clash/ClashGrotesk-Variable.woff2" as="font" type="font/woff2" crossorigin>
+    <script src="js/script.js" defer></script>
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/about.css" />
     <link rel="stylesheet" href="css/aside.css" />
@@ -98,23 +99,23 @@
     </header>
 
     <!-- HERO -->
-    <section class="card-hero hero" aria-labelledby="contact-hero-title">
+    <section class="card-hero hero u-stagger" aria-labelledby="contact-hero-title">
         <div class="container hero-grid">
             <div class="hero-copy">
-                <h1 id="contact-hero-title" class="display-l">CONTACT<br><span style="font-weight:300">ME</span></h1>
+                <h1 id="contact-hero-title" class="display-l u-reveal">CONTACT<br><span style="font-weight:300">ME</span></h1>
 
             </div>
-            <figure class="hero-portrait">
+            <figure class="hero-portrait u-reveal">
                 <img src="img/avatar-waving4.webp" alt="Gabrielė waving – creative designer" width="360" height="500" loading="eager" decoding="sync" fetchpriority="high">
             </figure>
         </div>
     </section>
 
-    <main class="content container">
+    <main class="content container u-stagger">
         <section class="contact" id="contact">
-            <div class="contact-grid">
+            <div class="contact-grid u-stagger">
                 <!-- Left: direct contacts -->
-                <article class="card contact-info">
+                <article class="card contact-info u-reveal">
 
                     <h2 class="section-title">
                         <span class="about-ico" aria-hidden="true">
@@ -146,7 +147,7 @@
                 </article>
 
                 <!-- Right: form -->
-                <article class="card">
+                <article class="card u-reveal">
                     <h2 class="section-title">
                         <span class="about-ico" aria-hidden="true">
       <!-- chat bubble -->
@@ -183,7 +184,7 @@
         </section>
 
         <!-- ASIDE (only here, not in header) -->
-        <aside aria-label="Quick info" class="sidebar">
+        <aside aria-label="Quick info" class="sidebar u-reveal">
             <div class="card card--soft profile profile--soft">
                 <div class="avatar-neo-halo">
                     <img class="avatar-neo" src="img/avatar-profile.webp" alt="Gabrielė – profile photo" width="72" height="72" loading="lazy" decoding="async" fetchpriority="low">
@@ -346,250 +347,6 @@
                 });
             });
         });
-        document.addEventListener('DOMContentLoaded', () => {
-
-
-            const root = document.documentElement;
-            const menu = document.getElementById('themeMenu');
-            const btn = document.getElementById('themeBtn');
-            const list = menu.querySelector('.theme-list');
-            const items = Array.from(list.querySelectorAll('[data-theme]'));
-
-            // apply saved theme
-            const saved = localStorage.getItem('theme') || 'cream';
-            applyTheme(saved);
-
-            // open/close
-            const setOpen = (open) => {
-                menu.setAttribute('aria-expanded', String(open));
-                btn.setAttribute('aria-expanded', String(open));
-            };
-            btn.addEventListener('click', () => setOpen(menu.getAttribute('aria-expanded') !== 'true'));
-
-            // choose theme
-            items.forEach(el => {
-                el.addEventListener('click', () => {
-                    const t = el.dataset.theme;
-                    applyTheme(t);
-                    setOpen(false);
-                    btn.focus();
-                });
-            });
-
-            // a11y: esc / outside click
-            document.addEventListener('keydown', (e) => {
-                if (e.key === 'Escape') setOpen(false);
-            });
-            document.addEventListener('click', (e) => {
-                if (!menu.contains(e.target)) setOpen(false);
-            });
-
-            function applyTheme(theme) {
-                root.setAttribute('data-theme', theme);
-                localStorage.setItem('theme', theme);
-                // update current state
-                items.forEach(i => i.setAttribute('aria-current', i.dataset.theme === theme ? 'true' : 'false'));
-                // recolor header swatch
-                // (nebūtina: rely on CSS var)
-            }
-
-
-            /* Header blur tik kai scroll > 8px */
-            const setScrolled = () => {
-                document.documentElement.classList.toggle('scrolled', window.scrollY > 8);
-            };
-            setScrolled();
-            window.addEventListener('scroll', setScrolled, {
-                passive: true
-            });
-
-            /* Process rail – tik jei yra DOM'e */
-            const rail = document.getElementById('processRail');
-            if (rail) {
-                const updateProgress = () => {
-                    const rect = rail.getBoundingClientRect();
-                    const vh = window.innerHeight || document.documentElement.clientHeight;
-                    const visible = Math.max(0, Math.min(rect.bottom, vh) - Math.max(rect.top, 0));
-                    const ratio = Math.max(0, Math.min(1, visible / Math.min(rect.height, vh)));
-                    rail.style.setProperty('--progress', ratio.toFixed(3));
-                };
-                updateProgress();
-                window.addEventListener('scroll', updateProgress, {
-                    passive: true
-                });
-                window.addEventListener('resize', updateProgress);
-
-                const obs = new IntersectionObserver((entries) => {
-                    entries.forEach(e => {
-                        if (e.isIntersecting) {
-                            rail.style.setProperty('--pct', '100');
-                        }
-                    });
-                }, {
-                    threshold: 0.2
-                });
-                obs.observe(rail);
-            }
-
-            /* Segmented filtras (jei naudojamas) */
-            const seg = document.querySelector('.segmented');
-            if (seg) {
-                const btns = Array.from(seg.querySelectorAll('.seg-btn'));
-                let thumb = seg.querySelector('.seg-thumb');
-                if (!thumb) {
-                    thumb = document.createElement('span');
-                    thumb.className = 'seg-thumb';
-                    seg.prepend(thumb);
-                }
-
-                const moveThumb = (btn) => {
-                    const x = btn.offsetLeft;
-                    const w = btn.offsetWidth;
-                    thumb.style.width = w + 'px';
-                    thumb.style.transform = `translateX(${x}px)`;
-                };
-
-                const setActive = (btn) => {
-                    btns.forEach(b => {
-                        const active = b === btn;
-                        b.classList.toggle('is-active', active);
-                        b.setAttribute('aria-selected', String(active));
-                    });
-                    moveThumb(btn);
-                };
-
-                // init
-                const current = seg.querySelector('.seg-btn.is-active') || btns[0];
-                if (current) setActive(current);
-
-                // click
-                seg.addEventListener('click', (e) => {
-                    const btn = e.target.closest('.seg-btn');
-                    if (!btn) return;
-                    setActive(btn);
-
-                    const f = btn.dataset.filter; // 'all' | 'web' | 'mobile' | 'desktop'
-                    document.querySelectorAll('.featured-grid .project').forEach(card => {
-                        const cats = (card.dataset.cat || '').split(/\s+/); // palaiko 'web desktop'
-                        const show = (f === 'all') || cats.includes(f);
-                        card.classList.toggle('is-hidden', !show);
-                    });
-                });
-
-
-                // responsive – perbraižyti poziciją
-                window.addEventListener('resize', () => moveThumb(seg.querySelector('.seg-btn.is-active') || btns[0]));
-            }
-        });
-
-        (function() {
-            if (window.__navInit) return;
-            window.__navInit = true;
-
-            var body = document.body;
-            var toggle = document.getElementById('navToggle');
-            var nav = document.getElementById('primaryNav');
-            var overlay = document.getElementById('navOverlay');
-            var closeBtn = document.getElementById('navClose');
-
-            function setNavOpen(open) {
-                body.classList.toggle('nav-open', open);
-                if (toggle) toggle.setAttribute('aria-expanded', String(open));
-                if (overlay) overlay.hidden = !open;
-            }
-
-            if (toggle) {
-                toggle.addEventListener('click', function() {
-                    setNavOpen(!body.classList.contains('nav-open'));
-                });
-            }
-            if (overlay) {
-                overlay.addEventListener('click', function() {
-                    setNavOpen(false);
-                });
-            }
-            if (closeBtn) {
-                closeBtn.addEventListener('click', function() {
-                    setNavOpen(false);
-                });
-            }
-            if (nav) {
-                nav.addEventListener('click', function(e) {
-                    if (e && e.target && e.target.closest && e.target.closest('a')) {
-                        setNavOpen(false);
-                    }
-                });
-            }
-            document.addEventListener('keydown', function(e) {
-                if (e.key === 'Escape') setNavOpen(false);
-            });
-        })();
-        /* === Featured image rotator === */
-        (() => {
-            const wrap = document.querySelector('.project-xl .container-canva');
-            if (!wrap) return;
-
-            const track = wrap.querySelector('#card .slides');
-            const slides = Array.from(track ? track.children : []);
-            const dots = wrap.querySelector('.carousel-ui .dots');
-            const carEl = wrap.querySelector('#card .carousel');
-            if (!track || slides.length < 2 || !dots || !carEl) return;
-
-            const intervalMs = Number(carEl.getAttribute('data-auto')) || 3000;
-
-            // sukurti dots
-            slides.forEach((_, idx) => {
-                const b = document.createElement('button');
-                b.type = 'button';
-                b.setAttribute('aria-label', `Go to slide ${idx+1}`);
-                b.addEventListener('click', () => go(idx, true));
-                dots.appendChild(b);
-            });
-
-            let i = 0,
-                timer = null;
-            const update = () => {
-                track.style.transform = `translateX(-${i * 100}%)`;
-                dots.querySelectorAll('button').forEach((b, idx) =>
-                    b.setAttribute('aria-current', String(idx === i))
-                );
-            };
-            const go = (to, user = false) => {
-                i = (to + slides.length) % slides.length;
-                update();
-                if (user) restart();
-            };
-            const nextSlide = () => go(i + 1);
-
-            const start = () => {
-                if (!timer) timer = setInterval(nextSlide, intervalMs);
-            };
-            const stop = () => {
-                if (timer) {
-                    clearInterval(timer);
-                    timer = null;
-                }
-            };
-            const restart = () => {
-                stop();
-                start();
-            };
-
-            // pauzė ant hover
-            wrap.addEventListener('mouseenter', stop);
-            wrap.addEventListener('mouseleave', start);
-
-            // start tik kai matoma
-            const io = new IntersectionObserver(([e]) => {
-                e.isIntersecting ? start() : stop();
-            }, {
-                threshold: 0.2
-            });
-            io.observe(wrap);
-
-            // init
-            update();
-        })();
     </script>
 </body>
 

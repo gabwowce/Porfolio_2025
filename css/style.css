@@ -397,3 +397,116 @@ html.nav-fade {
 .service .btn-pill{
   margin-top:auto; align-self:start;
 }
+
+/* Animacija */
+:root {
+  /* trukmės */
+  --anim-xs: 0.35s;
+  --anim-sm: 0.6s;
+  --anim-md: 0.9s;
+  --anim-lg: 1.4s;
+
+  /* kreivės – viena „brand“ kreivė viskam */
+  --ease-brand: cubic-bezier(0.21, 0.65, 0.22, 0.99);
+
+  /* atstumai */
+  --shift-sm: 8px;
+  --shift-md: 16px;
+  --shift-lg: 58px;
+
+  /* pradiniai blur/kaukės parametrai */
+  --blur: 8px;
+  --clip-radius: 24px;
+}
+
+/* bendra utilitė – viskas pradžioj „nematoma“ */
+.u-reveal {
+  opacity: 0;
+  transform: translateY(var(--shift-lg));
+  transition: opacity var(--anim-lg) var(--ease-brand),
+    transform var(--anim-lg) var(--ease-brand),
+    filter var(--anim-lg) var(--ease-brand),
+    clip-path var(--anim-lg) var(--ease-brand) !important;;
+  will-change: opacity, transform, filter, clip-path;
+}
+.u-reveal.is-inview {
+  opacity: 1;
+  transform: translateY(0);
+  filter: blur(0);
+  /* nepaliekam clip-path čia */
+}
+/* variantai */
+.anim-fade-up {
+  transform: translateY(var(--shift-lg));
+}
+.anim-fade-down {
+  transform: translateY(calc(var(--shift-lg) * -1));
+}
+.anim-fade-left {
+  transform: translateX(var(--shift-lg));
+}
+.anim-fade-right {
+  transform: translateX(calc(var(--shift-lg) * -1));
+}
+.anim-scale-in {
+  transform: scale(0.96);
+}
+.anim-blur-in {
+  filter: blur(var(--blur));
+}
+
+/* clip-reveal su radius */
+.anim-clip-reveal {
+  clip-path: inset(0 0 100% 0 round var(--clip-radius));
+}
+.anim-clip-reveal.is-inview {
+  clip-path: inset(0 round var(--clip-radius));
+}
+
+/* clip-reveal be radius */
+.anim-clip-reveal-no-radius {
+  clip-path: inset(0 0 100% 0);
+}
+.anim-clip-reveal-no-radius.is-inview {
+  clip-path: inset(0);
+}
+/* TRUKMĖS ir DELAY per data-atributus */
+.u-reveal {
+  transition-duration: var(--dur, var(--anim-lg));
+  transition-delay: var(--delay, 0s);
+}
+
+/* STAGGER konteineriams */
+.u-stagger > * {
+  --i: 0;
+}
+.u-stagger.is-inview > * {
+  --delay: calc(var(--stagger, 0.08s) * var(--i));
+}
+.u-stagger.is-inview > *:nth-child(1) {
+  --i: 0;
+}
+.u-stagger.is-inview > *:nth-child(2) {
+  --i: 1;
+}
+.u-stagger.is-inview > *:nth-child(3) {
+  --i: 2;
+}
+.u-stagger.is-inview > *:nth-child(4) {
+  --i: 3;
+}
+.u-stagger.is-inview > *:nth-child(5) {
+  --i: 4;
+}
+/* pridėk daugiau jei reikia */
+
+/* „prefers-reduced-motion“ – pagarba prieinamumui */
+@media (prefers-reduced-motion: reduce) {
+  .u-reveal {
+    transition: none !important;
+    opacity: 1 !important;
+    transform: none !important;
+    filter: none !important;
+    clip-path: none !important;
+  }
+}

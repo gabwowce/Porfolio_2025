@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <title>Gabrielė – Blog</title>
     <link rel="preload" href="fonts/clash/ClashGrotesk-Variable.woff2" as="font" type="font/woff2" crossorigin>
+    <script src="js/script.js" defer></script>
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/about.css" />
     <link rel="stylesheet" href="css/aside.css" />
@@ -101,33 +102,33 @@
     </header>
 
     <!-- HERO -->
-    <section class="card-hero2 hero">
+    <section class="card-hero2 hero u-stagger">
         <div class="container hero-grid" style="min-height: clamp(420px, 72vh, 960px);">
             <div class="hero-copy">
-                <h1 class="display-xl">FRONT END DEV <span style="font-weight:300">&lt;/&gt;DESIGNER</span></h1>
-                <p class="lead">
+                <h1 class="display-xl u-reveal">FRONT END DEV <span style="font-weight:300">&lt;/&gt;DESIGNER</span></h1>
+                <p class="lead u-reveal">
                     Crafting memorable digital experiences through thoughtful design and strategic thinking.
                 </p>
             </div>
-            <figure class="hero-portrait2">
+            <figure class="hero-portrait2 u-reveal">
                 <img src="img/avatar-standing.webp" alt="Gabriele – Creative Designer" width="400" height="900" loading="eager" decoding="sync" fetchpriority="high">
             </figure>
         </div>
     </section>
 
     <main>
-        <section class="about-cards" id="about">
+        <section class="about-cards u-stagger" id="about">
             <div class="container">
-                <header class="about-head">
+                <header class="about-head u-reveal">
                     <h2 class="display-l">MEET ME</h2>
                     <p>Four key things you can expect when working with me.</p>
                 </header>
 
                 <!-- Cards grid -->
-                <div class="about-grid">
+                <div class="about-grid u-stagger">
                     <!-- 1 -->
-                    <article class="card">
-                        <div class="about-ico">
+                    <article class="card u-reveal">
+                        <div class="about-ico ">
                             <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M13 2L3 14h7l-1 8 10-12h-7l1-8z"/></svg>
                         </div>
                         <h3>SPEED & CLARITY</h3>
@@ -135,8 +136,8 @@
                     </article>
 
                     <!-- 2 -->
-                    <article class="card">
-                        <div class="about-ico">
+                    <article class="card u-reveal">
+                        <div class="about-ico ">
                             <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 2h10a2 2 0 0 1 2 2v16a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2zM12 21a1.2 1.2 0 1 0 0-2.4 1.2 1.2 0 0 0 0 2.4zM6 5h12v12H6z"/></svg>
                         </div>
                         <h3>REACT & REACT NATIVE</h3>
@@ -144,8 +145,8 @@
                     </article>
 
                     <!-- 3 -->
-                    <article class="card">
-                        <div class="about-ico">
+                    <article class="card u-reveal">
+                        <div class="about-ico ">
                             <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 3h8v8H3V3zm10 0h8v8h-8V3zM3 13h8v8H3v-8zm10 0h8v8h-8v-8z"/></svg>
                         </div>
                         <h3>UI/UX & FIGMA</h3>
@@ -153,8 +154,8 @@
                     </article>
 
                     <!-- 4 -->
-                    <article class="card">
-                        <div class="about-ico">
+                    <article class="card u-reveal">
+                        <div class="about-ico ">
                             <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 4h18v12H3zM8 20h8v-2H8z"/></svg>
                         </div>
                         <h3>WORDPRESS</h3>
@@ -163,15 +164,17 @@
                 </div>
 
                 <!-- Badges -->
-                <div class="about-expect">
-                    <h3>What you can expect from me</h3>
-                    <ul class="expect-grid">
-                        <li class="expect-item"><i></i>Clear project scope definition</li>
-                        <li class="expect-item"><i></i>Regular communication and progress updates</li>
-                        <li class="expect-item"><i></i>Component-based system solutions</li>
-                        <li class="expect-item"><i></i>Accessibility and SEO standards</li>
-                        <li class="expect-item"><i></i>Performance optimization</li>
-                        <li class="expect-item"><i></i>Thorough documentation</li>
+                <div class="about-expect u-stagger">
+                    <h3 class="u-reveal">What you can expect from me</h3>
+                    <ul class="expect-grid  u-stagger">
+                        <li class="expect-item u-reveal"><i></i>Clear project scope definition</li>
+                        <li class="expect-item u-reveal"><i></i>Regular communication and progress updates</li>
+                        <li class="expect-item u-reveal"><i></i>Component-based system solutions</li>
+                        <li class="expect-item u-reveal"><i></i>Accessibility and SEO standards</li>
+                        <li class="expect-item u-reveal"><i></i>CPerformance optimization</li>
+                        <li class="expect-item u-reveal"><i></i>Thorough documentation</li>
+
+
                     </ul>
                 </div>
             </div>
@@ -179,10 +182,10 @@
 
         <section class="articles">
             <!-- FEATURED PROJECTS -->
-            <section class="container">
-                <h2 class="heading-section display-l">FEATURED PROJECTS</h2>
-                <div class="segmented" role="tablist" aria-label="Project filter">
-                    <span class="seg-thumb" aria-hidden="true"></span>
+            <section class="container u-stagger">
+                <h2 class="heading-section display-l u-reveal">FEATURED PROJECTS</h2>
+                <div class="segmented u-reveal" role="tablist" aria-label="Project filter">
+                    <span class="seg-thumb u-reveal" aria-hidden="true"></span>
                     <button class="seg-btn is-active" data-filter="all" role="tab" aria-selected="true">All</button>
                     <button class="seg-btn" data-filter="web" role="tab" aria-selected="false">Web</button>
                     <button class="seg-btn" data-filter="mobile" role="tab" aria-selected="false">Mobile</button>
@@ -220,22 +223,22 @@
                                 <div class="tracker tr-25"></div>
                                 <div id="card">
                                     <div class="carousel" data-auto="3000">
-                                        <div class="slides">
-                                            <img src="img/Group 189.webp" alt="Screen 1" width="1248" height="765" loading="eager" decoding="sync" fetchpriority="high">
-                                            <img src="img/Group 208.webp" alt="Screen 2" width="1248" height="765" loading="lazy" decoding="async" fetchpriority="low">
-                                            <img src="img/Group 207.webp" alt="Screen 3" width="1248" height="765" loading="lazy" decoding="async" fetchpriority="low">
+                                        <div class="slides u-stagger">
+                                            <img class="u-reveal" src="img/Group 189.webp" alt="Screen 1" width="1248" height="765" loading="eager" decoding="sync" fetchpriority="high">
+                                            <img class="u-reveal" src="img/Group 208.webp" alt="Screen 2" width="1248" height="765" loading="lazy" decoding="async" fetchpriority="low">
+                                            <img class="u-reveal" src="img/Group 207.webp" alt="Screen 3" width="1248" height="765" loading="lazy" decoding="async" fetchpriority="low">
                                         </div>
                                     </div>
 
                                 </div>
                             </div>
-                            <div class="carousel-ui">
-                                <div class="dots" aria-label="Slides"></div>
+                            <div class="carousel-ui u-stagger">
+                                <div class="dots u-reveal" aria-label="Slides"></div>
                             </div>
                         </div>
 
-                        <div class="meta">
-                            <h3 class="meta-title">
+                        <div class="meta u-stagger">
+                            <h3 class="meta-title u-reveal">
                                 <a class="meta-title-link" href="portfolio.html#carestudio" aria-label="Open CareStudio details">
     CareStudio — WordPress Block Theme
     <svg class="meta-title-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true">
@@ -243,7 +246,7 @@
     </svg>
   </a>
                             </h3>
-                            <p class="sub">Web · 2025</p>
+                            <p class="sub u-reveal">Web · 2025</p>
 
 
                         </div>
@@ -253,16 +256,16 @@
 
 
 
-                    <article class="project" data-cat="web">
-                        <div class="thumb"><img src="img/Group 200.webp" alt="TechFlow Mobile App" width="490" height="385" loading="lazy" decoding="async" fetchpriority="low"></div>
-                        <div class="meta">
-                            <h3 class="meta-title">
+                    <article class="project u-stagger" data-cat="web">
+                        <div class="thumb u-reveal"><img src="img/Group 200.webp" alt="TechFlow Mobile App" width="490" height="385" loading="lazy" decoding="async" fetchpriority="low"></div>
+                        <div class="meta u-stagger">
+                            <h3 class="meta-title u-reveal">
                                 <a class="meta-title-link" href="portfolio.html#autorent">
     AutoRent — Car Rental Front-end
     <svg class="meta-title-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M7 17L17 7M9 7h8v8" stroke-linecap="round" stroke-linejoin="round"/></svg>
   </a>
                             </h3>
-                            <p class="sub">
+                            <p class="sub u-reveal">
                                 Web · 2025
 
                             </p>
@@ -271,17 +274,17 @@
 
 
                     </article>
-                    <article class="project" data-cat="mobile">
-                        <div class="thumb"><img src="img/123.webp" alt="TechFlow Mobile App" width="490" height="385" loading="lazy" decoding="async" fetchpriority="low"></div>
-                        <div class="meta">
-                            <h3 class="meta-title">
+                    <article class="project u-stagger" data-cat="mobile">
+                        <div class="thumb u-reveal"><img src="img/123.webp" alt="TechFlow Mobile App" width="490" height="385" loading="lazy" decoding="async" fetchpriority="low"></div>
+                        <div class="meta u-stagger">
+                            <h3 class="meta-title u-reveal">
                                 <a class="meta-title-link" href="portfolio.html#travel-app">
     Travel App — React Native (Expo)
     <svg class="meta-title-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M7 17L17 7M9 7h8v8" stroke-linecap="round" stroke-linejoin="round"/></svg>
   </a>
                             </h3>
 
-                            <p class="sub">
+                            <p class="sub u-reveal">
                                 Mobile · 2025
                             </p>
 
@@ -289,17 +292,17 @@
 
                     </article>
 
-                    <article class="project" data-cat="web">
-                        <div class="thumb"><img src="img/Group 190.webp" alt="Startup Brand Identity" width="490" height="385" loading="lazy" decoding="async" fetchpriority="low"></div>
-                        <div class="meta">
-                            <h3 class="meta-title">
+                    <article class="project u-stagger" data-cat="web">
+                        <div class="thumb u-reveal"><img src="img/Group 190.webp" alt="Startup Brand Identity" width="490" height="385" loading="lazy" decoding="async" fetchpriority="low"></div>
+                        <div class="meta u-stagger">
+                            <h3 class="meta-title u-reveal">
                                 <a class="meta-title-link" href="portfolio.html#kibinai">
     Kibinai Vilnius — Headless React + WordPress
     <svg class="meta-title-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M7 17L17 7M9 7h8v8" stroke-linecap="round" stroke-linejoin="round"/></svg>
   </a>
                             </h3>
 
-                            <p class="sub">
+                            <p class="sub u-reveal">
                                 Web · 2025
                             </p>
 
@@ -307,51 +310,51 @@
 
                     </article>
 
-                    <article class="project" data-cat="mobile">
-                        <div class="thumb"><img src="img/124.webp" alt="SaaS Landing Redesign" width="490" height="385" loading="lazy" decoding="async" fetchpriority="low"></div>
-                        <div class="meta">
-                            <h3 class="meta-title">
+                    <article class="project u-stagger" data-cat="mobile">
+                        <div class="thumb u-reveal"><img src="img/124.webp" alt="SaaS Landing Redesign" width="490" height="385" loading="lazy" decoding="async" fetchpriority="low"></div>
+                        <div class="meta u-stagger">
+                            <h3 class="meta-title u-reveal">
                                 <a class="meta-title-link" href="portfolio.html#convertclimb">
     ConvertClimb — React Native (Expo)
     <svg class="meta-title-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M7 17L17 7M9 7h8v8" stroke-linecap="round" stroke-linejoin="round"/></svg>
   </a>
                             </h3>
 
-                            <p class="sub">
+                            <p class="sub u-reveal">
                                 Mobile · 2025
                             </p>
 
                         </div>
 
                     </article>
-                    <article class="project" data-cat="web">
-                        <div class="thumb"><img src="img/Group 202.webp" alt="TechFlow Mobile App" width="490" height="385" loading="lazy" decoding="async" fetchpriority="low"></div>
-                        <div class="meta">
-                            <h3 class="meta-title">
+                    <article class="project u-stagger" data-cat="web">
+                        <div class="thumb u-reveal"><img src="img/Group 202.webp" alt="TechFlow Mobile App" width="490" height="385" loading="lazy" decoding="async" fetchpriority="low"></div>
+                        <div class="meta u-stagger">
+                            <h3 class="meta-title u-reveal">
                                 <a class="meta-title-link" href="portfolio.html#library">
     Library Management — React + ASP.NET Core
     <svg class="meta-title-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M7 17L17 7M9 7h8v8" stroke-linecap="round" stroke-linejoin="round"/></svg>
   </a>
                             </h3>
 
-                            <p class="sub">
+                            <p class="sub u-reveal">
                                 Web · 2024
                             </p>
 
                         </div>
 
                     </article>
-                    <article class="project" data-cat="web">
-                        <div class="thumb"><img src="img/Group 203.webp" alt="TechFlow Mobile App" width="490" height="385" loading="lazy" decoding="async" fetchpriority="low"></div>
-                        <div class="meta">
-                            <h3 class="meta-title">
+                    <article class="project u-stagger" data-cat="web">
+                        <div class="thumb u-reveal"><img src="img/Group 203.webp" alt="TechFlow Mobile App" width="490" height="385" loading="lazy" decoding="async" fetchpriority="low"></div>
+                        <div class="meta u-stagger">
+                            <h3 class="meta-title u-reveal">
                                 <a class="meta-title-link" href="portfolio.html#realestate">
     RealEstate — Front-end Listings
     <svg class="meta-title-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M7 17L17 7M9 7h8v8" stroke-linecap="round" stroke-linejoin="round"/></svg>
   </a>
                             </h3>
 
-                            <p class="sub">
+                            <p class="sub u-reveal">
                                 Web · 2024
                             </p>
 
@@ -359,17 +362,17 @@
 
                     </article>
 
-                    <article class="project" data-cat="web">
-                        <div class="thumb"><img src="img/Group 201.webp" alt="TechFlow Mobile App" width="490" height="385" loading="lazy" decoding="async" fetchpriority="low"></div>
-                        <div class="meta">
-                            <h3 class="meta-title">
+                    <article class="project u-stagger" data-cat="web">
+                        <div class="thumb u-reveal"><img src="img/Group 201.webp" alt="TechFlow Mobile App" width="490" height="385" loading="lazy" decoding="async" fetchpriority="low"></div>
+                        <div class="meta u-stagger">
+                            <h3 class="meta-title u-reveal">
                                 <a class="meta-title-link" href="portfolio.html#personal-portfolio">
     Personal Portfolio — UI/UX + Front-end
     <svg class="meta-title-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M7 17L17 7M9 7h8v8" stroke-linecap="round" stroke-linejoin="round"/></svg>
   </a>
                             </h3>
 
-                            <p class="sub">
+                            <p class="sub u-reveal">
                                 Web · 2024
                             </p>
 
@@ -381,17 +384,17 @@
 
 
 
-                    <article class="project" data-cat="desktop">
-                        <div class="thumb"><img src="img/Group 206.webp" alt="SaaS Landing Redesign" width="490" height="385" loading="lazy" decoding="async" fetchpriority="low"></div>
-                        <div class="meta">
-                            <h3 class="meta-title">
+                    <article class="project u-stagger" data-cat="desktop">
+                        <div class="thumb u-reveal"><img src="img/Group 206.webp" alt="SaaS Landing Redesign" width="490" height="385" loading="lazy" decoding="async" fetchpriority="low"></div>
+                        <div class="meta u-stagger">
+                            <h3 class="meta-title u-reveal">
                                 <a class="meta-title-link" href="portfolio.html#estate-clicker">
     Estate Clicker — Python (Pygame)
     <svg class="meta-title-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M7 17L17 7M9 7h8v8" stroke-linecap="round" stroke-linejoin="round"/></svg>
   </a>
                             </h3>
 
-                            <p class="sub">
+                            <p class="sub u-reveal">
                                 Desktop · 2024
                             </p>
 
@@ -404,23 +407,23 @@
             </section>
         </section>
         <section id="services" class="services container">
-            <header class="services-head">
-                <h2 class="display-l">SERVICES</h2>
-                <p class="muted">Three main service areas — I can start from scratch or join your existing project.</p>
+            <header class="services-head u-stagger">
+                <h2 class="display-l u-reveal">SERVICES</h2>
+                <p class="muted u-reveal">Three main service areas — I can start from scratch or join your existing project.</p>
             </header>
 
             <div class="services-grid">
                 <!-- 1) WordPress -->
-                <article class="service card">
-                    <div class="about-ico" aria-hidden="true">
+                <article class="service card u-stagger">
+                    <div class="about-ico u-reveal" aria-hidden="true">
                         <!-- WP icon -->
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><circle cx="12" cy="12" r="9"/><path d="M4 12h16M8 4.5l6.5 15M15.5 4.5L9 19.5"/></svg>
                     </div>
-                    <h3 class="svc-title">WordPress websites & customization</h3>
-                    <p class="svc-sub muted">Theme setup and customization, design updates, creating a new block/FSE theme and ongoing improvements.</p>
+                    <h3 class="svc-title u-reveal">WordPress websites & customization</h3>
+                    <p class="svc-sub muted u-reveal">Theme setup and customization, design updates, creating a new block/FSE theme and ongoing improvements.</p>
 
 
-                    <ul class="tags tags--pill">
+                    <ul class="tags tags--pill u-reveal">
                         <li>Theme adaptation</li>
                         <li>Custom blocks / patterns</li>
                         <li>SEO & speed optimization</li>
@@ -429,7 +432,7 @@
 
                     </ul>
 
-                    <div class="svc-process">
+                    <div class="svc-process u-reveal">
                         <span class="chip">1. Analysis</span>
                         <span class="chip">2. Design</span>
                         <span class="chip">3. Implementation</span>
@@ -437,21 +440,21 @@
                         <span class="chip">5. Launch</span>
                     </div>
 
-                    <a href="services.html#contact-project" class="btn-pill">Start project →</a>
+                    <a href="services.html#contact-project" class="btn-pill u-reveal">Start project →</a>
 
                 </article>
 
                 <!-- 2) React / RN / Figma -->
-                <article class="service card">
-                    <div class="about-ico" aria-hidden="true">
+                <article class="service card u-stagger">
+                    <div class="about-ico u-reveal" aria-hidden="true">
                         <!-- React icon -->
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><circle cx="12" cy="12" r="2"/><ellipse cx="12" cy="12" rx="9" ry="4.5"/><ellipse cx="12" cy="12" rx="9" ry="4.5" transform="rotate(60 12 12)"/><ellipse cx="12" cy="12" rx="9" ry="4.5" transform="rotate(-60 12 12)"/></svg>
                     </div>
-                    <h3 class="svc-title">React / React Native + Figma</h3>
-                    <p class="svc-sub muted">Build new apps or contribute to existing ones: design, components, API integration, optimization, and new feature development.</p>
+                    <h3 class="svc-title u-reveal">React / React Native + Figma</h3>
+                    <p class="svc-sub muted u-reveal">Build new apps or contribute to existing ones: design, components, API integration, optimization, and new feature development.</p>
 
 
-                    <ul class="tags tags--pill">
+                    <ul class="tags tags--pill u-reveal">
                         <li>Component libraries</li>
                         <li>API / data integration</li>
                         <li>Animations & forms</li>
@@ -460,7 +463,7 @@
 
                     </ul>
 
-                    <div class="svc-process">
+                    <div class="svc-process u-reveal">
                         <span class="chip">1. Planning</span>
                         <span class="chip">2. Prototyping</span>
                         <span class="chip">3. Development</span>
@@ -468,21 +471,21 @@
                         <span class="chip">5. Handoff</span>
                     </div>
 
-                    <a href="services.html#contact-project" class="btn-pill">Start project →</a>
+                    <a href="services.html#contact-project" class="btn-pill u-reveal">Start project →</a>
 
 
                 </article>
 
                 <!-- 3) UI/UX -->
-                <article class="service card">
-                    <div class="about-ico" aria-hidden="true">
+                <article class="service card u-stagger">
+                    <div class="about-ico u-reveal" aria-hidden="true">
                         <!-- UI frame icon -->
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><rect x="4" y="4" width="16" height="16" rx="3"/><path d="M9 4v16M4 9h16"/></svg>
                     </div>
-                    <h3 class="svc-title">UI/UX design & prototyping</h3>
-                    <p class="svc-sub muted">Quick prototypes to test ideas, clear user flows, design systems, and smooth handoff to developers.</p>
+                    <h3 class="svc-title u-reveal">UI/UX design & prototyping</h3>
+                    <p class="svc-sub muted u-reveal">Quick prototypes to test ideas, clear user flows, design systems, and smooth handoff to developers.</p>
 
-                    <ul class="tags tags--pill">
+                    <ul class="tags tags--pill u-reveal">
                         <li>Wireframes</li>
                         <li>UI mockups</li>
                         <li>Design system</li>
@@ -490,7 +493,7 @@
                     </ul>
 
 
-                    <div class="svc-process">
+                    <div class="svc-process u-reveal">
                         <span class="chip">1. Discovery</span>
                         <span class="chip">2. Wireframes</span>
                         <span class="chip">3. UI design</span>
@@ -498,7 +501,7 @@
                         <span class="chip">5. Handoff</span>
                     </div>
 
-                    <a href="services.html#contact-project" class="btn-pill">Start project →</a>
+                    <a href="services.html#contact-project" class="btn-pill u-reveal">Start project →</a>
 
 
                 </article>
@@ -507,154 +510,162 @@
 
 
         <section class="stack" id="stack">
-            <div class="container">
-                <header class="stack-head">
-                    <h2 class="display-l">TOOLS, TECHNOLOGIES & CERTIFICATIONS</h2>
-                    <p>I use modern tools and keep learning to build clean, fast and user-friendly solutions.</p>
+            <div class="container u-stagger">
+                <header class="stack-head u-stagger">
+                    <h2 class="display-l u-reveal">TOOLS, TECHNOLOGIES & CERTIFICATIONS</h2>
+                    <p class="u-reveal">I use modern tools and keep learning to build clean, fast and user-friendly solutions.</p>
                 </header>
 
                 <!-- Tools -->
-                <h3 class="stack-sub">Tools & Technologies</h3>
-                <div class="stack-grid">
+                <h3 class="stack-sub u-reveal">Tools & Technologies</h3>
+                <div class="stack-grid u-stagger u-reveal">
                     <!-- Web / FE -->
-                    <article class="card tool-card">
-                        <div class="tool-ico"><img src="img/tools/html.png" alt="HTML"></div>
-                        <h4>HTML5</h4><span class="sub">Semantics / A11y</span></article>
-                    <article class="card tool-card">
-                        <div class="tool-ico"><img src="img/tools/css.png" alt="CSS"></div>
-                        <h4>CSS3</h4><span class="sub">Grid / Flex / Animations</span></article>
-                    <article class="card tool-card">
-                        <div class="tool-ico"><img src="img/tools/icons8-tailwind-css-48.png" alt="Tailwind CSS"></div>
-                        <h4>Tailwind CSS</h4><span class="sub">Utility-first</span></article>
-                    <article class="card tool-card">
-                        <div class="tool-ico"><img src="img/tools/icons8-sass-48.png" alt="SCSS"></div>
-                        <h4>SCSS/SASS</h4><span class="sub">Modules</span></article>
-                    <article class="card tool-card">
-                        <div class="tool-ico"><img src="img/tools/js.png" alt="JavaScript"></div>
-                        <h4>JavaScript</h4><span class="sub">ESNext</span></article>
-                    <article class="card tool-card">
-                        <div class="tool-ico"><img src="img/tools/icons8-typescript-48.png" alt="TypeScript"></div>
-                        <h4>TypeScript</h4><span class="sub">Strong typing</span></article>
-                    <article class="card tool-card">
-                        <div class="tool-ico"><img src="img/tools/react.png" alt="React"></div>
-                        <h4>React</h4><span class="sub">Hooks / CSR</span></article>
-                    <article class="card tool-card">
-                        <div class="tool-ico"><img src="img/tools/icons8-next.js-48.png" alt="Next.js"></div>
-                        <h4>Next.js</h4><span class="sub">App Router / SSR</span></article>
-                    <article class="card tool-card">
-                        <div class="tool-ico"><img src="img/tools/icons8-redux-48.png" alt="Redux Toolkit"></div>
-                        <h4>Redux Toolkit</h4><span class="sub">RTK Query</span></article>
-                    <article class="card tool-card">
-                        <div class="tool-ico"><img src="img/tools/icons8-react-native-64.png" alt="React Native"></div>
-                        <h4>React Native</h4><span class="sub">Expo / RN Maps / Lottie</span></article>
-                    <article class="card tool-card">
-                        <div class="tool-ico"><img src="img/tools/icons8-expo-50.png" alt="Expo"></div>
-                        <h4>Expo</h4><span class="sub">Builds / Notifications</span></article>
+                    <article class="card tool-card u-stagger u-reveal">
+                        <div class="tool-ico u-reveal">
+                            <img src="img/tools/html.png" alt="HTML">
+                        </div>
+                        <h4 class="u-reveal">
+                            HTML5
+                        </h4>
+                        <span class="sub u-reveal">
+                            Semantics / A11y
+                        </span>
+                    </article>
+                    <article class="card tool-card u-stagger u-reveal">
+                        <div class="tool-ico u-reveal"><img src="img/tools/css.png" alt="CSS"></div>
+                        <h4 class="u-reveal">CSS3</h4><span class="sub u-reveal">Grid / Flex / Animations</span></article>
+                    <article class="card tool-card u-stagger u-reveal">
+                        <div class="tool-ico u-reveal"><img src="img/tools/icons8-tailwind-css-48.png" alt="Tailwind CSS"></div>
+                        <h4 class="u-reveal">Tailwind CSS</h4><span class="sub u-reveal">Utility-first</span></article>
+                    <article class="card tool-card u-stagger u-reveal">
+                        <div class="tool-ico u-reveal"><img src="img/tools/icons8-sass-48.png" alt="SCSS"></div>
+                        <h4 class="u-reveal">SCSS/SASS</h4><span class="sub u-reveal">Modules</span></article>
+                    <article class="card tool-card u-stagger u-reveal">
+                        <div class="tool-ico u-reveal"><img src="img/tools/js.png" alt="JavaScript"></div>
+                        <h4 class="u-reveal">JavaScript</h4><span class="sub u-reveal">ESNext</span></article>
+                    <article class="card tool-card u-stagger u-reveal">
+                        <div class="tool-ico u-reveal"><img src="img/tools/icons8-typescript-48.png" alt="TypeScript"></div>
+                        <h4 class="u-reveal">TypeScript</h4><span class="sub u-reveal">Strong typing</span></article>
+                    <article class="card tool-card u-stagger u-reveal">
+                        <div class="tool-ico u-reveal"><img src="img/tools/react.png" alt="React"></div>
+                        <h4 class="u-reveal">React</h4><span class="sub u-reveal">Hooks / CSR</span></article>
+                    <article class="card tool-card u-stagger u-reveal">
+                        <div class="tool-ico u-reveal"><img src="img/tools/icons8-next.js-48.png" alt="Next.js"></div>
+                        <h4 class="u-reveal">Next.js</h4><span class="sub u-reveal">App Router / SSR</span></article>
+                    <article class="card tool-card u-stagger u-reveal">
+                        <div class="tool-ico u-reveal"><img src="img/tools/icons8-redux-48.png" alt="Redux Toolkit"></div>
+                        <h4 class="u-reveal">Redux Toolkit</h4><span class="sub u-reveal">RTK Query</span></article>
+                    <article class="card tool-card u-stagger u-reveal">
+                        <div class="tool-ico u-reveal"><img src="img/tools/icons8-react-native-64.png" alt="React Native"></div>
+                        <h4 class="u-reveal">React Native</h4><span class="sub u-reveal">Expo / RN Maps / Lottie</span></article>
+                    <article class="card tool-card u-stagger u-reveal">
+                        <div class="tool-ico u-reveal"><img src="img/tools/icons8-expo-50.png" alt="Expo"></div>
+                        <h4 class="u-reveal">Expo</h4><span class="sub u-reveal">Builds / Notifications</span></article>
 
                     <!-- WP / CMS -->
-                    <article class="card tool-card">
-                        <div class="tool-ico"><img src="img/tools/icons8-wordpress-48.png" alt="WordPress"></div>
-                        <h4>WordPress</h4><span class="sub">FSE / Theme Dev</span></article>
-                    <article class="card tool-card">
-                        <div class="tool-ico"><img src="img/tools/icons8-wordpress-48.png" alt="Gutenberg"></div>
-                        <h4>Gutenberg</h4><span class="sub">Blocks</span></article>
+                    <article class="card tool-card u-stagger u-reveal">
+                        <div class="tool-ico u-reveal"><img src="img/tools/icons8-wordpress-48.png" alt="WordPress"></div>
+                        <h4 class="u-reveal">WordPress</h4><span class="sub u-reveal">FSE / Theme Dev</span></article>
+                    <article class="card tool-card u-stagger u-reveal">
+                        <div class="tool-ico u-reveal"><img src="img/tools/icons8-wordpress-48.png" alt="Gutenberg"></div>
+                        <h4 class="u-reveal">Gutenberg</h4><span class="sub u-reveal">Blocks</span></article>
 
                     <!-- Backend / DB / API -->
-                    <article class="card tool-card">
-                        <div class="tool-ico"><img src="img/tools/api.png" alt="Rest API"></div>
-                        <h4>Rest API</h4><span class="sub">API</span></article>
-                    <article class="card tool-card">
-                        <div class="tool-ico"><img src="img/tools/sql.png" alt="MySQL"></div>
-                        <h4>SQL</h4><span class="sub">DB design</span></article>
+                    <article class="card tool-card u-stagger u-reveal">
+                        <div class="tool-ico u-reveal"><img src="img/tools/api.png" alt="Rest API"></div>
+                        <h4 class="u-reveal">Rest API</h4><span class="sub u-reveal">API</span></article>
+                    <article class="card tool-card u-stagger u-reveal">
+                        <div class="tool-ico u-reveal"><img src="img/tools/sql.png" alt="MySQL"></div>
+                        <h4 class="u-reveal">SQL</h4><span class="sub u-reveal">DB design</span></article>
 
                     <!-- Tools / DevOps -->
-                    <article class="card tool-card">
-                        <div class="tool-ico"><img src="img/tools/github.png" alt="Git"></div>
-                        <h4>GitHub</h4><span class="sub">Flow / Actions</span></article>
-                    <article class="card tool-card">
-                        <div class="tool-ico"><img src="img/tools/icons8-visual-studio-code-48.png" alt="VS Code"></div>
-                        <h4>VS Code</h4><span class="sub">Extensions</span></article>
+                    <article class="card tool-card u-stagger u-reveal">
+                        <div class="tool-ico u-reveal"><img src="img/tools/github.png" alt="Git"></div>
+                        <h4 class="u-reveal">GitHub</h4><span class="sub">Flow / Actions</span></article>
+                    <article class="card tool-card u-stagger u-reveal">
+                        <div class="tool-ico u-reveal"><img src="img/tools/icons8-visual-studio-code-48.png" alt="VS Code"></div>
+                        <h4 class="u-reveal">VS Code</h4><span class="sub u-reveal">Extensions</span></article>
 
                     <!-- Other (work experience) -->
-                    <article class="card tool-card">
-                        <div class="tool-ico"><img src="img/tools/c-sharp.png" alt=".NET"></div>
-                        <h4>C# .NET WPF</h4><span class="sub">XAML / A11y</span></article>
-                    <article class="card tool-card">
-                        <div class="tool-ico"><img src="img/tools/figma.png" alt="Figma"></div>
-                        <h4>Figma</h4><span class="sub">UI/UX prototypes</span></article>
+                    <article class="card tool-card u-stagger u-reveal">
+                        <div class="tool-ico u-reveal"><img src="img/tools/c-sharp.png" alt=".NET"></div>
+                        <h4 class="u-reveal">C# .NET WPF</h4><span class="sub u-reveal">XAML / A11y</span></article>
+                    <article class="card tool-card u-stagger u-reveal">
+                        <div class="tool-ico u-reveal"><img src="img/tools/figma.png" alt="Figma"></div>
+                        <h4 class="u-reveal">Figma</h4><span class="sub u-reveal">UI/UX prototypes</span></article>
                 </div>
 
                 <!-- Soft skills (cards) -->
                 <h3 class="stack-sub">Soft Skills</h3>
                 <div class="stack-grid stack-grid--soft">
-                    <article class="card tool-card">
-                        <div class="tool-ico"><span class="dot" aria-hidden="true"></span></div>
-                        <h4>Highly adaptable</h4>
-                        <p class="sub">Startup environment</p>
+                    <article class="card tool-card u-stagger">
+                        <div class="tool-ico u-reveal"><span class="dot u-reveal" aria-hidden="true"></span></div>
+                        <h4 class="u-reveal">Highly adaptable</h4>
+                        <p class="sub u-reveal">Startup environment</p>
                     </article>
 
-                    <article class="card tool-card">
-                        <div class="tool-ico"><span class="dot " aria-hidden="true"></span></div>
-                        <h4>Attention to detail</h4>
-                        <p class="sub">UI/UX, A11y</p>
+                    <article class="card tool-card u-stagger">
+                        <div class="tool-ico u-reveal"><span class="dot u-reveal" aria-hidden="true"></span></div>
+                        <h4 class="u-reveal">Attention to detail</h4>
+                        <p class="sub u-reveal">UI/UX, A11y</p>
                     </article>
 
-                    <article class="card tool-card">
-                        <div class="tool-ico"><span class="dot" aria-hidden="true"></span></div>
-                        <h4>Critical thinking</h4>
-                        <p class="sub">Decision analysis</p>
+                    <article class="card tool-card u-stagger">
+                        <div class="tool-ico u-reveal"><span class="dot u-reveal" aria-hidden="true"></span></div>
+                        <h4 class="u-reveal">Critical thinking</h4>
+                        <p class="sub u-reveal">Decision analysis</p>
                     </article>
 
-                    <article class="card tool-card">
-                        <div class="tool-ico"><span class="dot" aria-hidden="true"></span></div>
-                        <h4>Handle multiple priorities</h4>
-                        <p class="sub">Planning</p>
+                    <article class="card tool-card u-stagger">
+                        <div class="tool-ico u-reveal"><span class="dot u-reveal" aria-hidden="true"></span></div>
+                        <h4 class="u-reveal">Handle multiple priorities</h4>
+                        <p class="sub u-reveal">Planning</p>
                     </article>
 
-                    <article class="card tool-card">
-                        <div class="tool-ico"><span class="dot" aria-hidden="true"></span></div>
-                        <h4>Multitasking</h4>
-                        <p class="sub">FE + Mobile + WP</p>
+                    <article class="card tool-card u-stagger">
+                        <div class="tool-ico u-reveal"><span class="dot u-reveal" aria-hidden="true"></span></div>
+                        <h4 class="u-reveal">Multitasking</h4>
+                        <p class="sub u-reveal">FE + Mobile + WP</p>
                     </article>
 
-                    <article class="card tool-card">
-                        <div class="tool-ico"><span class="dot " aria-hidden="true"></span></div>
-                        <h4>Teamwork</h4>
-                        <p class="sub">Design ↔ Dev</p>
+                    <article class="card tool-card u-stagger">
+                        <div class="tool-ico u-reveal"><span class="dot u-reveal" aria-hidden="true"></span></div>
+                        <h4 class="u-reveal">Teamwork</h4>
+                        <p class="sub u-reveal">Design ↔ Dev</p>
                     </article>
 
-                    <article class="card tool-card">
-                        <div class="tool-ico"><span class="dot " aria-hidden="true"></span></div>
-                        <h4>Problem solving</h4>
-                        <p class="sub">Debug / optimization</p>
+                    <article class="card tool-card u-stagger">
+                        <div class="tool-ico u-reveal"><span class="dot u-reveal" aria-hidden="true"></span></div>
+                        <h4 class="u-reveal">Problem solving</h4>
+                        <p class="sub u-reveal">Debug / optimization</p>
                     </article>
 
-                    <article class="card tool-card">
-                        <div class="tool-ico"><span class="dot " aria-hidden="true"></span></div>
-                        <h4>Communication</h4>
-                        <p class="sub">LT / EN</p>
+                    <article class="card tool-card u-stagger">
+                        <div class="tool-ico u-reveal"><span class="dot u-reveal" aria-hidden="true"></span></div>
+                        <h4 class="u-reveal">Communication</h4>
+                        <p class="sub u-reveal">LT / EN</p>
                     </article>
                 </div>
 
                 <!-- Certifications -->
                 <h3 class="stack-sub">Certifications & Training</h3>
                 <div class="stack-grid stack-grid--certs">
-                    <article class="card tool-card">
-                        <div class="tool-ico"><span class="dot " aria-hidden="true"></span></div>
-                        <h4>Figma UI UX Design Essentials</h4>
-                        <span class="issuer">Udemy</span><span class="year">Issued Aug 2025</span>
+                    <article class="card tool-card u-stagger">
+                        <div class="tool-ico u-reveal"><span class="dot " aria-hidden="true"></span></div>
+                        <h4 class="u-reveal">Figma UI UX Design Essentials</h4>
+                        <span class="issuer u-reveal">Udemy</span><span class="year u-reveal">Issued Aug 2025</span>
                     </article>
 
-                    <article class="card tool-card">
-                        <div class="tool-ico"><span class="dot" aria-hidden="true"></span></div>
-                        <h4>React Native – The Practical Guide [2025]</h4>
-                        <span class="issuer">Udemy</span><span class="year">Issued Aug 2025</span>
+                    <article class="card tool-card u-stagger">
+                        <div class="tool-ico u-reveal"><span class="dot u-reveal" aria-hidden="true"></span></div>
+                        <h4 class="u-reveal">React Native – The Practical Guide [2025]</h4>
+                        <span class="issuer u-reveal">Udemy</span><span class="year u-reveal">Issued Aug 2025</span>
                     </article>
 
-                    <article class="card tool-card">
-                        <div class="tool-ico"><span class="dot dot--lg" aria-hidden="true"></span></div>
-                        <h4>ChatGPT & AI for Productivity</h4>
-                        <span class="issuer">ELEVEL-Academy</span><span class="year">Issued Nov 2023</span>
+                    <article class="card tool-card u-stagger">
+                        <div class="tool-ico u-reveal"><span class="dot dot--lg u-reveal" aria-hidden="true"></span></div>
+                        <h4 class="u-reveal">ChatGPT & AI for Productivity</h4>
+                        <span class="issuer u-reveal">ELEVEL-Academy</span><span class="year u-reveal">Issued Nov 2023</span>
                     </article>
                 </div>
 
@@ -733,323 +744,6 @@
             </div>
         </div>
     </footer>
-
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const form = document.querySelector('.newsletter');
-            if (!form) return;
-
-            const btn = form.querySelector('button');
-            const note = form.querySelector('.form-note');
-
-            // Tiny inline SVG icons
-            const icons = {
-                spinner: '<svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="3" opacity=".25"/><path class="svg-spin" d="M12 3a9 9 0 0 1 9 9" fill="none" stroke="currentColor" stroke-width="3"/></svg>',
-                check: '<svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6L9 17l-5-5" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>',
-                cross: '<svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><path d="M18 6L6 18M6 6l12 12" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"/></svg>'
-            };
-
-            const setBtnState = (state, text, noteText = '', noteKind = '') => {
-                btn.classList.remove('is-sending', 'is-ok', 'is-err');
-                note.className = 'form-note';
-                if (state) btn.classList.add(state);
-                note.textContent = '';
-                if (noteText) {
-                    note.textContent = noteText;
-                    if (noteKind) note.classList.add(noteKind);
-                }
-                btn.innerHTML = text; // replace button content (icon + label)
-            };
-
-            form.addEventListener('submit', async(e) => {
-                e.preventDefault();
-
-                // Sending…
-                btn.disabled = true;
-                setBtnState('is-sending', `${icons.spinner} Sending…`);
-
-                try {
-                    const res = await fetch(form.action, {
-                        method: 'POST',
-                        body: new FormData(form),
-                        headers: {
-                            'Accept': 'application/json'
-                        }
-                    });
-
-                    if (res.ok) {
-                        form.reset();
-                        setBtnState('is-ok', `${icons.check} Sent`, 'Thanks! Your message was sent.', 'ok');
-                    } else {
-                        let msg = 'Could not send. Please try again.';
-                        try {
-                            const data = await res.json();
-                            if (data && Array.isArray(data.errors) && data.errors[0] && typeof data.errors[0].message === 'string') {
-                                msg = data.errors[0].message;
-                            }
-                        } catch (_) {}
-                        setBtnState('is-err', `${icons.cross} Try again`, msg, 'err');
-                    }
-                } catch {
-                    setBtnState('is-err', `${icons.cross} Try again`, 'Network error. Check your connection and try again.', 'err');
-                } finally {
-                    // Restore default button after 3.5s
-                    setTimeout(() => {
-                        btn.disabled = false;
-                        setBtnState('', 'Say hi 👋');
-                    }, 8000);
-                }
-            });
-        });
-
-        document.addEventListener('DOMContentLoaded', () => {
-
-
-            const root = document.documentElement;
-            const menu = document.getElementById('themeMenu');
-            const btn = document.getElementById('themeBtn');
-            const list = menu.querySelector('.theme-list');
-            const items = Array.from(list.querySelectorAll('[data-theme]'));
-
-            // apply saved theme
-            const saved = localStorage.getItem('theme') || 'cream';
-            applyTheme(saved);
-
-            // open/close
-            const setOpen = (open) => {
-                menu.setAttribute('aria-expanded', String(open));
-                btn.setAttribute('aria-expanded', String(open));
-            };
-            btn.addEventListener('click', () => setOpen(menu.getAttribute('aria-expanded') !== 'true'));
-
-            // choose theme
-            items.forEach(el => {
-                el.addEventListener('click', () => {
-                    const t = el.dataset.theme;
-                    applyTheme(t);
-                    setOpen(false);
-                    btn.focus();
-                });
-            });
-
-            // a11y: esc / outside click
-            document.addEventListener('keydown', (e) => {
-                if (e.key === 'Escape') setOpen(false);
-            });
-            document.addEventListener('click', (e) => {
-                if (!menu.contains(e.target)) setOpen(false);
-            });
-
-            function applyTheme(theme) {
-                root.setAttribute('data-theme', theme);
-                localStorage.setItem('theme', theme);
-                // update current state
-                items.forEach(i => i.setAttribute('aria-current', i.dataset.theme === theme ? 'true' : 'false'));
-                // recolor header swatch
-                // (nebūtina: rely on CSS var)
-            }
-
-
-            /* Header blur tik kai scroll > 8px */
-            const setScrolled = () => {
-                document.documentElement.classList.toggle('scrolled', window.scrollY > 8);
-            };
-            setScrolled();
-            window.addEventListener('scroll', setScrolled, {
-                passive: true
-            });
-
-            /* Process rail – tik jei yra DOM'e */
-            const rail = document.getElementById('processRail');
-            if (rail) {
-                const updateProgress = () => {
-                    const rect = rail.getBoundingClientRect();
-                    const vh = window.innerHeight || document.documentElement.clientHeight;
-                    const visible = Math.max(0, Math.min(rect.bottom, vh) - Math.max(rect.top, 0));
-                    const ratio = Math.max(0, Math.min(1, visible / Math.min(rect.height, vh)));
-                    rail.style.setProperty('--progress', ratio.toFixed(3));
-                };
-                updateProgress();
-                window.addEventListener('scroll', updateProgress, {
-                    passive: true
-                });
-                window.addEventListener('resize', updateProgress);
-
-                const obs = new IntersectionObserver((entries) => {
-                    entries.forEach(e => {
-                        if (e.isIntersecting) {
-                            rail.style.setProperty('--pct', '100');
-                        }
-                    });
-                }, {
-                    threshold: 0.2
-                });
-                obs.observe(rail);
-            }
-
-            /* Segmented filtras (jei naudojamas) */
-            const seg = document.querySelector('.segmented');
-            if (seg) {
-                const btns = Array.from(seg.querySelectorAll('.seg-btn'));
-                let thumb = seg.querySelector('.seg-thumb');
-                if (!thumb) {
-                    thumb = document.createElement('span');
-                    thumb.className = 'seg-thumb';
-                    seg.prepend(thumb);
-                }
-
-                const moveThumb = (btn) => {
-                    const x = btn.offsetLeft;
-                    const w = btn.offsetWidth;
-                    thumb.style.width = w + 'px';
-                    thumb.style.transform = `translateX(${x}px)`;
-                };
-
-                const setActive = (btn) => {
-                    btns.forEach(b => {
-                        const active = b === btn;
-                        b.classList.toggle('is-active', active);
-                        b.setAttribute('aria-selected', String(active));
-                    });
-                    moveThumb(btn);
-                };
-
-                // init
-                const current = seg.querySelector('.seg-btn.is-active') || btns[0];
-                if (current) setActive(current);
-
-                // click
-                seg.addEventListener('click', (e) => {
-                    const btn = e.target.closest('.seg-btn');
-                    if (!btn) return;
-                    setActive(btn);
-
-                    const f = btn.dataset.filter; // 'all' | 'web' | 'mobile' | 'desktop'
-                    document.querySelectorAll('.featured-grid .project').forEach(card => {
-                        const cats = (card.dataset.cat || '').split(/\s+/); // palaiko 'web desktop'
-                        const show = (f === 'all') || cats.includes(f);
-                        card.classList.toggle('is-hidden', !show);
-                    });
-                });
-
-
-                // responsive – perbraižyti poziciją
-                window.addEventListener('resize', () => moveThumb(seg.querySelector('.seg-btn.is-active') || btns[0]));
-            }
-        });
-
-        (function() {
-            if (window.__navInit) return;
-            window.__navInit = true;
-
-            var body = document.body;
-            var toggle = document.getElementById('navToggle');
-            var nav = document.getElementById('primaryNav');
-            var overlay = document.getElementById('navOverlay');
-            var closeBtn = document.getElementById('navClose');
-
-            function setNavOpen(open) {
-                body.classList.toggle('nav-open', open);
-                if (toggle) toggle.setAttribute('aria-expanded', String(open));
-                if (overlay) overlay.hidden = !open;
-            }
-
-            if (toggle) {
-                toggle.addEventListener('click', function() {
-                    setNavOpen(!body.classList.contains('nav-open'));
-                });
-            }
-            if (overlay) {
-                overlay.addEventListener('click', function() {
-                    setNavOpen(false);
-                });
-            }
-            if (closeBtn) {
-                closeBtn.addEventListener('click', function() {
-                    setNavOpen(false);
-                });
-            }
-            if (nav) {
-                nav.addEventListener('click', function(e) {
-                    if (e && e.target && e.target.closest && e.target.closest('a')) {
-                        setNavOpen(false);
-                    }
-                });
-            }
-            document.addEventListener('keydown', function(e) {
-                if (e.key === 'Escape') setNavOpen(false);
-            });
-        })();
-        /* === Featured image rotator === */
-        (() => {
-            const wrap = document.querySelector('.project-xl .container-canva');
-            if (!wrap) return;
-
-            const track = wrap.querySelector('#card .slides');
-            const slides = Array.from(track ? track.children : []);
-            const dots = wrap.querySelector('.carousel-ui .dots');
-            const carEl = wrap.querySelector('#card .carousel');
-            if (!track || slides.length < 2 || !dots || !carEl) return;
-
-            const intervalMs = Number(carEl.getAttribute('data-auto')) || 3000;
-
-            // sukurti dots
-            slides.forEach((_, idx) => {
-                const b = document.createElement('button');
-                b.type = 'button';
-                b.setAttribute('aria-label', `Go to slide ${idx+1}`);
-                b.addEventListener('click', () => go(idx, true));
-                dots.appendChild(b);
-            });
-
-            let i = 0,
-                timer = null;
-            const update = () => {
-                track.style.transform = `translateX(-${i * 100}%)`;
-                dots.querySelectorAll('button').forEach((b, idx) =>
-                    b.setAttribute('aria-current', String(idx === i))
-                );
-            };
-            const go = (to, user = false) => {
-                i = (to + slides.length) % slides.length;
-                update();
-                if (user) restart();
-            };
-            const nextSlide = () => go(i + 1);
-
-            const start = () => {
-                if (!timer) timer = setInterval(nextSlide, intervalMs);
-            };
-            const stop = () => {
-                if (timer) {
-                    clearInterval(timer);
-                    timer = null;
-                }
-            };
-            const restart = () => {
-                stop();
-                start();
-            };
-
-            // pauzė ant hover
-            wrap.addEventListener('mouseenter', stop);
-            wrap.addEventListener('mouseleave', start);
-
-            // start tik kai matoma
-            const io = new IntersectionObserver(([e]) => {
-                e.isIntersecting ? start() : stop();
-            }, {
-                threshold: 0.2
-            });
-            io.observe(wrap);
-
-            // init
-            update();
-        })();
-    </script>
-
-
-
 
 </body>
 
