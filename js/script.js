@@ -386,3 +386,31 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 })();
+
+(function () {
+  var a = document.getElementById("langSwitch");
+  if (!a) return;
+
+  var p = location.pathname;
+
+  // heuristika: /lt/... ↔ /en/...
+  var isLT = p.indexOf("/lt/") !== -1;
+  var isEN = p.indexOf("/en/") !== -1;
+
+  function swapLang(path) {
+    if (path.indexOf("/lt/") !== -1) return path.replace("/lt/", "/en/");
+    if (path.indexOf("/en/") !== -1) return path.replace("/en/", "/lt/");
+    // jei ne LT ir ne EN, darykim prielaidą, kad dabar LT ir veskim į EN root
+    return "/en/";
+  }
+
+  var target = swapLang(p);
+
+  a.href = target;
+  a.textContent = isLT ? "EN" : "LT";
+  a.setAttribute("hreflang", isLT ? "en" : "lt");
+  a.setAttribute(
+    "aria-label",
+    isLT ? "Switch to English" : "Perjungti į lietuvių"
+  );
+})();

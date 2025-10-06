@@ -1,0 +1,413 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+
+    <title>Gabrielė – Type Scale</title>
+    <meta name="description" content="Modular scale with clamp(), three breakpoints, and a consistent typography rhythm." />
+    <meta name="robots" content="index,follow" />
+
+    <!-- Canonical + hreflang -->
+    <link rel="canonical" href="https://gabwowce.github.io/porfolio-2025/en/blog/type-scale.html" />
+    <link rel="alternate" href="https://gabwowce.github.io/porfolio-2025/en/blog/type-scale.html" hreflang="en" />
+    <link rel="alternate" href="https://gabwowce.github.io/porfolio-2025/lt/blog/type-scale.html" hreflang="lt" />
+    <link rel="alternate" href="https://gabwowce.github.io/porfolio-2025/en/blog/type-scale.html" hreflang="x-default" />
+
+    <!-- Icons / theme (iš /en/blog/) -->
+    <link rel="icon" href="../../img/favicon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="../../img/apple-touch-icon.png" />
+    <meta name="theme-color" content="#ffe9d6" />
+
+    <!-- Open Graph / X -->
+    <meta property="og:type" content="article" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:title" content="Type Scale — Gabrielė" />
+    <meta property="og:description" content="Modular scale with clamp(), three breakpoints, and a consistent typography rhythm." />
+    <meta property="og:url" content="https://gabwowce.github.io/porfolio-2025/en/blog/type-scale.html" />
+    <meta property="og:image" content="https://gabwowce.github.io/porfolio-2025/img/blog/type-scale.jpg" />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <!-- Preload -->
+    <link rel="preload" href="../../fonts/clash/ClashGrotesk-Variable.woff2" as="font" type="font/woff2" crossorigin />
+
+    <!-- highlight.js (viena tema, be dublikatų) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/atom-one-light.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/css.min.js"></script>
+    <script>
+        hljs.highlightAll();
+    </script>
+
+    <!-- CSS/JS -->
+    <script src="../../js/script.js" defer></script>
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="../../css/about.css">
+    <link rel="stylesheet" href="../../css/aside.css">
+    <link rel="stylesheet" href="../../css/blog.css">
+    <link rel="stylesheet" href="../../css/contact-me.css">
+    <link rel="stylesheet" href="../../css/footer.css">
+    <link rel="stylesheet" href="../../css/hero.css">
+    <link rel="stylesheet" href="../../css/header.css">
+    <link rel="stylesheet" href="../../css/card.css">
+    <link rel="stylesheet" href="../../css/projects.css">
+
+    <!-- JSON-LD -->
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "Article",
+            "headline": "Type Scale",
+            "inLanguage": "en",
+            "author": {
+                "@type": "Person",
+                "name": "Gabrielė"
+            },
+            "datePublished": "2025-02-01",
+            "image": "https://gabwowce.github.io/porfolio-2025/img/blog/type-scale.jpg",
+            "mainEntityOfPage": {
+                "@type": "WebPage",
+                "@id": "https://gabwowce.github.io/porfolio-2025/en/blog/type-scale.html"
+            }
+        }
+    </script>
+</head>
+
+
+<body>
+    <!-- HEADER (be aside) -->
+    <header class="site-header">
+        <div class="container header-in">
+            <a id="brand" class="brand" href="/en/">
+                <span class="icon" aria-hidden="true">GT</span>
+                <span aria-label="Gabrielė Tamaševičiūtė">Gabrielė · Codeart</span>
+            </a>
+            <!-- Hamburger -->
+            <button class="hamburger" id="navToggle" aria-label="Open menu" aria-controls="primaryNav" aria-expanded="false">
+      <span class="hamburger__bar" aria-hidden="true"></span>
+      <span class="hamburger__bar" aria-hidden="true"></span>
+      <span class="hamburger__bar" aria-hidden="true"></span>
+    </button>
+            <nav class="main-nav">
+                <button class="nav-close" id="navClose" aria-label="Close menu">✕</button>
+                <a class="nav-link" href="../index.html">Home</a>
+                <a class="nav-link" href="../about.html">About</a>
+                <a class="nav-link" href="../portfolio.html">Portfolio</a>
+                <a class="nav-link" href="../services.html">Services</a>
+                <a class="nav-link active" href="../blog.html">Blog</a>
+                <a class="nav-link" href="../contact.html">Contact</a>
+                <!-- Theme dropdown -->
+                <div class="nav-theme" id="themeMenu">
+                    <button id="themeBtn" class="nav-link theme-btn" aria-haspopup="true" aria-expanded="false">
+      Theme <span class="swatch" aria-hidden="true"></span>
+    </button>
+                    <ul class="theme-list" role="menu" aria-label="Choose theme">
+                        <li>
+                            <button role="menuitem" data-theme="cream" style="--c1:#362f27;--c2:#ffe9d6;--c3:#ffffffff;--c4:#ffaa5fff">
+      <span class="thumb-pall">
+        <span class="sw s1"></span><span class="sw s2"></span>
+        <span class="sw s3"></span><span class="sw s4"></span>
+      </span>
+      <span class="meta">
+        <strong>Cream</strong><small>Warm, editorial</small>
+      </span>
+      <span class="check" aria-hidden="true">✓</span>
+    </button>
+                        </li>
+
+                        <li>
+                            <button role="menuitem" data-theme="ocean" style="--c1:#476eae;--c2:#e6efff;--c3:#ffffff;--c4:#FE7743">
+      <span class="thumb-pall"><span class="sw s1"></span><span class="sw s2"></span><span class="sw s3"></span><span class="sw s4"></span></span>
+      <span class="meta"><strong>Ocean</strong><small>Clean blue</small></span>
+      <span class="check" aria-hidden="true">✓</span>
+    </button>
+                        </li>
+
+                        <li>
+                            <button role="menuitem" data-theme="forest" style="--c1:#5F8B4C;--c2:#e9f6ef;--c3:#ffffff;--c4:#FF9A9A">
+      <span class="thumb-pall"><span class="sw s1"></span><span class="sw s2"></span><span class="sw s3"></span><span class="sw s4"></span></span>
+      <span class="meta"><strong>Forest</strong><small>Fresh green</small></span>
+      <span class="check" aria-hidden="true">✓</span>
+    </button>
+                        </li>
+
+                        <li>
+                            <button role="menuitem" data-theme="rose" style="--c1:#E69DB8;--c2:#fde7ee;--c3:#ffffff;--c4:#80C4E9">
+      <span class="thumb-pall"><span class="sw s1"></span><span class="sw s2"></span><span class="sw s3"></span><span class="sw s4"></span></span>
+      <span class="meta"><strong>Rose</strong><small>Soft pink</small></span>
+      <span class="check" aria-hidden="true">✓</span>
+    </button>
+                        </li>
+
+                        <li>
+                            <button role="menuitem" data-theme="slate" style="--c1:#b664a462;--c2:#262a31ff;--c3:#1c1e22ff;--c4:#60a5fa">
+      <span class="thumb-pall"><span class="sw s1"></span><span class="sw s2"></span><span class="sw s3"></span><span class="sw s4"></span></span>
+      <span class="meta"><strong>Slate</strong><small>Dark, neutral</small></span>
+      <span class="check" aria-hidden="true">✓</span>
+    </button>
+                        </li>
+                    </ul>
+
+                </div>
+                <!-- Language switcher -->
+                <div class="nav-lang">
+                    <!-- noscript/fallback gali vesti į EN pradžią -->
+                    <a id="langSwitch" class="nav-link" href="/en/" hreflang="en" aria-label="Switch language">EN</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <!-- HERO -->
+    <section class="card-hero hero u-stagger">
+        <div class="container hero-grid">
+            <div class="hero-copy">
+                <h2 class="display-l u-reveal">TYPE SCALE</h1>
+                    <nav class="breadcrumbs u-reveal">
+                        <a href="../blog.html">BLOG</a> <svg class="crumb-sep" viewBox="0 0 24 24" aria-hidden="true">
+    <path d="M9 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  </svg> <span aria-current="page">TYPE SCALE</span>
+                    </nav>
+
+            </div>
+            <figure class="hero-portrait u-reveal">
+                <img src="../../img/avatar-writing.webp" alt="Gabrielle – Frontend developer" width="360" height="500" loading="eager" decoding="sync" fetchpriority="high">
+            </figure>
+        </div>
+    </section>
+
+    <!-- TURINYS -->
+    <main class="content container u-stagger">
+        <section class="u-reveal">
+            <article class="card">
+                <h2>What is a type scale (and why does it break)?</h2>
+                <p>A type scale is a <em>set of predefined font sizes</em> used across a product. It breaks when sizes are chosen ad-hoc, the ratio changes between breakpoints, or line-height/spacing don’t adapt to viewport changes.</p>
+
+                <h2>Goal</h2>
+                <p>Build a small, fluid scale that:</p>
+                <ul>
+                    <li>uses 6–8 steps (not 20),</li>
+                    <li>flows smoothly with <code>clamp()</code>,</li>
+                    <li>keeps readable line-height and spacing,</li>
+                    <li>has predictable, semantic names.</li>
+                </ul>
+
+                <h2>1) Pick a base and ratio</h2>
+                <p>Start with a <strong>16px base</strong> (body). Choose a subtle ratio:
+                    <code>1.20</code> (minor third) for content-heavy pages, or <code>1.25</code> for a bit more contrast.</p>
+
+                <pre><code class="language-css">--step--2: clamp(0.78rem, 0.74rem + 0.2vw, 0.88rem); /* xs */
+--step--1: clamp(0.88rem, 0.84rem + 0.3vw, 0.95rem); /* sm */
+--step-0 : 1rem;                                      /* body */
+--step-1 : clamp(1.1rem, 1.03rem + 0.5vw, 1.25rem);   /* h6 */
+--step-2 : clamp(1.35rem, 1.2rem  + 1vw,  1.56rem);   /* h5 */
+--step-3 : clamp(1.62rem, 1.35rem + 1.8vw, 1.95rem);  /* h4 */
+--step-4 : clamp(1.95rem, 1.6rem  + 2.6vw, 2.44rem);  /* h3 */
+--step-5 : clamp(2.44rem, 2rem   + 3.6vw, 3.05rem);   /* h2 */
+--step-6 : clamp(3.05rem, 2.4rem + 5vw,  3.81rem);    /* h1 */</code></pre>
+
+                <p>Rule of thumb: <em>small steps grow less, large steps grow more</em>.</p>
+
+                <h2>2) Implement with CSS variables</h2>
+                <p>Define steps once, then map them to elements. Use <code>clamp(min, preferred, max)</code> where the middle term is a small linear function of viewport width.</p>
+
+                <pre><code class="language-css">:root{
+  /* Scale (adjust coefficients to your layout width) */
+  --step--2: clamp(0.78rem, 0.74rem + 0.20vw, 0.88rem);
+  --step--1: clamp(0.88rem, 0.84rem + 0.30vw, 0.95rem);
+  --step-0 : 1rem;
+  --step-1 : clamp(1.10rem, 1.03rem + 0.50vw, 1.25rem);
+  --step-2 : clamp(1.35rem, 1.20rem + 1.00vw, 1.56rem);
+  --step-3 : clamp(1.62rem, 1.35rem + 1.80vw, 1.95rem);
+  --step-4 : clamp(1.95rem, 1.60rem + 2.60vw, 2.44rem);
+  --step-5 : clamp(2.44rem, 2.00rem + 3.60vw, 3.05rem);
+  --step-6 : clamp(3.05rem, 2.40rem + 5.00vw, 3.81rem);
+
+  /* Rhythm tokens */
+  --lh-tight: 1.15;
+  --lh-normal: 1.45;
+  --lh-loose: 1.60;
+
+  --space-1: 0.25rem;
+  --space-2: 0.50rem;
+  --space-3: 0.75rem;
+  --space-4: 1.00rem;
+  --space-6: 1.50rem;
+  --space-8: 2.00rem;
+}
+
+/* Map steps to elements */
+body{ font-size: var(--step-0); line-height: var(--lh-loose); }
+h1{ font-size: var(--step-6); line-height: var(--lh-tight); margin: 0 0 var(--space-6); }
+h2{ font-size: var(--step-5); line-height: var(--lh-tight); margin: 0 0 var(--space-4); }
+h3{ font-size: var(--step-4); line-height: 1.25;           margin: 0 0 var(--space-3); }
+h4{ font-size: var(--step-3); line-height: 1.25;           margin: 0 0 var(--space-3); }
+
+p, ul, ol{ margin: 0 0 var(--space-4); }
+small, .caption{ font-size: var(--step--1); line-height: var(--lh-normal); }</code></pre>
+
+                <h2>3) Fluid without breakpoints</h2>
+                <p><code>clamp()</code> avoids hard jumps. If you still want a manual breakpoint (for very large/small screens), tweak a step inside media queries:</p>
+                <pre><code class="language-css">@media (min-width: 1280px){
+  :root{ --step-6: clamp(3.2rem, 2.2rem + 3vw, 4.2rem); }
+}</code></pre>
+
+                <h2>4) Line-height & spacing rules</h2>
+                <ul>
+                    <li>Display sizes (H1–H2): <strong>1.15–1.25</strong></li>
+                    <li>Text sizes (body): <strong>1.45–1.60</strong></li>
+                    <li>Keep vertical rhythm via spacing tokens (e.g., paragraph margin = <code>--space-4</code>).</li>
+                </ul>
+
+                <h2>5) Naming: semantic, not numeric</h2>
+                <p>Prefer semantic tokens for reuse:</p>
+                <pre><code class="language-css">:root{
+  --fs-body: var(--step-0);
+  --fs-lead: var(--step-2);
+  --fs-kicker: var(--step--1);
+  --fs-h1: var(--step-6);
+  --fs-h2: var(--step-5);
+  --fs-h3: var(--step-4);
+}
+.lead{ font-size: var(--fs-lead); line-height: var(--lh-normal); }
+.kicker{ font-size: var(--fs-kicker); letter-spacing: .04em; text-transform: uppercase; }</code></pre>
+
+                <h2>6) Accessibility checks</h2>
+                <ul>
+                    <li><strong>Min body size:</strong> don’t go below 16px; 17–18px is fine for text-heavy pages.</li>
+                    <li><strong>Contrast:</strong> test headings vs background (WCAG AA at minimum).</li>
+                    <li><strong>Respect user settings:</strong> use <code>rem</code> and don’t lock zoom.</li>
+                </ul>
+
+                <h2>7) Quick starter snippet</h2>
+                <p>Copy this and tweak only the <em>middle</em> term in <code>clamp()</code> until it feels right for your container width:</p>
+                <pre><code class="language-css">:root{
+  --step-0: 1rem;
+  --step-2: clamp(1.35rem, 1.10rem + 1vw, 1.56rem);
+  --step-4: clamp(1.95rem, 1.40rem + 2.6vw, 2.44rem);
+  --step-6: clamp(3.05rem, 2.00rem + 5vw, 3.81rem);
+}
+h1{ font-size: var(--step-6); line-height: 1.20; }
+h2{ font-size: var(--step-4); line-height: 1.25; }
+.lead{ font-size: var(--step-2); line-height: 1.45; }</code></pre>
+
+                <h2>Common mistakes</h2>
+                <div class="chips">
+                    <span class="chip" style="display:inline;">Mixing too many ratios (e.g., 1.25 on mobile, 1.5 on desktop) → visible jumps.</span>
+                    <span class="chip" style="display:inline;">Ignoring line-height/spacing when sizes change → cramped or airy blocks.</span>
+                    <span class="chip" style="display:inline;">Basing growth on the full viewport while content sits in a narrow column → sizes grow too fast. Use small coefficients <span>(e.g., <code>+ 0.5vw</code> to <code>+ 3vw</code>).</span></span>
+                </div>
+
+                <h2>Takeaway</h2>
+                <p>Define 6–8 steps, make them fluid with <code>clamp()</code>, and lock rhythm with line-height + spacing tokens. Your headings will scale smoothly, remain readable, and won’t “snap” across breakpoints.</p>
+            </article>
+
+            <nav class="post-nav">
+
+                <a href="./typography.html"><svg class="crumb-sep" style="transform: scaleX(-1)" viewBox="0 0 24 24" aria-hidden="true">
+    <path d="M9 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  </svg> Typography</a>
+                <a href="./color-system.html">Color System <svg class="crumb-sep" viewBox="0 0 24 24" aria-hidden="true">
+    <path d="M9 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  </svg></a>
+            </nav>
+        </section>
+        <!-- ASIDE (only here, not in header) -->
+        <aside aria-label="Quick info" class="sidebar u-reveal">
+            <div class="card card--soft profile profile--soft">
+                <div class="avatar-neo-halo">
+                    <img class="avatar-neo" src="../../img/avatar-profile.webp" alt="Gabrielė – profile photo" width="72" height="72" loading="lazy" decoding="async" fetchpriority="low">
+                </div>
+                <h3 class="name t-title" style="margin: 0;">GABRIELĖ</h3>
+                <p class="muted">Frontend developer</p>
+                <p class="muted xsmall">Vilnius, Lithuania</p>
+                <div class="badge-aside" style="margin:10px auto 0; display:inline-block;">Open for new projects</div>
+
+                <div class="cta-stack" style="margin-top:14px">
+                    <a class="btn" href="mailto:gt1230112301@gmail.com">Email Me</a>
+                    <a class="btn outline" href="../docs/CV.pdf" download>Download CV</a>
+                </div>
+            </div>
+
+
+
+
+        </aside>
+
+    </main>
+
+    <footer class="site-footer" role="contentinfo">
+        <section class="cta-contact">
+            <div class="container footer-card-flex">
+                <div class="cta-contact__text">
+                    <h3>Ready to build something great?</h3>
+                    <p>Tell me about your idea!</p>
+                </div>
+                <a class="btn-pill" href="/porfolio-2025/en/contact">Contact me →</a>
+            </div>
+        </section>
+
+        <div class="footer-in container">
+            <div class="footer-top">
+                <!-- Brand / About -->
+                <section>
+                    <a class="brand" href="/en/">
+                        <span class="icon" aria-hidden="true">GT</span>
+                        <span aria-label="Gabrielė Tamaševičiūtė">Gabrielė · Codeart</span>
+                    </a>
+                    <p class="brand-note">Front-end dev & designer. I build clean, fast and accessible UIs.</p>
+                    <div class="socials" aria-label="Social links">
+                        <a class="soc" href="#" aria-label="GitHub" title="GitHub">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 19c-4 1.5-4-2.5-6-3m12 6v-3.87a3.37 3.37 0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0018 3.77 5.07 5.07 0 0017.91 1S16.73.65 14 2.48a13.38 13.38 0 00-5 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 005 3.77a5.44 5.44 0 00-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 009 18.13V22"/></svg>
+                        </a>
+                        <a class="soc" href="#" aria-label="LinkedIn" title="LinkedIn">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-4 0v7h-4v-7a6 6 0 016-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+                        </a>
+                        <a class="soc" href="#" aria-label="Email" title="Email">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 4h16v16H4z"/><path d="M22 6L12 13 2 6"/></svg>
+                        </a>
+                    </div>
+                </section>
+
+                <!-- Quick links -->
+                <nav class="footer-card" aria-labelledby="flinks">
+                    <h3 id="flinks" class="footer-title">Quick links</h3>
+                    <ul class="footer-list">
+                        <li><a class="footer-link" href="/porfolio-2025/en/home.html">Home</a></li>
+                        <li><a class="footer-link" href="/porfolio-2025/en/about.html">About</a></li>
+                        <li><a class="footer-link" href="/porfolio-2025/en/portfolio.html">Portfolio</a></li>
+                        <li><a class="footer-link" href="/porfolio-2025/en/blog.html">Blog</a></li>
+                        <li><a class="footer-link" href="/porfolio-2025/en/contact.html">Contact</a></li>
+                        <li><a class="footer-link" href="../docs/CV.pdf" download>CV / Resume</a></li>
+                    </ul>
+                </nav>
+
+                <!-- Newsletter / CTA -->
+                <section class="footer-card" aria-labelledby="fnews">
+                    <h3 id="fnews" class="footer-title">Quick message</h3>
+                    <form class="newsletter" action="https://formspree.io/f/xeorkyne" method="POST">
+                        <input class="input" type="email" name="email" placeholder="Email" aria-label="Email" required>
+                        <input class="input" type="text" name="Message" placeholder="Message" aria-label="Message" required>
+                        <input type="text" name="_gotcha" style="display:none">
+                        <!-- honeypot -->
+                        <button class="btn-pill" type="submit">Say hi 👋</button>
+                        <p class="form-note" role="status" aria-live="polite"></p>
+                        <small class="brand-note">Message me — I reply within 24 h.</small>
+                    </form>
+                </section>
+            </div>
+
+            <div class="footer-bottom">
+                <span>© 2025 Gabrielė · Codeart</span>
+                <div class="mini-nav">
+
+                    <a href="mailto:gt1230112301@gmail.com">gt1230112301@gmail.com</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+</body>
+
+</html>

@@ -510,3 +510,14 @@ html.nav-fade {
     clip-path: none !important;
   }
 }
+
+.nav-lang .nav-link{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  height:36px;            /* priderink prie tavo .theme-btn aukščio */
+  padding:0 12px;
+  border-radius:999px;
+  line-height:1;
+  vertical-align:middle;
+}

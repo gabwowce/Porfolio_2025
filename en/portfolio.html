@@ -1,28 +1,68 @@
 <!doctype html>
-<html lang="lt">
+<html lang="en">
 
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Portfolio</title>
-    <script src="js/script.js" defer></script>
-    <link rel="stylesheet" href="css/style.css" />
-    <link rel="stylesheet" href="css/about.css" />
-    <link rel="stylesheet" href="css/aside.css" />
-    <link rel="stylesheet" href="css/blog.css" />
-    <link rel="stylesheet" href="css/contact-me.css" />
-    <link rel="stylesheet" href="css/footer.css" />
-    <link rel="stylesheet" href="css/hero.css" />
-    <link rel="stylesheet" href="css/header.css" />
-    <link rel="stylesheet" href="css/card.css" />
-    <link rel="stylesheet" href="css/projects.css" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+
+    <title>Gabrielė – Portfolio</title>
+    <meta name="description" content="Selected front-end & design work: websites, React/React Native apps, UI components, performance and accessibility." />
+    <meta name="robots" content="index,follow" />
+
+    <!-- Canonical + hreflang -->
+    <link rel="canonical" href="https://gabwowce.github.io/porfolio-2025/en/portfolio.html" />
+    <link rel="alternate" href="https://gabwowce.github.io/porfolio-2025/en/portfolio.html" hreflang="en" />
+    <link rel="alternate" href="https://gabwowce.github.io/porfolio-2025/lt/portfolio.html" hreflang="lt" />
+    <link rel="alternate" href="https://gabwowce.github.io/porfolio-2025/en/portfolio.html" hreflang="x-default" />
+
+    <!-- Icons / theme -->
+    <link rel="icon" href="../img/favicon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="../img/apple-touch-icon.png" />
+    <meta name="theme-color" content="#ffe9d6" />
+
+    <!-- Open Graph / X -->
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:title" content="Gabrielė – Portfolio" />
+    <meta property="og:description" content="A curated set of fast, accessible, and aesthetic UI projects." />
+    <meta property="og:url" content="https://gabwowce.github.io/porfolio-2025/en/portfolio.html" />
+    <meta property="og:image" content="https://gabwowce.github.io/porfolio-2025/img/og-cover.jpg" />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <!-- Preload -->
+    <link rel="preload" href="../fonts/clash/ClashGrotesk-Variable.woff2" as="font" type="font/woff2" crossorigin />
+
+    <!-- CSS/JS (be dvigubų //) -->
+    <script src="../js/script.js" defer></script>
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/about.css" />
+    <link rel="stylesheet" href="../css/aside.css" />
+    <link rel="stylesheet" href="../css/blog.css" />
+    <link rel="stylesheet" href="../css/contact-me.css" />
+    <link rel="stylesheet" href="../css/footer.css" />
+    <link rel="stylesheet" href="../css/hero.css" />
+    <link rel="stylesheet" href="../css/header.css" />
+    <link rel="stylesheet" href="../css/card.css" />
+    <link rel="stylesheet" href="../css/projects.css" />
+
+    <!-- JSON-LD: CollectionPage -->
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "CollectionPage",
+            "name": "Portfolio – Gabrielė",
+            "inLanguage": "en",
+            "url": "https://gabwowce.github.io/porfolio-2025/en/portfolio.html"
+        }
+    </script>
 </head>
+
 
 <body>
     <!-- HEADER (no aside) -->
     <header class="site-header">
         <div class="container header-in">
-            <a id="brand" class="brand" href="/">
+            <a id="brand" class="brand" href="/en/">
                 <span class="icon" aria-hidden="true">GT</span>
                 <span aria-label="Gabrielė Tamaševičiūtė">Gabrielė · Codeart</span>
             </a>
@@ -93,6 +133,11 @@
                     </ul>
 
                 </div>
+                <!-- Language switcher -->
+                <div class="nav-lang">
+                    <!-- noscript/fallback gali vesti į EN pradžią -->
+                    <a id="langSwitch" class="nav-link" href="/en/" hreflang="en" aria-label="Switch language">EN</a>
+                </div>
             </nav>
         </div>
     </header>
@@ -104,7 +149,7 @@
 
             </div>
             <figure class="hero-portrait u-reveal">
-                <img src="img/avatar-porfolio.webp" style="transform: scaleX(-1)" alt="Gabrielle – Creative Designer" width="72" height="72" loading="eager" decoding="sync" fetchpriority="high">
+                <img src="../img/avatar-porfolio.webp" style="transform: scaleX(-1)" alt="Gabrielle – Frontend developer" width="72" height="72" loading="eager" decoding="sync" fetchpriority="high">
             </figure>
         </div>
     </section>
@@ -123,12 +168,12 @@
             <!-- <h3 class="heading-section display-m">FEATURED PROJECTS</h3> -->
             <div class="featured-grid ">
                 <article class="project project-xl u-stagger" id="carestudio" data-cat="web">
-                    <div class="thumb u-reveal"><img src="img/Group 189.webp" alt="Startup Brand Identity" width="750" height="590" loading="lazy" decoding="async" fetchpriority="low">
+                    <div class="thumb u-reveal"><img src="../img/Group 189.webp" alt="Startup Brand Identity" width="750" height="590" loading="lazy" decoding="async" fetchpriority="low">
                         <div class="meta u-reveal u-stagger">
                             <h3 class="u-reveal">CareStudio — WordPress Block Theme</h3>
                             <p class="sub">Web · 2025</p>
                             <p class="desc">
-                                Lightweight block theme with a tablet-first hero and multiple UI variants (carousel). Built with core blocks, custom patterns, and clean CSS components. Editable content, fast setup, SEO-friendly.
+                                Lightweight block theme with multiple UI variants (carousel). Built with core blocks, custom patterns, and clean CSS components. Editable content, fast setup, SEO-friendly.
                             </p>
                             <ul class="tags tags--pill u-reveal">
                                 <li>WordPress</li>
@@ -142,7 +187,7 @@
 
                 </article>
                 <article class="project project-xl u-stagger" id="autorent" data-cat="web">
-                    <div class="thumb u-reveal"><img src="img/Group 200.webp" alt="TechFlow Mobile App" width="750" height="590" loading="lazy" decoding="async" fetchpriority="low"></div>
+                    <div class="thumb u-reveal"><img src="../img/Group 200.webp" alt="TechFlow Mobile App" width="750" height="590" loading="lazy" decoding="async" fetchpriority="low"></div>
                     <div class="meta u-reveal u-stagger">
                         <h3 class="u-reveal">AutoRent — Car Rental Front-end</h3>
                         <p class="sub u-reveal">
@@ -152,8 +197,9 @@
                             <a class="link-ghost" href="https://github.com/gabwowce/autorent_api" target="_blank" rel="noopener">API </a>
                         </p>
                         <p class="desc u-reveal">
-                            Responsive car-rental UI: vehicle catalog, filters, date-range pickers, and reservation flow. Demo uses mock data (API not connected). Backend REST API built in Python (separate repo).
+                            Car-rental interface: vehicle catalog, search & filters, date selection, and a clear booking flow. Easy to use and mobile-friendly.
                         </p>
+
                         <ul class="tags tags--pill u-reveal">
                             <li>React</li>
                             <li>Vite</li>
@@ -174,7 +220,7 @@
 
 
                 <article class="project  project-xl u-stagger" id="travel-app" data-cat="mobile">
-                    <div class="thumb u-reveal"><img src="img/123.webp" alt="TechFlow Mobile App" width="750" height="590" loading="lazy" decoding="async" fetchpriority="low"></div>
+                    <div class="thumb u-reveal"><img src="../img/123.webp" alt="TechFlow Mobile App" width="750" height="590" loading="lazy" decoding="async" fetchpriority="low"></div>
                     <div class="meta u-reveal u-stagger">
                         <h3 class="u-reveal">Travel App — React Native (Expo)</h3>
                         <p class="sub u-reveal">
@@ -193,7 +239,7 @@
                 </article>
 
                 <article class="project project-xl u-stagger" id="kibinai" data-cat="web">
-                    <div class="thumb u-reveal"><img src="img/Group 190.webp" alt="Startup Brand Identity" width="750" height="590" loading="lazy" decoding="async" fetchpriority="low"></div>
+                    <div class="thumb u-reveal"><img src="../img/Group 190.webp" alt="Startup Brand Identity" width="750" height="590" loading="lazy" decoding="async" fetchpriority="low"></div>
                     <div class="meta u-reveal u-stagger">
                         <h3 class="u-reveal">Kibinai Vilnius — Headless React + WordPress</h3>
                         <p class="sub u-reveal">
@@ -216,7 +262,7 @@
 
 
                 <article class="project project-xl u-stagger" id="convertclimb" data-cat="mobile">
-                    <div class="thumb u-reveal"><img src="img/124.webp" alt="SaaS Landing Redesign" width="750" height="590" loading="lazy" decoding="async" fetchpriority="low"></div>
+                    <div class="thumb u-reveal"><img src="../img/124.webp" alt="SaaS Landing Redesign" width="750" height="590" loading="lazy" decoding="async" fetchpriority="low"></div>
                     <div class="meta u-reveal u-stagger">
                         <h3 class="u-reveal">ConvertClimb — React Native (Expo)</h3>
                         <p class="sub u-reveal">
@@ -238,7 +284,7 @@
 
 
                 <article class="project project-xl u-stagger" id="library" data-cat="web">
-                    <div class="thumb u-reveal"><img src="img/Group 202.webp" alt="TechFlow Mobile App" width="750" height="590" loading="lazy" decoding="async" fetchpriority="low"></div>
+                    <div class="thumb u-reveal"><img src="../img/Group 202.webp" alt="TechFlow Mobile App" width="750" height="590" loading="lazy" decoding="async" fetchpriority="low"></div>
                     <div class="meta u-reveal u-stagger">
                         <h3 class="u-reveal">Library Management — React + ASP.NET Core</h3>
                         <p class="sub u-reveal">
@@ -263,7 +309,7 @@
                     </div>
                 </article>
                 <article class="project project-xl u-stagger" id="realestate" data-cat="web">
-                    <div class="thumb u-reveal"><img src="img/Group 203.webp" alt="TechFlow Mobile App" width="750" height="590" loading="lazy" decoding="async" fetchpriority="low"></div>
+                    <div class="thumb u-reveal"><img src="../img/Group 203.webp" alt="TechFlow Mobile App" width="750" height="590" loading="lazy" decoding="async" fetchpriority="low"></div>
                     <div class="meta u-reveal u-stagger">
                         <h3 class="u-reveal">RealEstate — Front-end Listings</h3>
                         <p class="sub u-reveal">
@@ -272,7 +318,7 @@
                             <a class="link-ghost" href="https://github.com/gabwowce/real-estate-fronted-app" target="_blank" rel="noopener">GitHub</a>
                         </p>
                         <p class="desc u-reveal">
-                            Responsive real-estate UI: listing grid & cards, filters (price, city, bedrooms), search, and detail view. Fast client-side routing and clean, reusable components.
+                            Responsive real-estate UI: listing grid & cards. Fast client-side routing and clean, reusable components.
                         </p>
                         <ul class="tags tags--pill u-reveal">
                             <li>React</li>
@@ -284,7 +330,7 @@
                     </div>
                 </article>
                 <article class="project project-xl u-stagger" id="personal-portfolio" data-cat="web">
-                    <div class="thumb u-reveal"><img src="img/Group 201.webp" alt="TechFlow Mobile App" width="750" height="590" loading="lazy" decoding="async" fetchpriority="low"></div>
+                    <div class="thumb u-reveal"><img src="../img/Group 201.webp" alt="TechFlow Mobile App" width="750" height="590" loading="lazy" decoding="async" fetchpriority="low"></div>
                     <div class="meta u-reveal u-stagger">
                         <h3 class="u-reveal">Personal Portfolio — UI/UX + Front-end</h3>
                         <p class="sub u-reveal">
@@ -305,7 +351,7 @@
                     </div>
                 </article>
                 <article class="project project-xl u-stagger" id="estate-clicker" data-cat="desktop">
-                    <div class="thumb u-reveal"><img src="img/Group 206.webp" alt="SaaS Landing Redesign" width="750" height="590" loading="lazy" decoding="async" fetchpriority="low"></div>
+                    <div class="thumb u-reveal"><img src="../img/Group 206.webp" alt="SaaS Landing Redesign" width="750" height="590" loading="lazy" decoding="async" fetchpriority="low"></div>
                     <div class="meta u-reveal u-stagger">
                         <h3 clas="u-reveal">Estate Clicker — Python (Pygame)</h3>
                         <p class="sub u-reveal">
@@ -331,16 +377,16 @@
         <aside aria-label="Quick info" class="sidebar u-reveal">
             <div class="card card--soft profile profile--soft">
                 <div class="avatar-neo-halo">
-                    <img class="avatar-neo" src="img/avatar-profile.webp" alt="Gabrielė – profile photo" width="430" height="500" loading="lazy" decoding="async" fetchpriority="low">
+                    <img class="avatar-neo" src="../../img/avatar-profile.webp" alt="Gabrielė – profile photo" width="430" height="500" loading="lazy" decoding="async" fetchpriority="low">
                 </div>
                 <h3 class="name t-title" style="margin: 0;">GABRIELĖ</h3>
-                <p class="muted">Creative Designer</p>
+                <p class="muted">Frontend developer</p>
                 <p class="muted xsmall">Vilnius, Lithuania</p>
                 <div class="badge-aside" style="margin:10px auto 0; display:inline-block;">Open for new projects</div>
 
                 <div class="cta-stack" style="margin-top:14px">
                     <a class="btn" href="mailto:gt1230112301@gmail.com">Email Me</a>
-                    <a class="btn outline" href="docs/CV.pdf" download>Download CV</a>
+                    <a class="btn outline" href="../docs/CV.pdf" download>Download CV</a>
                 </div>
             </div>
         </aside>
@@ -351,9 +397,9 @@
             <div class="container footer-card-flex">
                 <div class="cta-contact__text">
                     <h3>Ready to build something great?</h3>
-                    <p>Write briefly what you need — I’ll respond quickly.</p>
+                    <p>Tell me about your idea!</p>
                 </div>
-                <a class="btn-pill" href="/contact">Contact me →</a>
+                <a class="btn-pill" href="/porfolio-2025/en/contact">Contact me →</a>
             </div>
         </section>
 
@@ -361,7 +407,7 @@
             <div class="footer-top">
                 <!-- Brand / About -->
                 <section>
-                    <a class="brand" href="/">
+                    <a class="brand" href="/en/">
                         <span class="icon" aria-hidden="true">GT</span>
                         <span aria-label="Gabrielė Tamaševičiūtė">Gabrielė · Codeart</span>
                     </a>
@@ -383,12 +429,12 @@
                 <nav class="footer-card" aria-labelledby="flinks">
                     <h3 id="flinks" class="footer-title">Quick links</h3>
                     <ul class="footer-list">
-                        <li><a class="footer-link" href="/home.html">Home</a></li>
-                        <li><a class="footer-link" href="/about.html">About</a></li>
-                        <li><a class="footer-link" href="/portfolio.html">Portfolio</a></li>
-                        <li><a class="footer-link" href="/blog.html">Blog</a></li>
-                        <li><a class="footer-link" href="/contact.html">Contact</a></li>
-                        <li><a class="footer-link" href="docs/CV.pdf" download>CV / Resume</a></li>
+                        <li><a class="footer-link" href="/porfolio-2025/en/home.html">Home</a></li>
+                        <li><a class="footer-link" href="/porfolio-2025/en/about.html">About</a></li>
+                        <li><a class="footer-link" href="/porfolio-2025/en/portfolio.html">Portfolio</a></li>
+                        <li><a class="footer-link" href="/porfolio-2025/en/blog.html">Blog</a></li>
+                        <li><a class="footer-link" href="/porfolio-2025/en/contact.html">Contact</a></li>
+                        <li><a class="footer-link" href="../docs/CV.pdf" download>CV / Resume</a></li>
                     </ul>
                 </nav>
 

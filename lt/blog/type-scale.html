@@ -2,59 +2,85 @@
 <html lang="lt">
 
 <head>
-    <meta charset="utf-8">
+    <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <title>Type Scale — Gabrielė</title>
-    <meta name="description" content="Modular scale, clamp(), 3 lūžiai ir hierarchijos ritmas.">
-    <meta property="og:type" content="article">
-    <meta property="og:title" content="Type Scale — Gabrielė">
-    <meta property="og:description" content="Modular scale, clamp(), 3 lūžiai ir hierarchijos ritmas.">
-    <meta property="og:image" content="../img/blog/type-scale.jpg">
-    <link rel="canonical" href="https://tavo-domenas.lt/blog/type-scale.html">
-    <script type="application/ld+json">
-        {
-            "@context": "https://schema.org",
-            "@type": "Article",
-            "headline": "Type Scale",
-            "author": {
-                "@type": "Person",
-                "name": "Gabrielė"
-            },
-            "datePublished": "2025-02-01",
-            "image": "../img/blog/type-scale.jpg"
-        }
-    </script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/vs.min.css">
-    <link id="hljs-theme" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/vs.min.css">
-    <link id="hljs-theme" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/atom-one-light.min.css">
 
+    <title>Gabrielė – Type Scale</title>
+    <meta name="description" content="Modular scale, clamp(), 3 lūžiai ir tipografijos hierarchijos ritmas." />
+    <meta name="robots" content="index,follow" />
+
+    <!-- Canonical + hreflang -->
+    <link rel="canonical" href="https://gabwowce.github.io/porfolio-2025/lt/blog/type-scale.html" />
+    <link rel="alternate" href="https://gabwowce.github.io/porfolio-2025/lt/blog/type-scale.html" hreflang="lt" />
+    <link rel="alternate" href="https://gabwowce.github.io/porfolio-2025/en/blog/type-scale.html" hreflang="en" />
+    <link rel="alternate" href="https://gabwowce.github.io/porfolio-2025/en/blog/type-scale.html" hreflang="x-default" />
+
+    <!-- Ikonos / tema -->
+    <link rel="icon" href="../../img/favicon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="../../img/apple-touch-icon.png" />
+    <meta name="theme-color" content="#ffe9d6" />
+
+    <!-- Open Graph / X -->
+    <meta property="og:type" content="article" />
+    <meta property="og:locale" content="lt_LT" />
+    <meta property="og:title" content="Type Scale — Gabrielė" />
+    <meta property="og:description" content="Modular scale, clamp(), 3 lūžiai ir tipografijos hierarchijos ritmas." />
+    <meta property="og:url" content="https://gabwowce.github.io/porfolio-2025/lt/blog/type-scale.html" />
+    <meta property="og:image" content="https://gabwowce.github.io/porfolio-2025/img/blog/type-scale.jpg" />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <!-- Preload (kelias iš /lt/blog/) -->
+    <link rel="preload" href="../../fonts/clash/ClashGrotesk-Variable.woff2" as="font" type="font/woff2" crossorigin />
+
+    <!-- highlight.js (viena tema, be dublikatų) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/atom-one-light.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/css.min.js"></script>
     <script>
         hljs.highlightAll();
     </script>
-    <script src="../js/script.js" defer></script>
 
+    <!-- CSS/JS (iš /lt/blog/ kylam dviem lygiais) -->
+    <script src="../../js/script.js" defer></script>
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="../../css/about.css">
+    <link rel="stylesheet" href="../../css/aside.css">
+    <link rel="stylesheet" href="../../css/blog.css">
+    <link rel="stylesheet" href="../../css/blogs.css">
+    <link rel="stylesheet" href="../../css/contact-me.css">
+    <link rel="stylesheet" href="../../css/footer.css">
+    <link rel="stylesheet" href="../../css/hero.css">
+    <link rel="stylesheet" href="../../css/header.css">
+    <link rel="stylesheet" href="../../css/card.css">
+    <link rel="stylesheet" href="../../css/projects.css">
 
-    <!-- CSS (keliai iš /blog/) -->
-    <link rel="stylesheet" href="../css/style.css">
-    <link rel="stylesheet" href="../css/about.css">
-    <link rel="stylesheet" href="../css/aside.css">
-    <link rel="stylesheet" href="../css/blog.css">
-    <link rel="stylesheet" href="../css/contact-me.css">
-    <link rel="stylesheet" href="../css/footer.css">
-    <link rel="stylesheet" href="../css/hero.css">
-    <link rel="stylesheet" href="../css/header.css">
-    <link rel="stylesheet" href="../css/card.css">
-    <link rel="stylesheet" href="../css/projects.css">
-    <link rel="stylesheet" href="../css/blogs.css">
+    <!-- JSON-LD: Article -->
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "Article",
+            "headline": "Type Scale",
+            "inLanguage": "lt",
+            "author": {
+                "@type": "Person",
+                "name": "Gabrielė"
+            },
+            "datePublished": "2025-02-01",
+            "image": "https://gabwowce.github.io/porfolio-2025/img/blog/type-scale.jpg",
+            "mainEntityOfPage": {
+                "@type": "WebPage",
+                "@id": "https://gabwowce.github.io/porfolio-2025/lt/blog/type-scale.html"
+            }
+        }
+    </script>
 </head>
+
 
 <body>
     <!-- HEADER (be aside) -->
     <header class="site-header">
         <div class="container header-in">
-            <a id="brand" class="brand" href="/">
+            <a id="brand" class="brand" href="/lt/">
                 <span class="icon" aria-hidden="true">GT</span>
                 <span aria-label="Gabrielė Tamaševičiūtė">Gabrielė · Codeart</span>
             </a>
@@ -66,16 +92,16 @@
     </button>
             <nav class="main-nav">
                 <button class="nav-close" id="navClose" aria-label="Close menu">✕</button>
-                <a class="nav-link" href="../index.html">Home</a>
-                <a class="nav-link" href="../about.html">About</a>
+                <a class="nav-link" href="../index.html">Pagrindinis</a>
+                <a class="nav-link" href="../about.html">Apie</a>
                 <a class="nav-link" href="../portfolio.html">Portfolio</a>
-                <a class="nav-link" href="../services.html">Services</a>
-                <a class="nav-link active" href="../blog.html">Blog</a>
-                <a class="nav-link" href="../contact.html">Contact</a>
+                <a class="nav-link" href="../services.html">Paslaugos</a>
+                <a class="nav-link active" href="../blog.html">Tinklaraštis</a>
+                <a class="nav-link" href="../contact.html">Kontaktai</a>
                 <!-- Theme dropdown -->
                 <div class="nav-theme" id="themeMenu">
                     <button id="themeBtn" class="nav-link theme-btn" aria-haspopup="true" aria-expanded="false">
-      Theme <span class="swatch" aria-hidden="true"></span>
+      Tema <span class="swatch" aria-hidden="true"></span>
     </button>
                     <ul class="theme-list" role="menu" aria-label="Choose theme">
                         <li>
@@ -85,7 +111,7 @@
         <span class="sw s3"></span><span class="sw s4"></span>
       </span>
       <span class="meta">
-        <strong>Cream</strong><small>Warm, editorial</small>
+       <span class="meta"><strong>Cream</strong><small>Šilta, redakcinė</small></span>
       </span>
       <span class="check" aria-hidden="true">✓</span>
     </button>
@@ -94,7 +120,7 @@
                         <li>
                             <button role="menuitem" data-theme="ocean" style="--c1:#476eae;--c2:#e6efff;--c3:#ffffff;--c4:#FE7743">
       <span class="thumb-pall"><span class="sw s1"></span><span class="sw s2"></span><span class="sw s3"></span><span class="sw s4"></span></span>
-      <span class="meta"><strong>Ocean</strong><small>Clean blue</small></span>
+      <span class="meta"><strong>Ocean</strong><small>Švari mėlyna</small></span>
       <span class="check" aria-hidden="true">✓</span>
     </button>
                         </li>
@@ -102,7 +128,7 @@
                         <li>
                             <button role="menuitem" data-theme="forest" style="--c1:#5F8B4C;--c2:#e9f6ef;--c3:#ffffff;--c4:#FF9A9A">
       <span class="thumb-pall"><span class="sw s1"></span><span class="sw s2"></span><span class="sw s3"></span><span class="sw s4"></span></span>
-      <span class="meta"><strong>Forest</strong><small>Fresh green</small></span>
+      <span class="meta"><strong>Forest</strong><small>Gaivi žalia</small></span>
       <span class="check" aria-hidden="true">✓</span>
     </button>
                         </li>
@@ -110,7 +136,7 @@
                         <li>
                             <button role="menuitem" data-theme="rose" style="--c1:#E69DB8;--c2:#fde7ee;--c3:#ffffff;--c4:#80C4E9">
       <span class="thumb-pall"><span class="sw s1"></span><span class="sw s2"></span><span class="sw s3"></span><span class="sw s4"></span></span>
-      <span class="meta"><strong>Rose</strong><small>Soft pink</small></span>
+      <span class="meta"><strong>Rose</strong><small>Švelni rožinė</small></span>
       <span class="check" aria-hidden="true">✓</span>
     </button>
                         </li>
@@ -118,14 +144,20 @@
                         <li>
                             <button role="menuitem" data-theme="slate" style="--c1:#b664a462;--c2:#262a31ff;--c3:#1c1e22ff;--c4:#60a5fa">
       <span class="thumb-pall"><span class="sw s1"></span><span class="sw s2"></span><span class="sw s3"></span><span class="sw s4"></span></span>
-      <span class="meta"><strong>Slate</strong><small>Dark, neutral</small></span>
+      <span class="meta"><strong>Slate</strong><small>Tamsi, neutrali</small></span>
       <span class="check" aria-hidden="true">✓</span>
     </button>
                         </li>
                     </ul>
 
                 </div>
+                <!-- Language switcher -->
+                <div class="nav-lang">
+                    <!-- noscript/fallback gali vesti į EN pradžią -->
+                    <a id="langSwitch" class="nav-link" href="/en/" hreflang="en" aria-label="Switch language">EN</a>
+                </div>
             </nav>
+
         </div>
     </header>
     <!-- HERO -->
@@ -134,14 +166,14 @@
             <div class="hero-copy">
                 <h2 class="display-l u-reveal">TYPE SCALE</h1>
                     <nav class="breadcrumbs u-reveal">
-                        <a href="../blog.html">BLOG</a> <svg class="crumb-sep" viewBox="0 0 24 24" aria-hidden="true">
+                        <a href="../blog.html">TINKLARAIŠTIS</a> <svg class="crumb-sep" viewBox="0 0 24 24" aria-hidden="true">
     <path d="M9 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
   </svg> <span aria-current="page">TYPE SCALE</span>
                     </nav>
 
             </div>
             <figure class="hero-portrait u-reveal">
-                <img src="../img/avatar-writing.webp" alt="Gabrielle – Creative Designer" width="360" height="500" loading="eager" decoding="sync" fetchpriority="high">
+                <img src="../../img/avatar-writing.webp" alt="Gabrielle – Frontend developer" width="360" height="500" loading="eager" decoding="sync" fetchpriority="high">
             </figure>
         </div>
     </section>
@@ -282,58 +314,45 @@ h2{ font-size: var(--step-4); line-height: 1.25; }
   </svg></a>
             </nav>
         </section>
-        <!-- ASIDE (only here, not in header) -->
-        <aside aria-label="Quick info" class="sidebar u-reveal">
+        <!-- ASIDE (tik čia, ne header) -->
+        <aside aria-label="Greita informacija" class="sidebar hide-when-mobile u-reveal">
             <div class="card card--soft profile profile--soft">
                 <div class="avatar-neo-halo">
-                    <img class="avatar-neo" src="../img/avatar-profile.webp" alt="Gabrielė – profile photo" width="72" height="72" loading="lazy" decoding="async" fetchpriority="low">
+                    <img class="avatar-neo" src="../../img/avatar-profile.webp" alt="Gabrielė – profilio nuotrauka" width="72" height="72" loading="lazy" decoding="async" fetchpriority="low">
                 </div>
                 <h3 class="name t-title" style="margin: 0;">GABRIELĖ</h3>
-                <p class="muted">Creative Designer</p>
-                <p class="muted xsmall">Vilnius, Lithuania</p>
-                <div class="badge-aside" style="margin:10px auto 0; display:inline-block;">Open for new projects</div>
+                <p class="muted">Frontend programuotoja</p>
+                <p class="muted xsmall">Vilnius, Lietuva</p>
+                <div class="badge-aside" style="margin:10px auto 0; display:inline-block;">Atvira naujiems projektams</div>
 
                 <div class="cta-stack" style="margin-top:14px">
-                    <a class="btn" href="mailto:gt1230112301@gmail.com">Email Me</a>
-                    <a class="btn outline" href="docs/CV.pdf" download>Download CV</a>
+                    <a class="btn" href="mailto:gt1230112301@gmail.com">Parašyti el. laišką</a>
+                    <a class="btn outline" href="../docs/CV.pdf" download>Atsisiųsti CV</a>
                 </div>
             </div>
-
-
-
-
         </aside>
 
     </main>
 
+    <!-- FOOTER (kompaktinis) -->
     <footer class="site-footer" role="contentinfo">
-        <section class="cta-contact">
-            <div class="container footer-card-flex">
-                <div class="cta-contact__text">
-                    <h3>Ready to build something great?</h3>
-                    <p>Write briefly what you need — I’ll respond quickly.</p>
-                </div>
-                <a class="btn-pill" href="/contact">Contact me →</a>
-            </div>
-        </section>
-
         <div class="footer-in container">
             <div class="footer-top">
                 <!-- Brand / About -->
                 <section>
-                    <a class="brand" href="/">
+                    <a class="brand" href="/lt/">
                         <span class="icon" aria-hidden="true">GT</span>
                         <span aria-label="Gabrielė Tamaševičiūtė">Gabrielė · Codeart</span>
                     </a>
-                    <p class="brand-note">Front-end dev & designer. I build clean, fast and accessible UIs.</p>
-                    <div class="socials" aria-label="Social links">
+                    <p class="brand-note">Front-end kūrėja ir dizainerė. Kuriu švarius, greitus ir prieinamus UI.</p>
+                    <div class="socials" aria-label="Socialiniai saitai">
                         <a class="soc" href="#" aria-label="GitHub" title="GitHub">
                             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 19c-4 1.5-4-2.5-6-3m12 6v-3.87a3.37 3.37 0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0018 3.77 5.07 5.07 0 0017.91 1S16.73.65 14 2.48a13.38 13.38 0 00-5 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 005 3.77a5.44 5.44 0 00-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 009 18.13V22"/></svg>
                         </a>
                         <a class="soc" href="#" aria-label="LinkedIn" title="LinkedIn">
                             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-4 0v7h-4v-7a6 6 0 016-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
                         </a>
-                        <a class="soc" href="#" aria-label="Email" title="Email">
+                        <a class="soc" href="#" aria-label="El. paštas" title="El. paštas">
                             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 4h16v16H4z"/><path d="M22 6L12 13 2 6"/></svg>
                         </a>
                     </div>
@@ -341,28 +360,28 @@ h2{ font-size: var(--step-4); line-height: 1.25; }
 
                 <!-- Quick links -->
                 <nav class="footer-card" aria-labelledby="flinks">
-                    <h3 id="flinks" class="footer-title">Quick links</h3>
+                    <h3 id="flinks" class="footer-title">Trumpi saitai</h3>
                     <ul class="footer-list">
-                        <li><a class="footer-link" href="/home.html">Home</a></li>
-                        <li><a class="footer-link" href="/about.html">About</a></li>
-                        <li><a class="footer-link" href="/portfolio.html">Portfolio</a></li>
-                        <li><a class="footer-link" href="/blog.html">Blog</a></li>
-                        <li><a class="footer-link" href="/contact.html">Contact</a></li>
-                        <li><a class="footer-link" href="docs/CV.pdf" download>CV / Resume</a></li>
+                        <li><a class="footer-link" href="/porfolio-2025/lt/home.html">Pagrindinis</a></li>
+                        <li><a class="footer-link" href="/porfolio-2025/lt/about.html">Apie</a></li>
+                        <li><a class="footer-link" href="/porfolio-2025/lt/portfolio.html">Portfolio</a></li>
+                        <li><a class="footer-link" href="/porfolio-2025/lt/blog.html">Tinklaraštis</a></li>
+                        <li><a class="footer-link" href="/porfolio-2025/lt/contact.html">Kontaktai</a></li>
+                        <li><a class="footer-link" href="../docs/CV.pdf" download>CV / Reziumė</a></li>
                     </ul>
                 </nav>
 
                 <!-- Newsletter / CTA -->
                 <section class="footer-card" aria-labelledby="fnews">
-                    <h3 id="fnews" class="footer-title">Quick message</h3>
+                    <h3 id="fnews" class="footer-title">Trumpa žinutė</h3>
                     <form class="newsletter" action="https://formspree.io/f/xeorkyne" method="POST">
-                        <input class="input" type="email" name="email" placeholder="Email" aria-label="Email" required>
-                        <input class="input" type="text" name="Message" placeholder="Message" aria-label="Message" required>
+                        <input class="input" type="email" name="email" placeholder="El. paštas" aria-label="El. paštas" required>
+                        <input class="input" type="text" name="Message" placeholder="Žinutė" aria-label="Žinutė" required>
                         <input type="text" name="_gotcha" style="display:none">
                         <!-- honeypot -->
-                        <button class="btn-pill" type="submit">Say hi 👋</button>
+                        <button class="btn-pill" type="submit">Parašyk 👋</button>
                         <p class="form-note" role="status" aria-live="polite"></p>
-                        <small class="brand-note">Message me — I reply within 24 h.</small>
+                        <small class="brand-note">Parašyk — atrašau per 24 val.</small>
                     </form>
                 </section>
             </div>
@@ -370,13 +389,11 @@ h2{ font-size: var(--step-4); line-height: 1.25; }
             <div class="footer-bottom">
                 <span>© 2025 Gabrielė · Codeart</span>
                 <div class="mini-nav">
-
                     <a href="mailto:gt1230112301@gmail.com">gt1230112301@gmail.com</a>
                 </div>
             </div>
         </div>
     </footer>
-
 
 </body>
 

@@ -4,26 +4,85 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Contact – Gabrielė</title>
-    <link rel="preload" href="fonts/clash/ClashGrotesk-Variable.woff2" as="font" type="font/woff2" crossorigin>
-    <script src="js/script.js" defer></script>
-    <link rel="stylesheet" href="css/style.css" />
-    <link rel="stylesheet" href="css/about.css" />
-    <link rel="stylesheet" href="css/aside.css" />
-    <link rel="stylesheet" href="css/blog.css" />
-    <link rel="stylesheet" href="css/contact-me.css" />
-    <link rel="stylesheet" href="css/footer.css" />
-    <link rel="stylesheet" href="css/hero.css" />
-    <link rel="stylesheet" href="css/header.css" />
-    <link rel="stylesheet" href="css/card.css" />
-    <link rel="stylesheet" href="css/projects.css" />
+
+    <title>Gabrielė – Contact</title>
+    <meta name="description" content="Get in touch by email or form. I usually reply within 24 hours. Based in Vilnius, working remotely." />
+    <meta name="robots" content="index,follow" />
+
+    <!-- Canonical + hreflang -->
+    <link rel="canonical" href="https://gabwowce.github.io/porfolio-2025/en/contact.html" />
+    <link rel="alternate" href="https://gabwowce.github.io/porfolio-2025/en/contact.html" hreflang="en" />
+    <link rel="alternate" href="https://gabwowce.github.io/porfolio-2025/lt/contact.html" hreflang="lt" />
+    <link rel="alternate" href="https://gabwowce.github.io/porfolio-2025/en/contact.html" hreflang="x-default" />
+
+    <!-- Icons / theme -->
+    <link rel="icon" href="../img/favicon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="../img/apple-touch-icon.png" />
+    <meta name="theme-color" content="#ffe9d6" />
+
+    <!-- Open Graph / X -->
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:title" content="Gabrielė – Contact" />
+    <meta property="og:description" content="Write a short message — I’ll reply quickly." />
+    <meta property="og:url" content="https://gabwowce.github.io/porfolio-2025/en/contact.html" />
+    <meta property="og:image" content="https://gabwowce.github.io/porfolio-2025/img/og-cover.jpg" />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <!-- Preload -->
+    <link rel="preload" href="../fonts/clash/ClashGrotesk-Variable.woff2" as="font" type="font/woff2" crossorigin />
+
+    <!-- CSS/JS (be dvigubų //) -->
+    <script src="../js/script.js" defer></script>
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/about.css" />
+    <link rel="stylesheet" href="../css/aside.css" />
+    <link rel="stylesheet" href="../css/blog.css" />
+    <link rel="stylesheet" href="../css/contact-me.css" />
+    <link rel="stylesheet" href="../css/footer.css" />
+    <link rel="stylesheet" href="../css/hero.css" />
+    <link rel="stylesheet" href="../css/header.css" />
+    <link rel="stylesheet" href="../css/card.css" />
+    <link rel="stylesheet" href="../css/projects.css" />
+
+    <!-- JSON-LD: ContactPage + Person -->
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "ContactPage",
+            "name": "Contact – Gabrielė",
+            "url": "https://gabwowce.github.io/porfolio-2025/en/contact.html",
+            "inLanguage": "en"
+        }
+    </script>
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "Person",
+            "name": "Gabrielė Tamaševičiūtė",
+            "jobTitle": "Front-end Developer",
+            "url": "https://gabwowce.github.io/porfolio-2025/en/contact.html",
+            "contactPoint": [{
+                "@type": "ContactPoint",
+                "contactType": "customer support",
+                "email": "gt1230112301@gmail.com",
+                "areaServed": "EN"
+            }],
+            "address": {
+                "@type": "PostalAddress",
+                "addressLocality": "Vilnius",
+                "addressCountry": "LT"
+            }
+        }
+    </script>
 </head>
+
 
 <body>
     <!-- HEADER (no aside) -->
     <header class="site-header">
         <div class="container header-in">
-            <a id="brand" class="brand" href="/">
+            <a id="brand" class="brand" href="/en/">
                 <span class="icon" aria-hidden="true">GT</span>
                 <span aria-label="Gabrielė Tamaševičiūtė">Gabrielė · Codeart</span>
             </a>
@@ -94,6 +153,11 @@
                     </ul>
 
                 </div>
+                <!-- Language switcher -->
+                <div class="nav-lang">
+                    <!-- noscript/fallback gali vesti į EN pradžią -->
+                    <a id="langSwitch" class="nav-link" href="/en/" hreflang="en" aria-label="Switch language">EN</a>
+                </div>
             </nav>
         </div>
     </header>
@@ -106,7 +170,7 @@
 
             </div>
             <figure class="hero-portrait u-reveal">
-                <img src="img/avatar-waving4.webp" alt="Gabrielė waving – creative designer" width="360" height="500" loading="eager" decoding="sync" fetchpriority="high">
+                <img src="../img/avatar-waving4.webp" alt="Gabrielė waving – Frontend developer" width="360" height="500" loading="eager" decoding="sync" fetchpriority="high">
             </figure>
         </div>
     </section>
@@ -187,16 +251,16 @@
         <aside aria-label="Quick info" class="sidebar u-reveal">
             <div class="card card--soft profile profile--soft">
                 <div class="avatar-neo-halo">
-                    <img class="avatar-neo" src="img/avatar-profile.webp" alt="Gabrielė – profile photo" width="72" height="72" loading="lazy" decoding="async" fetchpriority="low">
+                    <img class="avatar-neo" src="../../img/avatar-profile.webp" alt="Gabrielė – profile photo" width="72" height="72" loading="lazy" decoding="async" fetchpriority="low">
                 </div>
                 <h3 class="name t-title" style="margin: 0;">GABRIELĖ</h3>
-                <p class="muted">Creative Designer</p>
+                <p class="muted">Frontend developer</p>
                 <p class="muted xsmall">Vilnius, Lithuania</p>
                 <div class="badge-aside" style="margin:10px auto 0; display:inline-block;">Open for new projects</div>
 
                 <div class="cta-stack" style="margin-top:14px">
                     <a class="btn" href="mailto:gt1230112301@gmail.com">Email Me</a>
-                    <a class="btn outline" href="docs/CV.pdf" download>Download CV</a>
+                    <a class="btn outline" href="../docs/CV.pdf" download>Download CV</a>
                 </div>
             </div>
         </aside>
@@ -211,7 +275,7 @@
             <div class="footer-top">
                 <!-- Brand / About -->
                 <section>
-                    <a class="brand" href="/">
+                    <a class="brand" href="/en/">
                         <span class="icon" aria-hidden="true">GT</span>
                         <span aria-label="Gabrielė Tamaševičiūtė">Gabrielė · Codeart</span>
                     </a>
@@ -233,12 +297,12 @@
                 <nav class="footer-card" aria-labelledby="flinks">
                     <h3 id="flinks" class="footer-title">Quick links</h3>
                     <ul class="footer-list">
-                        <li><a class="footer-link" href="/home.html">Home</a></li>
-                        <li><a class="footer-link" href="/about.html">About</a></li>
-                        <li><a class="footer-link" href="/portfolio.html">Portfolio</a></li>
-                        <li><a class="footer-link" href="/blog.html">Blog</a></li>
-                        <li><a class="footer-link" href="/contact.html">Contact</a></li>
-                        <li><a class="footer-link" href="docs/CV.pdf" download>CV / Resume</a></li>
+                        <li><a class="footer-link" href="/porfolio-2025/en/home.html">Home</a></li>
+                        <li><a class="footer-link" href="/porfolio-2025/en/about.html">About</a></li>
+                        <li><a class="footer-link" href="/porfolio-2025/en/portfolio.html">Portfolio</a></li>
+                        <li><a class="footer-link" href="/porfolio-2025/en/blog.html">Blog</a></li>
+                        <li><a class="footer-link" href="/porfolio-2025/en/contact.html">Contact</a></li>
+                        <li><a class="footer-link" href="../docs/CV.pdf" download>CV / Resume</a></li>
                     </ul>
                 </nav>
 

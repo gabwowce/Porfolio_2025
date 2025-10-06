@@ -1,0 +1,454 @@
+<!doctype html>
+<html lang="lt">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+
+    <title>Gabrielė – Portfolio</title>
+    <meta name="description" content="Atrinkti front-end ir dizaino projektai: svetainės, React/React Native darbai, UI komponentai, našumo ir A11y sprendimai." />
+    <meta name="robots" content="index,follow" />
+
+    <!-- Canonical + hreflang -->
+    <link rel="canonical" href="https://gabwowce.github.io/porfolio-2025/lt/portfolio.html" />
+    <link rel="alternate" href="https://gabwowce.github.io/porfolio-2025/lt/portfolio.html" hreflang="lt" />
+    <link rel="alternate" href="https://gabwowce.github.io/porfolio-2025/en/portfolio.html" hreflang="en" />
+    <link rel="alternate" href="https://gabwowce.github.io/porfolio-2025/en/portfolio.html" hreflang="x-default" />
+
+    <!-- Ikonos / tema -->
+    <link rel="icon" href="../img/favicon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="../img/apple-touch-icon.png" />
+    <meta name="theme-color" content="#ffe9d6" />
+
+    <!-- Open Graph / X -->
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="lt_LT" />
+    <meta property="og:title" content="Gabrielė – Portfolio" />
+    <meta property="og:description" content="Front-end ir dizaino projektų rinkinys: greiti, prieinami ir estetiški UI." />
+    <meta property="og:url" content="https://gabwowce.github.io/porfolio-2025/lt/portfolio.html" />
+    <meta property="og:image" content="https://gabwowce.github.io/porfolio-2025/img/og-cover.jpg" />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <!-- Preload'ai -->
+    <link rel="preload" href="../fonts/clash/ClashGrotesk-Variable.woff2" as="font" type="font/woff2" crossorigin />
+
+    <!-- CSS/JS (be dvigubų //) -->
+    <script src="../js/script.js" defer></script>
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/about.css" />
+    <link rel="stylesheet" href="../css/aside.css" />
+    <link rel="stylesheet" href="../css/blog.css" />
+    <link rel="stylesheet" href="../css/contact-me.css" />
+    <link rel="stylesheet" href="../css/footer.css" />
+    <link rel="stylesheet" href="../css/hero.css" />
+    <link rel="stylesheet" href="../css/header.css" />
+    <link rel="stylesheet" href="../css/card.css" />
+    <link rel="stylesheet" href="../css/projects.css" />
+
+    <!-- JSON-LD: CollectionPage -->
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "CollectionPage",
+            "name": "Portfolio – Gabrielė",
+            "inLanguage": "lt",
+            "url": "https://gabwowce.github.io/porfolio-2025/lt/portfolio.html"
+        }
+    </script>
+</head>
+
+
+<body>
+    <!-- HEADER (be aside) -->
+    <header class="site-header">
+        <div class="container header-in">
+            <a id="brand" class="brand" href="/lt/">
+                <span class="icon" aria-hidden="true">GT</span>
+                <span aria-label="Gabrielė Tamaševičiūtė">Gabrielė · Codeart</span>
+            </a>
+            <!-- Hamburger -->
+            <button class="hamburger" id="navToggle" aria-label="Atverti meniu" aria-controls="primaryNav" aria-expanded="false">
+        <span class="hamburger__bar" aria-hidden="true"></span>
+        <span class="hamburger__bar" aria-hidden="true"></span>
+        <span class="hamburger__bar" aria-hidden="true"></span>
+      </button>
+
+            <nav class="main-nav">
+                <button class="nav-close" id="navClose" aria-label="Uždaryti meniu">✕</button>
+                <a class="nav-link" href="index.html">Pagrindinis</a>
+                <a class="nav-link" href="about.html">Apie</a>
+                <a class="nav-link active" href="portfolio.html">Portfolio</a>
+                <a class="nav-link" href="services.html">Paslaugos</a>
+                <a class="nav-link" href="blog.html">Tinklaraštis</a>
+                <a class="nav-link" href="contact.html">Kontaktai</a>
+                <!-- Theme dropdown -->
+                <div class="nav-theme" id="themeMenu">
+                    <button id="themeBtn" class="nav-link theme-btn" aria-haspopup="true" aria-expanded="false">
+            Tema <span class="swatch" aria-hidden="true"></span>
+          </button>
+                    <ul class="theme-list" role="menu" aria-label="Pasirinkite temą">
+                        <li>
+                            <button role="menuitem" data-theme="cream" style="--c1:#362f27;--c2:#ffe9d6;--c3:#ffffffff;--c4:#ffaa5fff">
+                <span class="thumb-pall">
+                  <span class="sw s1"></span><span class="sw s2"></span>
+                  <span class="sw s3"></span><span class="sw s4"></span>
+                </span>
+                <span class="meta">
+                  <strong>Cream</strong><small>Šilta, redakcinė</small>
+                </span>
+                <span class="check" aria-hidden="true">✓</span>
+              </button>
+                        </li>
+
+                        <li>
+                            <button role="menuitem" data-theme="ocean" style="--c1:#476eae;--c2:#e6efff;--c3:#ffffff;--c4:#FE7743">
+                <span class="thumb-pall"><span class="sw s1"></span><span class="sw s2"></span><span class="sw s3"></span><span class="sw s4"></span></span>
+                <span class="meta"><strong>Ocean</strong><small>Švari mėlyna</small></span>
+                <span class="check" aria-hidden="true">✓</span>
+              </button>
+                        </li>
+
+                        <li>
+                            <button role="menuitem" data-theme="forest" style="--c1:#5F8B4C;--c2:#e9f6ef;--c3:#ffffff;--c4:#FF9A9A">
+                <span class="thumb-pall"><span class="sw s1"></span><span class="sw s2"></span><span class="sw s3"></span><span class="sw s4"></span></span>
+                <span class="meta"><strong>Forest</strong><small>Gaivi žalia</small></span>
+                <span class="check" aria-hidden="true">✓</span>
+              </button>
+                        </li>
+
+                        <li>
+                            <button role="menuitem" data-theme="rose" style="--c1:#E69DB8;--c2:#fde7ee;--c3:#ffffff;--c4:#80C4E9">
+                <span class="thumb-pall"><span class="sw s1"></span><span class="sw s2"></span><span class="sw s3"></span><span class="sw s4"></span></span>
+                <span class="meta"><strong>Rose</strong><small>Švelni rožinė</small></span>
+                <span class="check" aria-hidden="true">✓</span>
+              </button>
+                        </li>
+
+                        <li>
+                            <button role="menuitem" data-theme="slate" style="--c1:#b664a462;--c2:#262a31ff;--c3:#1c1e22ff;--c4:#60a5fa">
+                <span class="thumb-pall"><span class="sw s1"></span><span class="sw s2"></span><span class="sw s3"></span><span class="sw s4"></span></span>
+                <span class="meta"><strong>Slate</strong><small>Tamsi, neutrali</small></span>
+                <span class="check" aria-hidden="true">✓</span>
+              </button>
+                        </li>
+                    </ul>
+
+                </div>
+                <!-- Language switcher -->
+                <div class="nav-lang">
+                    <!-- noscript/fallback gali vesti į EN pradžią -->
+                    <a id="langSwitch" class="nav-link" href="/en/" hreflang="en" aria-label="Switch language">EN</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- HERO -->
+    <section class="card-hero hero u-stagger">
+        <div class="container hero-grid">
+            <div class="hero-copy">
+                <h2 class="display-l u-reveal">PORTFOLIO</h2>
+            </div>
+            <figure class="hero-portrait u-reveal">
+                <img src="../img/avatar-porfolio.webp" style="transform: scaleX(-1)" alt="Gabrielė – Frontend programuotoja" width="72" height="72" loading="eager" decoding="sync" fetchpriority="high">
+            </figure>
+        </div>
+    </section>
+
+    <main class="content container">
+        <section class="articles u-stagger" style="background-color:transparent; padding: 0;">
+            <div class="segmented" role="tablist" aria-label="Projektų filtras">
+                <span class="seg-thumb" aria-hidden="true"></span>
+                <button class="seg-btn is-active" data-filter="all" role="tab" aria-selected="true">Visi</button>
+                <button class="seg-btn" data-filter="web" role="tab" aria-selected="false">Web</button>
+                <button class="seg-btn" data-filter="mobile" role="tab" aria-selected="false">Mobile</button>
+                <button class="seg-btn" data-filter="desktop" role="tab" aria-selected="false">Desktop</button>
+            </div>
+
+            <div class="featured-grid">
+                <article class="project project-xl u-stagger" id="carestudio" data-cat="web">
+                    <div class="thumb u-reveal"><img src="../img/Group 189.webp" alt="CareStudio — WordPress blokinė tema" width="750" height="590" loading="lazy" decoding="async" fetchpriority="low"></div>
+                    <div class="meta u-reveal u-stagger">
+                        <h3 class="u-reveal">CareStudio — WordPress blokinė tema</h3>
+                        <p class="sub">Web · 2025</p>
+                        <p class="desc">
+                            Lengva blokinė tema su keliais UI variantais. Blokai, individualūs pattern'ai ir švarūs CSS komponentai. Redaguojamas turinys, greitas diegimas, SEO draugiška.
+                        </p>
+                        <ul class="tags tags--pill u-reveal">
+                            <li>WordPress</li>
+                            <li>Block Theme</li>
+                            <li>Gutenberg</li>
+                            <li>HTML5</li>
+                            <li>CSS/SCSS</li>
+                            <li>PHP</li>
+                        </ul>
+                    </div>
+                </article>
+
+                <article class="project project-xl u-stagger" id="autorent" data-cat="web">
+                    <div class="thumb u-reveal"><img src="../img/Group 200.webp" alt="AutoRent — automobilių nuomos Front-end" width="750" height="590" loading="lazy" decoding="async" fetchpriority="low"></div>
+                    <div class="meta u-reveal u-stagger">
+                        <h3 class="u-reveal">AutoRent — automobilių nuomos Front-end</h3>
+                        <p class="sub u-reveal">
+                            Web · 2025 ·
+                            <a class="link-ghost" href="https://car-rental-frontend-v2.vercel.app/" target="_blank" rel="noopener">Live demo</a> ·
+                            <a class="link-ghost" href="https://github.com/gabwowce/car-rental-frontend" target="_blank" rel="noopener">GitHub (FE)</a> ·
+                            <a class="link-ghost" href="https://github.com/gabwowce/autorent_api" target="_blank" rel="noopener">API</a>
+                        </p>
+                        <p class="desc u-reveal">
+                            Automobilių nuomos sąsaja: katalogas, paieška ir filtrai, datos pasirinkimas bei aiški rezervavimo eiga. Lengva naudoti ir pritaikyta mobiliesiems.
+                        </p>
+                        <ul class="tags tags--pill u-reveal">
+                            <li>React</li>
+                            <li>Vite</li>
+                            <li>Tailwind CSS</li>
+                            <li>Formos/Validacija</li>
+                            <li>Python</li>
+                            <li>FastAPI</li>
+                            <li>JWT</li>
+                            <li>JSON</li>
+                        </ul>
+                    </div>
+                </article>
+
+                <article class="project project-xl u-stagger" id="travel-app" data-cat="mobile">
+                    <div class="thumb u-reveal"><img src="../img/123.webp" alt="Travel App — React Native (Expo)" width="750" height="590" loading="lazy" decoding="async" fetchpriority="low"></div>
+                    <div class="meta u-reveal u-stagger">
+                        <h3 class="u-reveal">Travel App — React Native (Expo)</h3>
+                        <p class="sub u-reveal">
+                            Mobile · 2025 ·
+                            <a class="link-ghost" href="https://github.com/gabwowce/travel-app-front" target="_blank" rel="noopener">GitHub</a>
+                        </p>
+                        <p class="desc u-reveal">
+                            Daugiaplatformis kelionių app'o karkasas su Expo. Failų pagrindu maršrutizacija, greitas atnaujinimas, paruošta dev build'ams (Android/iOS/Expo Go). Švari struktūra plėtrai (ekranai, API, autentifikacija).
+                        </p>
+                        <ul class="tags tags--pill u-reveal">
+                            <li>React Native</li>
+                            <li>Expo</li>
+                            <li>Google Maps</li>
+                        </ul>
+                    </div>
+                </article>
+
+                <article class="project project-xl u-stagger" id="kibinai" data-cat="web">
+                    <div class="thumb u-reveal"><img src="../img/Group 190.webp" alt="Kibinai Vilnius — Headless React + WordPress" width="750" height="590" loading="lazy" decoding="async" fetchpriority="low"></div>
+                    <div class="meta u-reveal u-stagger">
+                        <h3 class="u-reveal">Kibinai Vilnius — Headless React + WordPress</h3>
+                        <p class="sub u-reveal">
+                            Web · 2025 ·
+                            <a class="link-ghost" href="https://kibinaivilnius.lt/" target="_blank" rel="noopener">Svetainė</a> ·
+                            <a class="link-ghost" href="https://github.com/gabwowce?tab=repositories" target="_blank" rel="noopener">GitHub</a>
+                        </p>
+                        <p class="desc u-reveal">
+                            Headless architektūra: React FE maitinamas WordPress REST API (turinio ir meniu valdymas). Redaguojamas turinys, greitas krovimas ir SEO-ready struktūra.
+                        </p>
+                        <ul class="tags tags--pill u-reveal">
+                            <li>React</li>
+                            <li>WordPress</li>
+                            <li>REST API</li>
+                            <li>Headless CMS</li>
+                        </ul>
+                    </div>
+                </article>
+
+                <article class="project project-xl u-stagger" id="convertclimb" data-cat="mobile">
+                    <div class="thumb u-reveal"><img src="../img/124.webp" alt="ConvertClimb — React Native (Expo)" width="750" height="590" loading="lazy" decoding="async" fetchpriority="low"></div>
+                    <div class="meta u-reveal u-stagger">
+                        <h3 class="u-reveal">ConvertClimb — React Native (Expo)</h3>
+                        <p class="sub u-reveal">
+                            Mobile · 2025 ·
+                            <a class="link-ghost" href="https://github.com/gabwowce/ConvertClimb" target="_blank" rel="noopener">GitHub</a>
+                        </p>
+                        <p class="desc u-reveal">
+                            Laipiojimo/vaidmenų konverteris su Expo: greitos gradų konversijos (YDS/Prancūzų/UK) ir bendri vienetai (ūgis, atstumas). „Offline-first“ UI su paprastomis, greitomis sąveikomis.
+                        </p>
+                        <ul class="tags tags--pill u-reveal">
+                            <li>React Native</li>
+                            <li>Expo</li>
+                            <li>AsyncStorage (offline)</li>
+                        </ul>
+                    </div>
+                </article>
+
+                <article class="project project-xl u-stagger" id="library" data-cat="web">
+                    <div class="thumb u-reveal"><img src="../img/Group 202.webp" alt="Bibliotekos valdymas — React + ASP.NET Core" width="750" height="590" loading="lazy" decoding="async" fetchpriority="low"></div>
+                    <div class="meta u-reveal u-stagger">
+                        <h3 class="u-reveal">Bibliotekos valdymas — React + ASP.NET Core</h3>
+                        <p class="sub u-reveal">
+                            Web · 2024 ·
+                            <a class="link-ghost" href="https://github.com/gabwowce/LibraryManagement-frontend" target="_blank" rel="noopener">GitHub (FE)</a> ·
+                            <a class="link-ghost" href="https://github.com/gabwowce/LibraryManagement-backend" target="_blank" rel="noopener">GitHub (API)</a>
+                        </p>
+                        <p class="desc u-reveal">
+                            Pilnas stack'as: React FE + ASP.NET Core API su JWT, vaidmenų teisėmis ir SQL. Knygų/naudotojų CRUD, skolų sekimas ir kt.
+                        </p>
+                        <ul class="tags tags--pill u-reveal">
+                            <li>React</li>
+                            <li>SCSS</li>
+                            <li>ASP.NET Core</li>
+                            <li>C#</li>
+                            <li>REST API</li>
+                            <li>JWT</li>
+                            <li>SQL</li>
+                            <li>CRUD</li>
+                            <li>Role-based Access</li>
+                        </ul>
+                    </div>
+                </article>
+
+                <article class="project project-xl u-stagger" id="realestate" data-cat="web">
+                    <div class="thumb u-reveal"><img src="../img/Group 203.webp" alt="RealEstate — skelbimų Front-end" width="750" height="590" loading="lazy" decoding="async" fetchpriority="low"></div>
+                    <div class="meta u-reveal u-stagger">
+                        <h3 class="u-reveal">RealEstate — skelbimų Front-end</h3>
+                        <p class="sub u-reveal">
+                            Web · 2024 ·
+                            <a class="link-ghost" href="https://gabwowce.github.io/real-estate-fronted-app/" target="_blank" rel="noopener">Live demo</a> ·
+                            <a class="link-ghost" href="https://github.com/gabwowce/real-estate-fronted-app" target="_blank" rel="noopener">GitHub</a>
+                        </p>
+                        <p class="desc u-reveal">
+                            Reaguojantis UI: kortelių tinklelis, filtrai (kaina, miestas, kambariai). Greitas maršrutizavimas, pernaudojami komponentai.
+                        </p>
+                        <ul class="tags u-reveal tags--pill">
+                            <li>React</li>
+                            <li>Vite</li>
+                            <li>JavaScript</li>
+                            <li>Tailwind CSS</li>
+                            <li>React Router</li>
+                        </ul>
+                    </div>
+                </article>
+
+                <article class="project project-xl u-stagger" id="personal-portfolio" data-cat="web">
+                    <div class="thumb u-reveal"><img src="../img/Group 201.webp" alt="Asmeninis portfolio — UI/UX + Front-end" width="750" height="590" loading="lazy" decoding="async" fetchpriority="low"></div>
+                    <div class="meta u-reveal u-stagger">
+                        <h3 class="u-reveal">Asmeninis portfolio — UI/UX + Front-end</h3>
+                        <p class="sub u-reveal">
+                            Web · 2024 ·
+                            <a class="link-ghost" href="https://gabwowce.github.io/portfolio/" target="_blank" rel="noopener">Live demo</a> ·
+                            <a class="link-ghost" href="https://github.com/gabwowce/portfolio" target="_blank" rel="noopener">GitHub</a>
+                        </p>
+                        <p class="desc u-reveal">
+                            React pagrindu: komponentizuotas UI, puslapių maršrutai, projektų tinklelis, animuotas hero, švari tipografija.
+                        </p>
+                        <ul class="tags tags--pill u-reveal">
+                            <li>React</li>
+                            <li>i18next</li>
+                            <li>Tema</li>
+                            <li>Material-UI</li>
+                        </ul>
+                    </div>
+                </article>
+
+                <article class="project project-xl u-stagger" id="estate-clicker" data-cat="desktop">
+                    <div class="thumb u-reveal"><img src="../img/Group 206.webp" alt="Estate Clicker — Python (Pygame)" width="750" height="590" loading="lazy" decoding="async" fetchpriority="low"></div>
+                    <div class="meta u-reveal u-stagger">
+                        <h3 class="u-reveal">Estate Clicker — Python (Pygame)</h3>
+                        <p class="sub u-reveal">
+                            Desktop · 2024 ·
+                            <a class="link-ghost" href="https://github.com/gabwowce/Estate-Clicker" target="_blank" rel="noopener">GitHub</a>
+                        </p>
+                        <p class="desc u-reveal">
+                            „Idle/clicker“ žaidimas apie NT imperiją: pirk, atnaujink, augink pajamas. Pasiekimų sistema ir subalansuota progresija. Kurta su Pygame.
+                        </p>
+                        <ul class="tags tags--pill u-reveal">
+                            <li>Python</li>
+                            <li>Pygame</li>
+                            <li>Upgrade'ai/Balansas</li>
+                            <li>Pasiekimai</li>
+                        </ul>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- ASIDE (tik čia, ne header) -->
+        <aside aria-label="Greita informacija" class="sidebar u-reveal">
+            <div class="card card--soft profile profile--soft">
+                <div class="avatar-neo-halo">
+                    <img class="avatar-neo" src="../img/avatar-profile.webp" alt="Gabrielė – profilio nuotrauka" width="430" height="500" loading="lazy" decoding="async" fetchpriority="low">
+                </div>
+                <h3 class="name t-title" style="margin: 0;">GABRIELĖ</h3>
+                <p class="muted">Frontend programuotoja</p>
+                <p class="muted xsmall">Vilnius, Lietuva</p>
+                <div class="badge-aside" style="margin:10px auto 0; display:inline-block;">Atvira naujiems projektams</div>
+
+                <div class="cta-stack" style="margin-top:14px">
+                    <a class="btn" href="mailto:gt1230112301@gmail.com">Parašyti el. laišką</a>
+                    <a class="btn outline" href="../docs/CV.pdf" download>Atsisiųsti CV</a>
+                </div>
+            </div>
+        </aside>
+    </main>
+
+    <footer class="site-footer" role="contentinfo">
+        <section class="cta-contact">
+            <div class="container footer-card-flex">
+                <div class="cta-contact__text">
+                    <h3>Nori sukurti ką nors puikaus?</h3>
+                    <p>Parašyk man savo idėja!</p>
+                </div>
+                <a class="btn-pill" href="/porfolio-2025/lt/contact.html">Susisiekime →</a>
+            </div>
+        </section>
+
+        <div class="footer-in container">
+            <div class="footer-top">
+                <!-- Brand / About -->
+                <section>
+                    <a class="brand" href="/lt/">
+                        <span class="icon" aria-hidden="true">GT</span>
+                        <span aria-label="Gabrielė Tamaševičiūtė">Gabrielė · Codeart</span>
+                    </a>
+                    <p class="brand-note">Front-end kūrėja ir dizainerė. Kuriu švarius, greitus ir prieinamus UI.</p>
+                    <div class="socials" aria-label="Socialiniai saitai">
+                        <a class="soc" href="#" aria-label="GitHub" title="GitHub">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 19c-4 1.5-4-2.5-6-3m12 6v-3.87a3.37 3.37 0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0018 3.77 5.07 5.07 0 0017.91 1S16.73.65 14 2.48a13.38 13.38 0 00-5 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 005 3.77a5.44 5.44 0 00-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 009 18.13V22"/></svg>
+                        </a>
+                        <a class="soc" href="#" aria-label="LinkedIn" title="LinkedIn">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-4 0v7h-4v-7a6 6 0 016-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+                        </a>
+                        <a class="soc" href="#" aria-label="El. paštas" title="El. paštas">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 4h16v16H4z"/><path d="M22 6L12 13 2 6"/></svg>
+                        </a>
+                    </div>
+                </section>
+
+                <!-- Quick links -->
+                <nav class="footer-card" aria-labelledby="flinks">
+                    <h3 id="flinks" class="footer-title">Trumpi saitai</h3>
+                    <ul class="footer-list">
+                        <li><a class="footer-link" href="/porfolio-2025/lt/home.html">Pagrindinis</a></li>
+                        <li><a class="footer-link" href="/porfolio-2025/lt/about.html">Apie</a></li>
+                        <li><a class="footer-link" href="/porfolio-2025/lt/portfolio.html">Portfolio</a></li>
+                        <li><a class="footer-link" href="/porfolio-2025/lt/blog.html">Tinklaraštis</a></li>
+                        <li><a class="footer-link" href="/porfolio-2025/lt/contact.html">Kontaktai</a></li>
+                        <li><a class="footer-link" href="../docs/CV.pdf" download>CV / Reziumė</a></li>
+                    </ul>
+                </nav>
+
+                <!-- Newsletter / CTA -->
+                <section class="footer-card" aria-labelledby="fnews">
+                    <h3 id="fnews" class="footer-title">Trumpa žinutė</h3>
+                    <form class="newsletter" action="https://formspree.io/f/xeorkyne" method="POST">
+                        <input class="input" type="email" name="email" placeholder="El. paštas" aria-label="El. paštas" required>
+                        <input class="input" type="text" name="Message" placeholder="Žinutė" aria-label="Žinutė" required>
+                        <input type="text" name="_gotcha" style="display:none">
+                        <button class="btn-pill" type="submit">Parašyk 👋</button>
+                        <p class="form-note" role="status" aria-live="polite"></p>
+                        <small class="brand-note">Parašyk — atrašau per 24 val.</small>
+                    </form>
+                </section>
+            </div>
+
+            <div class="footer-bottom">
+                <span>© 2025 Gabrielė · Codeart</span>
+                <div class="mini-nav">
+                    <a href="mailto:gt1230112301@gmail.com">gt1230112301@gmail.com</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+
+
+</html>

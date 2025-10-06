@@ -1,60 +1,85 @@
 <!doctype html>
-<html lang="lt">
+<html lang="en">
 
 <head>
-    <meta charset="utf-8">
+    <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <title>Type Scale — Gabrielė</title>
-    <meta name="description" content="Modular scale, clamp(), 3 lūžiai ir hierarchijos ritmas.">
-    <meta property="og:type" content="article">
-    <meta property="og:title" content="Type Scale — Gabrielė">
-    <meta property="og:description" content="Modular scale, clamp(), 3 lūžiai ir hierarchijos ritmas.">
-    <meta property="og:image" content="../img/blog/type-scale.jpg">
-    <link rel="canonical" href="https://tavo-domenas.lt/blog/type-scale.html">
-    <script type="application/ld+json">
-        {
-            "@context": "https://schema.org",
-            "@type": "Article",
-            "headline": "Type Scale",
-            "author": {
-                "@type": "Person",
-                "name": "Gabrielė"
-            },
-            "datePublished": "2025-02-01",
-            "image": "../img/blog/type-scale.jpg"
-        }
-    </script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/vs.min.css">
-    <link id="hljs-theme" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/vs.min.css">
-    <link id="hljs-theme" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/atom-one-light.min.css">
 
+    <title>Gabrielė – Type Scale</title>
+    <meta name="description" content="Modular scale with clamp(), three breakpoints, and a consistent typography rhythm." />
+    <meta name="robots" content="index,follow" />
+
+    <!-- Canonical + hreflang -->
+    <link rel="canonical" href="https://gabwowce.github.io/porfolio-2025/en/blog/type-scale.html" />
+    <link rel="alternate" href="https://gabwowce.github.io/porfolio-2025/en/blog/type-scale.html" hreflang="en" />
+    <link rel="alternate" href="https://gabwowce.github.io/porfolio-2025/lt/blog/type-scale.html" hreflang="lt" />
+    <link rel="alternate" href="https://gabwowce.github.io/porfolio-2025/en/blog/type-scale.html" hreflang="x-default" />
+
+    <!-- Icons / theme (iš /en/blog/ → ../../) -->
+    <link rel="icon" href="../../img/favicon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="../../img/apple-touch-icon.png" />
+    <meta name="theme-color" content="#ffe9d6" />
+
+    <!-- Open Graph / X -->
+    <meta property="og:type" content="article" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:title" content="Type Scale — Gabrielė" />
+    <meta property="og:description" content="Modular scale with clamp(), three breakpoints, and a consistent typography rhythm." />
+    <meta property="og:url" content="https://gabwowce.github.io/porfolio-2025/en/blog/type-scale.html" />
+    <meta property="og:image" content="https://gabwowce.github.io/porfolio-2025/img/blog/type-scale.jpg" />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <!-- Preload (kelias iš /en/blog/) -->
+    <link rel="preload" href="../../fonts/clash/ClashGrotesk-Variable.woff2" as="font" type="font/woff2" crossorigin />
+
+    <!-- highlight.js (palik 1 temą, ne 2) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/atom-one-light.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/css.min.js"></script>
     <script>
         hljs.highlightAll();
     </script>
-    <script src="../js/script.js" defer></script>
 
+    <!-- CSS/JS -->
+    <script src="../../js/script.js" defer></script>
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="../../css/about.css">
+    <link rel="stylesheet" href="../../css/aside.css">
+    <link rel="stylesheet" href="../../css/blog.css">
+    <link rel="stylesheet" href="../../css/contact-me.css">
+    <link rel="stylesheet" href="../../css/footer.css">
+    <link rel="stylesheet" href="../../css/hero.css">
+    <link rel="stylesheet" href="../../css/header.css">
+    <link rel="stylesheet" href="../../css/card.css">
+    <link rel="stylesheet" href="../../css/projects.css">
 
-    <!-- CSS (keliai iš /blog/) -->
-    <link rel="stylesheet" href="../css/style.css">
-    <link rel="stylesheet" href="../css/about.css">
-    <link rel="stylesheet" href="../css/aside.css">
-    <link rel="stylesheet" href="../css/blog.css">
-    <link rel="stylesheet" href="../css/contact-me.css">
-    <link rel="stylesheet" href="../css/footer.css">
-    <link rel="stylesheet" href="../css/hero.css">
-    <link rel="stylesheet" href="../css/header.css">
-    <link rel="stylesheet" href="../css/card.css">
-    <link rel="stylesheet" href="../css/projects.css">
-    <link rel="stylesheet" href="../css/blogs.css">
+    <!-- JSON-LD -->
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "Article",
+            "headline": "Type Scale",
+            "inLanguage": "en",
+            "author": {
+                "@type": "Person",
+                "name": "Gabrielė"
+            },
+            "datePublished": "2025-02-01",
+            "image": "https://gabwowce.github.io/porfolio-2025/img/blog/type-scale.jpg",
+            "mainEntityOfPage": {
+                "@type": "WebPage",
+                "@id": "https://gabwowce.github.io/porfolio-2025/en/blog/type-scale.html"
+            }
+        }
+    </script>
 </head>
+
 
 <body>
     <!-- HEADER (be aside) -->
     <header class="site-header">
         <div class="container header-in">
-            <a id="brand" class="brand" href="/">
+            <a id="brand" class="brand" href="/en/">
                 <span class="icon" aria-hidden="true">GT</span>
                 <span aria-label="Gabrielė Tamaševičiūtė">Gabrielė · Codeart</span>
             </a>
@@ -125,6 +150,11 @@
                     </ul>
 
                 </div>
+                <!-- Language switcher -->
+                <div class="nav-lang">
+                    <!-- noscript/fallback gali vesti į EN pradžią -->
+                    <a id="langSwitch" class="nav-link" href="/en/" hreflang="en" aria-label="Switch language">EN</a>
+                </div>
             </nav>
         </div>
     </header>
@@ -141,7 +171,7 @@
 
             </div>
             <figure class="hero-portrait u-reveal">
-                <img src="../img/avatar-writing.webp" alt="Gabriele – Creative Designer" width="360" height="500" loading="eager" decoding="sync" fetchpriority="high">
+                <img src="../../img/avatar-writing.webp" alt="Gabriele – Frontend developer" width="360" height="500" loading="eager" decoding="sync" fetchpriority="high">
             </figure>
         </div>
     </section>
@@ -273,16 +303,16 @@ blockquote{ font-size: var(--fs-quote); line-height: 1.35; }
         <aside aria-label="Quick info" class="sidebar u-reveal">
             <div class="card card--soft profile profile--soft">
                 <div class="avatar-neo-halo">
-                    <img class="avatar-neo" src="../img/avatar-profile.webp" alt="Gabrielė – profile photo" width="72" height="72" loading="lazy" decoding="async" fetchpriority="low">
+                    <img class="avatar-neo" src="../../img/avatar-profile.webp" alt="Gabrielė – profile photo" width="72" height="72" loading="lazy" decoding="async" fetchpriority="low">
                 </div>
                 <h3 class="name t-title" style="margin: 0;">GABRIELĖ</h3>
-                <p class="muted">Creative Designer</p>
+                <p class="muted">Frontend developer</p>
                 <p class="muted xsmall">Vilnius, Lithuania</p>
                 <div class="badge-aside" style="margin:10px auto 0; display:inline-block;">Open for new projects</div>
 
                 <div class="cta-stack" style="margin-top:14px">
                     <a class="btn" href="mailto:gt1230112301@gmail.com">Email Me</a>
-                    <a class="btn outline" href="docs/CV.pdf" download>Download CV</a>
+                    <a class="btn outline" href="../docs/CV.pdf" download>Download CV</a>
                 </div>
             </div>
 
@@ -298,9 +328,9 @@ blockquote{ font-size: var(--fs-quote); line-height: 1.35; }
             <div class="container footer-card-flex">
                 <div class="cta-contact__text">
                     <h3>Ready to build something great?</h3>
-                    <p>Write briefly what you need — I’ll respond quickly.</p>
+                    <p>Tell me about your idea!</p>
                 </div>
-                <a class="btn-pill" href="/contact">Contact me →</a>
+                <a class="btn-pill" href="/porfolio-2025/en/contact">Contact me →</a>
             </div>
         </section>
 
@@ -308,7 +338,7 @@ blockquote{ font-size: var(--fs-quote); line-height: 1.35; }
             <div class="footer-top">
                 <!-- Brand / About -->
                 <section>
-                    <a class="brand" href="/">
+                    <a class="brand" href="/en/">
                         <span class="icon" aria-hidden="true">GT</span>
                         <span aria-label="Gabrielė Tamaševičiūtė">Gabrielė · Codeart</span>
                     </a>
@@ -330,12 +360,12 @@ blockquote{ font-size: var(--fs-quote); line-height: 1.35; }
                 <nav class="footer-card" aria-labelledby="flinks">
                     <h3 id="flinks" class="footer-title">Quick links</h3>
                     <ul class="footer-list">
-                        <li><a class="footer-link" href="/home.html">Home</a></li>
-                        <li><a class="footer-link" href="/about.html">About</a></li>
-                        <li><a class="footer-link" href="/portfolio.html">Portfolio</a></li>
-                        <li><a class="footer-link" href="/blog.html">Blog</a></li>
-                        <li><a class="footer-link" href="/contact.html">Contact</a></li>
-                        <li><a class="footer-link" href="docs/CV.pdf" download>CV / Resume</a></li>
+                        <li><a class="footer-link" href="/porfolio-2025/en/home.html">Home</a></li>
+                        <li><a class="footer-link" href="/porfolio-2025/en/about.html">About</a></li>
+                        <li><a class="footer-link" href="/porfolio-2025/en/portfolio.html">Portfolio</a></li>
+                        <li><a class="footer-link" href="/porfolio-2025/en/blog.html">Blog</a></li>
+                        <li><a class="footer-link" href="/porfolio-2025/en/contact.html">Contact</a></li>
+                        <li><a class="footer-link" href="../docs/CV.pdf" download>CV / Resume</a></li>
                     </ul>
                 </nav>
 

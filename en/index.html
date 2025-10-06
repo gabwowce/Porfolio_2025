@@ -4,26 +4,80 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <title>Gabrielė – Blog</title>
-    <link rel="preload" href="fonts/clash/ClashGrotesk-Variable.woff2" as="font" type="font/woff2" crossorigin>
-    <script src="js/script.js" defer></script>
-    <link rel="stylesheet" href="css/style.css" />
-    <link rel="stylesheet" href="css/about.css" />
-    <link rel="stylesheet" href="css/aside.css" />
-    <link rel="stylesheet" href="css/blog.css" />
-    <link rel="stylesheet" href="css/contact-me.css" />
-    <link rel="stylesheet" href="css/footer.css" />
-    <link rel="stylesheet" href="css/hero.css" />
-    <link rel="stylesheet" href="css/header.css" />
-    <link rel="stylesheet" href="css/card.css" />
-    <link rel="stylesheet" href="css/projects.css" />
+
+    <title>Gabrielė – Front-end Developer</title>
+    <meta name="description" content="Front-end + UI/UX. I build fast, accessible, and aesthetic websites plus React/React Native apps. Projects, services, contact." />
+    <meta name="robots" content="index,follow" />
+
+    <!-- Canonical + hreflang (EN page) -->
+    <link rel="canonical" href="https://gabwowce.github.io/porfolio-2025/en/" />
+    <link rel="alternate" href="https://gabwowce.github.io/porfolio-2025/en/" hreflang="en" />
+    <link rel="alternate" href="https://gabwowce.github.io/porfolio-2025/lt/" hreflang="lt" />
+    <link rel="alternate" href="https://gabwowce.github.io/porfolio-2025/en/" hreflang="x-default" />
+
+    <!-- Icons / theme -->
+    <link rel="icon" href="../img/favicon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="../img/apple-touch-icon.png" />
+    <meta name="theme-color" content="#ffe9d6" />
+
+    <!-- Open Graph / X (Twitter) -->
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:title" content="Gabrielė – Front-end Developer" />
+    <meta property="og:description" content="Fast, accessible UIs. React, Next.js, React Native." />
+    <meta property="og:url" content="https://gabwowce.github.io/porfolio-2025/en/" />
+    <meta property="og:image" content="https://gabwowce.github.io/porfolio-2025/img/og-cover.jpg" />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <!-- Preloads -->
+    <link rel="preload" href="../fonts/clash/ClashGrotesk-Variable.woff2" as="font" type="font/woff2" crossorigin />
+
+    <!-- CSS/JS (from /en/ go one level up) -->
+    <script src="../js/script.js" defer></script>
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/about.css" />
+    <link rel="stylesheet" href="../css/aside.css" />
+    <link rel="stylesheet" href="../css/blog.css" />
+    <link rel="stylesheet" href="../css/contact-me.css" />
+    <link rel="stylesheet" href="../css/footer.css" />
+    <link rel="stylesheet" href="../css/hero.css" />
+    <link rel="stylesheet" href="../css/header.css" />
+    <link rel="stylesheet" href="../css/card.css" />
+    <link rel="stylesheet" href="../css/projects.css" />
+
+    <!-- JSON-LD: WebSite + Person (EN) -->
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "WebSite",
+            "name": "Gabrielė – Portfolio",
+            "url": "https://gabwowce.github.io/porfolio-2025/en/",
+            "inLanguage": "en"
+        }
+    </script>
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "Person",
+            "name": "Gabrielė Tamaševičiūtė",
+            "jobTitle": "Front-end Developer",
+            "url": "https://gabwowce.github.io/porfolio-2025/en/",
+            "knowsLanguage": ["en", "lt"],
+            "address": {
+                "@type": "PostalAddress",
+                "addressLocality": "Vilnius",
+                "addressCountry": "LT"
+            }
+        }
+    </script>
 </head>
+
 
 <body>
     <!-- HEADER (no aside) -->
     <header class="site-header">
         <div class="container header-in">
-            <a id="brand" class="brand" href="/">
+            <a id="brand" class="brand" href="/en/">
                 <span class="icon" aria-hidden="true">GT</span>
                 <span aria-label="Gabrielė Tamaševičiūtė">Gabrielė · Codeart</span>
             </a>
@@ -95,6 +149,11 @@
                     </ul>
 
                 </div>
+                <!-- Language switcher -->
+                <div class="nav-lang">
+                    <!-- noscript/fallback gali vesti į EN pradžią -->
+                    <a id="langSwitch" class="nav-link" href="/en/" hreflang="en" aria-label="Switch language">EN</a>
+                </div>
             </nav>
             <!-- Overlay -->
             <div class="nav-overlay" id="navOverlay" hidden></div>
@@ -107,11 +166,11 @@
             <div class="hero-copy">
                 <h1 class="display-xl u-reveal">FRONT END DEV <span style="font-weight:300">&lt;/&gt;DESIGNER</span></h1>
                 <p class="lead u-reveal">
-                    Crafting memorable digital experiences through thoughtful design and strategic thinking.
+                    Crafting digital experiences through thoughtful design and strategic thinking.
                 </p>
             </div>
             <figure class="hero-portrait2 u-reveal">
-                <img src="img/avatar-standing.webp" alt="Gabriele – Creative Designer" width="400" height="900" loading="eager" decoding="sync" fetchpriority="high">
+                <img \ src="../img/avatar-standing.webp" alt="Gabriele – Frontend developer" width="400" height="900" loading="eager" decoding="sync" fetchpriority="high">
             </figure>
         </div>
     </section>
@@ -131,8 +190,8 @@
                         <div class="about-ico ">
                             <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M13 2L3 14h7l-1 8 10-12h-7l1-8z"/></svg>
                         </div>
-                        <h3>SPEED & CLARITY</h3>
-                        <p>Clean HTML and CSS, clear layout, fast loading. I explain choices in plain language and deliver on time.</p>
+                        <h3>HTML, CSS, JS</h3>
+                        <p>Solid foundations for every project: clean HTML, tidy CSS, and functional JavaScript. This ensures fast loading, accessibility, and reliable performance everywhere.</p>
                     </article>
 
                     <!-- 2 -->
@@ -167,11 +226,13 @@
                 <div class="about-expect u-stagger">
                     <h3 class="u-reveal">What you can expect from me</h3>
                     <ul class="expect-grid  u-stagger">
-                        <li class="expect-item u-reveal"><i></i>Clear project scope definition</li>
+
                         <li class="expect-item u-reveal"><i></i>Regular communication and progress updates</li>
                         <li class="expect-item u-reveal"><i></i>Component-based system solutions</li>
+                        <li class="expect-item u-reveal"><i></i>Testai ir kokybės užtikrinimas</li>
+
                         <li class="expect-item u-reveal"><i></i>Accessibility and SEO standards</li>
-                        <li class="expect-item u-reveal"><i></i>CPerformance optimization</li>
+                        <li class="expect-item u-reveal"><i></i>Performance optimization</li>
                         <li class="expect-item u-reveal"><i></i>Thorough documentation</li>
 
 
@@ -224,9 +285,9 @@
                                 <div id="card">
                                     <div class="carousel" data-auto="3000">
                                         <div class="slides u-stagger">
-                                            <img class="u-reveal" src="img/Group 189.webp" alt="Screen 1" width="1248" height="765" loading="eager" decoding="sync" fetchpriority="high">
-                                            <img class="u-reveal" src="img/Group 208.webp" alt="Screen 2" width="1248" height="765" loading="lazy" decoding="async" fetchpriority="low">
-                                            <img class="u-reveal" src="img/Group 207.webp" alt="Screen 3" width="1248" height="765" loading="lazy" decoding="async" fetchpriority="low">
+                                            <img class="u-reveal" src="../img/Group 189.webp" alt="Screen 1" width="1248" height="765" loading="eager" decoding="sync" fetchpriority="high">
+                                            <img class="u-reveal" src="../img/Group 208.webp" alt="Screen 2" width="1248" height="765" loading="lazy" decoding="async" fetchpriority="low">
+                                            <img class="u-reveal" src="../img/Group 207.webp" alt="Screen 3" width="1248" height="765" loading="lazy" decoding="async" fetchpriority="low">
                                         </div>
                                     </div>
 
@@ -257,7 +318,7 @@
 
 
                     <article class="project u-stagger" data-cat="web">
-                        <div class="thumb u-reveal"><img src="img/Group 200.webp" alt="TechFlow Mobile App" width="490" height="385" loading="lazy" decoding="async" fetchpriority="low"></div>
+                        <div class="thumb u-reveal"><img src="../img/Group 200.webp" alt="TechFlow Mobile App" width="490" height="385" loading="lazy" decoding="async" fetchpriority="low"></div>
                         <div class="meta u-stagger">
                             <h3 class="meta-title u-reveal">
                                 <a class="meta-title-link" href="portfolio.html#autorent">
@@ -275,7 +336,7 @@
 
                     </article>
                     <article class="project u-stagger" data-cat="mobile">
-                        <div class="thumb u-reveal"><img src="img/123.webp" alt="TechFlow Mobile App" width="490" height="385" loading="lazy" decoding="async" fetchpriority="low"></div>
+                        <div class="thumb u-reveal"><img src="../img/123.webp" alt="TechFlow Mobile App" width="490" height="385" loading="lazy" decoding="async" fetchpriority="low"></div>
                         <div class="meta u-stagger">
                             <h3 class="meta-title u-reveal">
                                 <a class="meta-title-link" href="portfolio.html#travel-app">
@@ -293,7 +354,7 @@
                     </article>
 
                     <article class="project u-stagger" data-cat="web">
-                        <div class="thumb u-reveal"><img src="img/Group 190.webp" alt="Startup Brand Identity" width="490" height="385" loading="lazy" decoding="async" fetchpriority="low"></div>
+                        <div class="thumb u-reveal"><img src="../img/Group 190.webp" alt="Startup Brand Identity" width="490" height="385" loading="lazy" decoding="async" fetchpriority="low"></div>
                         <div class="meta u-stagger">
                             <h3 class="meta-title u-reveal">
                                 <a class="meta-title-link" href="portfolio.html#kibinai">
@@ -311,7 +372,7 @@
                     </article>
 
                     <article class="project u-stagger" data-cat="mobile">
-                        <div class="thumb u-reveal"><img src="img/124.webp" alt="SaaS Landing Redesign" width="490" height="385" loading="lazy" decoding="async" fetchpriority="low"></div>
+                        <div class="thumb u-reveal"><img src="../img/124.webp" alt="SaaS Landing Redesign" width="490" height="385" loading="lazy" decoding="async" fetchpriority="low"></div>
                         <div class="meta u-stagger">
                             <h3 class="meta-title u-reveal">
                                 <a class="meta-title-link" href="portfolio.html#convertclimb">
@@ -328,7 +389,7 @@
 
                     </article>
                     <article class="project u-stagger" data-cat="web">
-                        <div class="thumb u-reveal"><img src="img/Group 202.webp" alt="TechFlow Mobile App" width="490" height="385" loading="lazy" decoding="async" fetchpriority="low"></div>
+                        <div class="thumb u-reveal"><img src="../img/Group 202.webp" alt="TechFlow Mobile App" width="490" height="385" loading="lazy" decoding="async" fetchpriority="low"></div>
                         <div class="meta u-stagger">
                             <h3 class="meta-title u-reveal">
                                 <a class="meta-title-link" href="portfolio.html#library">
@@ -345,7 +406,7 @@
 
                     </article>
                     <article class="project u-stagger" data-cat="web">
-                        <div class="thumb u-reveal"><img src="img/Group 203.webp" alt="TechFlow Mobile App" width="490" height="385" loading="lazy" decoding="async" fetchpriority="low"></div>
+                        <div class="thumb u-reveal"><img src="../img/Group 203.webp" alt="TechFlow Mobile App" width="490" height="385" loading="lazy" decoding="async" fetchpriority="low"></div>
                         <div class="meta u-stagger">
                             <h3 class="meta-title u-reveal">
                                 <a class="meta-title-link" href="portfolio.html#realestate">
@@ -363,7 +424,7 @@
                     </article>
 
                     <article class="project u-stagger" data-cat="web">
-                        <div class="thumb u-reveal"><img src="img/Group 201.webp" alt="TechFlow Mobile App" width="490" height="385" loading="lazy" decoding="async" fetchpriority="low"></div>
+                        <div class="thumb u-reveal"><img src="../img/Group 201.webp" alt="TechFlow Mobile App" width="490" height="385" loading="lazy" decoding="async" fetchpriority="low"></div>
                         <div class="meta u-stagger">
                             <h3 class="meta-title u-reveal">
                                 <a class="meta-title-link" href="portfolio.html#personal-portfolio">
@@ -385,7 +446,7 @@
 
 
                     <article class="project u-stagger" data-cat="desktop">
-                        <div class="thumb u-reveal"><img src="img/Group 206.webp" alt="SaaS Landing Redesign" width="490" height="385" loading="lazy" decoding="async" fetchpriority="low"></div>
+                        <div class="thumb u-reveal"><img src="../img/Group 206.webp" alt="SaaS Landing Redesign" width="490" height="385" loading="lazy" decoding="async" fetchpriority="low"></div>
                         <div class="meta u-stagger">
                             <h3 class="meta-title u-reveal">
                                 <a class="meta-title-link" href="portfolio.html#estate-clicker">
@@ -522,7 +583,7 @@
                     <!-- Web / FE -->
                     <article class="card tool-card u-stagger u-reveal">
                         <div class="tool-ico u-reveal">
-                            <img src="img/tools/html.png" alt="HTML">
+                            <img src="../img/tools/html.png" alt="HTML">
                         </div>
                         <h4 class="u-reveal">
                             HTML5
@@ -532,66 +593,66 @@
                         </span>
                     </article>
                     <article class="card tool-card u-stagger u-reveal">
-                        <div class="tool-ico u-reveal"><img src="img/tools/css.png" alt="CSS"></div>
+                        <div class="tool-ico u-reveal"><img src="../img/tools/css.png" alt="CSS"></div>
                         <h4 class="u-reveal">CSS3</h4><span class="sub u-reveal">Grid / Flex / Animations</span></article>
                     <article class="card tool-card u-stagger u-reveal">
-                        <div class="tool-ico u-reveal"><img src="img/tools/icons8-tailwind-css-48.png" alt="Tailwind CSS"></div>
+                        <div class="tool-ico u-reveal"><img src="../img/tools/icons8-tailwind-css-48.png" alt="Tailwind CSS"></div>
                         <h4 class="u-reveal">Tailwind CSS</h4><span class="sub u-reveal">Utility-first</span></article>
                     <article class="card tool-card u-stagger u-reveal">
-                        <div class="tool-ico u-reveal"><img src="img/tools/icons8-sass-48.png" alt="SCSS"></div>
+                        <div class="tool-ico u-reveal"><img src="../img/tools/icons8-sass-48.png" alt="SCSS"></div>
                         <h4 class="u-reveal">SCSS/SASS</h4><span class="sub u-reveal">Modules</span></article>
                     <article class="card tool-card u-stagger u-reveal">
-                        <div class="tool-ico u-reveal"><img src="img/tools/js.png" alt="JavaScript"></div>
+                        <div class="tool-ico u-reveal"><img src="../img/tools/js.png" alt="JavaScript"></div>
                         <h4 class="u-reveal">JavaScript</h4><span class="sub u-reveal">ESNext</span></article>
                     <article class="card tool-card u-stagger u-reveal">
-                        <div class="tool-ico u-reveal"><img src="img/tools/icons8-typescript-48.png" alt="TypeScript"></div>
+                        <div class="tool-ico u-reveal"><img src="../img/tools/icons8-typescript-48.png" alt="TypeScript"></div>
                         <h4 class="u-reveal">TypeScript</h4><span class="sub u-reveal">Strong typing</span></article>
                     <article class="card tool-card u-stagger u-reveal">
-                        <div class="tool-ico u-reveal"><img src="img/tools/react.png" alt="React"></div>
+                        <div class="tool-ico u-reveal"><img src="../img/tools/react.png" alt="React"></div>
                         <h4 class="u-reveal">React</h4><span class="sub u-reveal">Hooks / CSR</span></article>
                     <article class="card tool-card u-stagger u-reveal">
-                        <div class="tool-ico u-reveal"><img src="img/tools/icons8-next.js-48.png" alt="Next.js"></div>
+                        <div class="tool-ico u-reveal"><img src="../img/tools/icons8-next.js-48.png" alt="Next.js"></div>
                         <h4 class="u-reveal">Next.js</h4><span class="sub u-reveal">App Router / SSR</span></article>
                     <article class="card tool-card u-stagger u-reveal">
-                        <div class="tool-ico u-reveal"><img src="img/tools/icons8-redux-48.png" alt="Redux Toolkit"></div>
+                        <div class="tool-ico u-reveal"><img src="../img/tools/icons8-redux-48.png" alt="Redux Toolkit"></div>
                         <h4 class="u-reveal">Redux Toolkit</h4><span class="sub u-reveal">RTK Query</span></article>
                     <article class="card tool-card u-stagger u-reveal">
-                        <div class="tool-ico u-reveal"><img src="img/tools/icons8-react-native-64.png" alt="React Native"></div>
+                        <div class="tool-ico u-reveal"><img src="../img/tools/icons8-react-native-64.png" alt="React Native"></div>
                         <h4 class="u-reveal">React Native</h4><span class="sub u-reveal">Expo / RN Maps / Lottie</span></article>
                     <article class="card tool-card u-stagger u-reveal">
-                        <div class="tool-ico u-reveal"><img src="img/tools/icons8-expo-50.png" alt="Expo"></div>
+                        <div class="tool-ico u-reveal"><img src="../img/tools/icons8-expo-50.png" alt="Expo"></div>
                         <h4 class="u-reveal">Expo</h4><span class="sub u-reveal">Builds / Notifications</span></article>
 
                     <!-- WP / CMS -->
                     <article class="card tool-card u-stagger u-reveal">
-                        <div class="tool-ico u-reveal"><img src="img/tools/icons8-wordpress-48.png" alt="WordPress"></div>
+                        <div class="tool-ico u-reveal"><img src="../img/tools/icons8-wordpress-48.png" alt="WordPress"></div>
                         <h4 class="u-reveal">WordPress</h4><span class="sub u-reveal">FSE / Theme Dev</span></article>
                     <article class="card tool-card u-stagger u-reveal">
-                        <div class="tool-ico u-reveal"><img src="img/tools/icons8-wordpress-48.png" alt="Gutenberg"></div>
+                        <div class="tool-ico u-reveal"><img src="../img/tools/icons8-wordpress-48.png" alt="Gutenberg"></div>
                         <h4 class="u-reveal">Gutenberg</h4><span class="sub u-reveal">Blocks</span></article>
 
                     <!-- Backend / DB / API -->
                     <article class="card tool-card u-stagger u-reveal">
-                        <div class="tool-ico u-reveal"><img src="img/tools/api.png" alt="Rest API"></div>
+                        <div class="tool-ico u-reveal"><img src="../img/tools/api.png" alt="Rest API"></div>
                         <h4 class="u-reveal">Rest API</h4><span class="sub u-reveal">API</span></article>
                     <article class="card tool-card u-stagger u-reveal">
-                        <div class="tool-ico u-reveal"><img src="img/tools/sql.png" alt="MySQL"></div>
+                        <div class="tool-ico u-reveal"><img src="../img/tools/sql.png" alt="MySQL"></div>
                         <h4 class="u-reveal">SQL</h4><span class="sub u-reveal">DB design</span></article>
 
                     <!-- Tools / DevOps -->
                     <article class="card tool-card u-stagger u-reveal">
-                        <div class="tool-ico u-reveal"><img src="img/tools/github.png" alt="Git"></div>
+                        <div class="tool-ico u-reveal"><img src="../img/tools/github.png" alt="Git"></div>
                         <h4 class="u-reveal">GitHub</h4><span class="sub">Flow / Actions</span></article>
                     <article class="card tool-card u-stagger u-reveal">
-                        <div class="tool-ico u-reveal"><img src="img/tools/icons8-visual-studio-code-48.png" alt="VS Code"></div>
+                        <div class="tool-ico u-reveal"><img src="../img/tools/icons8-visual-studio-code-48.png" alt="VS Code"></div>
                         <h4 class="u-reveal">VS Code</h4><span class="sub u-reveal">Extensions</span></article>
 
                     <!-- Other (work experience) -->
                     <article class="card tool-card u-stagger u-reveal">
-                        <div class="tool-ico u-reveal"><img src="img/tools/c-sharp.png" alt=".NET"></div>
+                        <div class="tool-ico u-reveal"><img src="../img/tools/c-sharp.png" alt=".NET"></div>
                         <h4 class="u-reveal">C# .NET WPF</h4><span class="sub u-reveal">XAML / A11y</span></article>
                     <article class="card tool-card u-stagger u-reveal">
-                        <div class="tool-ico u-reveal"><img src="img/tools/figma.png" alt="Figma"></div>
+                        <div class="tool-ico u-reveal"><img src="../img/tools/figma.png" alt="Figma"></div>
                         <h4 class="u-reveal">Figma</h4><span class="sub u-reveal">UI/UX prototypes</span></article>
                 </div>
 
@@ -679,7 +740,7 @@
             <div class="container footer-card-flex">
                 <div class="cta-contact__text">
                     <h3>Ready to build something great?</h3>
-                    <p>Write briefly what you need — I’ll respond quickly.</p>
+                    <p>Tell me about your idea!</p>
                 </div>
                 <a class="btn-pill" href="/contact.html">Contact me →</a>
             </div>
@@ -689,7 +750,7 @@
             <div class="footer-top">
                 <!-- Brand / About -->
                 <section>
-                    <a class="brand" href="/">
+                    <a class="brand" href="/en/">
                         <span class="icon" aria-hidden="true">GT</span>
                         <span aria-label="Gabrielė Tamaševičiūtė">Gabrielė · Codeart</span>
                     </a>
@@ -711,12 +772,12 @@
                 <nav class="footer-card" aria-labelledby="flinks">
                     <h3 id="flinks" class="footer-title">Quick links</h3>
                     <ul class="footer-list">
-                        <li><a class="footer-link" href="/home.html">Home</a></li>
-                        <li><a class="footer-link" href="/about.html">About</a></li>
-                        <li><a class="footer-link" href="/portfolio.html">Portfolio</a></li>
-                        <li><a class="footer-link" href="/blog.html">Blog</a></li>
-                        <li><a class="footer-link" href="/contact.html">Contact</a></li>
-                        <li><a class="footer-link" href="docs/CV.pdf" download>CV / Resume</a></li>
+                        <li><a class="footer-link" href="/porfolio-2025/en/home.html">Home</a></li>
+                        <li><a class="footer-link" href="/porfolio-2025/en/about.html">About</a></li>
+                        <li><a class="footer-link" href="/porfolio-2025/en/portfolio.html">Portfolio</a></li>
+                        <li><a class="footer-link" href="/porfolio-2025/en/blog.html">Blog</a></li>
+                        <li><a class="footer-link" href="/porfolio-2025/en/contact.html">Contact</a></li>
+                        <li><a class="footer-link" href="../docs/CV.pdf" download>CV / Resume</a></li>
                     </ul>
                 </nav>
 

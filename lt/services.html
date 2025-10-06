@@ -1,0 +1,635 @@
+<!doctype html>
+<html lang="lt">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Gabrielė – Paslaugos</title>
+    <meta name="description" content="WordPress svetainės, React/React Native kūrimas ir UI/UX dizainas. Galiu startuoti nuo nulio arba prisijungti prie esamo produkto." />
+    <meta name="robots" content="index,follow" />
+
+    <!-- Canonical + hreflang -->
+    <link rel="canonical" href="https://gabwowce.github.io/porfolio-2025/lt/services.html" />
+    <link rel="alternate" href="https://gabwowce.github.io/porfolio-2025/lt/services.html" hreflang="lt" />
+    <link rel="alternate" href="https://gabwowce.github.io/porfolio-2025/en/services.html" hreflang="en" />
+    <link rel="alternate" href="https://gabwowce.github.io/porfolio-2025/en/services.html" hreflang="x-default" />
+
+    <!-- Ikonos / tema -->
+    <link rel="icon" href="../img/favicon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="../img/apple-touch-icon.png" />
+    <meta name="theme-color" content="#ffe9d6" />
+
+    <!-- Open Graph / X -->
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="lt_LT" />
+    <meta property="og:title" content="Gabrielė – Paslaugos" />
+    <meta property="og:description" content="WordPress, React/React Native ir UI/UX paslaugos. Paprašykite sąmatos." />
+    <meta property="og:url" content="https://gabwowce.github.io/porfolio-2025/lt/services.html" />
+    <meta property="og:image" content="https://gabwowce.github.io/porfolio-2025/img/og-cover.jpg" />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <!-- Preload'ai (kelias iš /lt/) -->
+    <link rel="preload" href="../fonts/clash/ClashGrotesk-Variable.woff2" as="font" type="font/woff2" crossorigin />
+
+    <!-- CSS/JS (be dvigubų //) -->
+    <script src="../js/script.js" defer></script>
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/about.css" />
+    <link rel="stylesheet" href="../css/aside.css" />
+    <link rel="stylesheet" href="../css/blog.css" />
+    <link rel="stylesheet" href="../css/contact-me.css" />
+    <link rel="stylesheet" href="../css/footer.css" />
+    <link rel="stylesheet" href="../css/hero.css" />
+    <link rel="stylesheet" href="../css/header.css" />
+    <link rel="stylesheet" href="../css/card.css" />
+    <link rel="stylesheet" href="../css/projects.css" />
+
+    <!-- JSON-LD: Service (paprasta) -->
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "Service",
+            "name": "Web kūrimo ir dizaino paslaugos",
+            "serviceType": "Front-end, WordPress, React/React Native, UI/UX",
+            "provider": {
+                "@type": "Person",
+                "name": "Gabrielė Tamaševičiūtė",
+                "jobTitle": "Front-end programuotoja",
+                "address": {
+                    "@type": "PostalAddress",
+                    "addressLocality": "Vilnius",
+                    "addressCountry": "LT"
+                },
+                "url": "https://gabwowce.github.io/porfolio-2025/lt/services.html"
+            },
+            "areaServed": "LT"
+        }
+    </script>
+</head>
+
+
+<body>
+    <!-- HEADER (be aside) -->
+    <header class="site-header">
+        <div class="container header-in">
+            <a id="brand" class="brand" href="/lt/">
+                <span class="icon" aria-hidden="true">GT</span>
+                <span aria-label="Gabrielė Tamaševičiūtė">Gabrielė · Codeart</span>
+            </a>
+            <!-- Hamburger -->
+            <button class="hamburger" id="navToggle" aria-label="Atverti meniu" aria-controls="primaryNav" aria-expanded="false">
+        <span class="hamburger__bar" aria-hidden="true"></span>
+        <span class="hamburger__bar" aria-hidden="true"></span>
+        <span class="hamburger__bar" aria-hidden="true"></span>
+      </button>
+
+            <nav class="main-nav">
+                <button class="nav-close" id="navClose" aria-label="Uždaryti meniu">✕</button>
+                <a class="nav-link" href="index.html">Pagrindinis</a>
+                <a class="nav-link" href="about.html">Apie</a>
+                <a class="nav-link" href="portfolio.html">Portfolio</a>
+                <a class="nav-link active" href="services.html">Paslaugos</a>
+                <a class="nav-link" href="blog.html">Tinklaraštis</a>
+                <a class="nav-link" href="contact.html">Kontaktai</a>
+                <!-- Theme dropdown -->
+                <div class="nav-theme" id="themeMenu">
+                    <button id="themeBtn" class="nav-link theme-btn" aria-haspopup="true" aria-expanded="false">
+            Tema <span class="swatch" aria-hidden="true"></span>
+          </button>
+                    <ul class="theme-list" role="menu" aria-label="Pasirinkite temą">
+                        <li>
+                            <button role="menuitem" data-theme="cream" style="--c1:#362f27;--c2:#ffe9d6;--c3:#ffffffff;--c4:#ffaa5fff">
+                <span class="thumb-pall">
+                  <span class="sw s1"></span><span class="sw s2"></span>
+                  <span class="sw s3"></span><span class="sw s4"></span>
+                </span>
+                <span class="meta">
+                  <strong>Cream</strong><small>Šilta, redakcinė</small>
+                </span>
+                <span class="check" aria-hidden="true">✓</span>
+              </button>
+                        </li>
+
+                        <li>
+                            <button role="menuitem" data-theme="ocean" style="--c1:#476eae;--c2:#e6efff;--c3:#ffffff;--c4:#FE7743">
+                <span class="thumb-pall"><span class="sw s1"></span><span class="sw s2"></span><span class="sw s3"></span><span class="sw s4"></span></span>
+                <span class="meta"><strong>Ocean</strong><small>Švari mėlyna</small></span>
+                <span class="check" aria-hidden="true">✓</span>
+              </button>
+                        </li>
+
+                        <li>
+                            <button role="menuitem" data-theme="forest" style="--c1:#5F8B4C;--c2:#e9f6ef;--c3:#ffffff;--c4:#FF9A9A">
+                <span class="thumb-pall"><span class="sw s1"></span><span class="sw s2"></span><span class="sw s3"></span><span class="sw s4"></span></span>
+                <span class="meta"><strong>Forest</strong><small>Gaivi žalia</small></span>
+                <span class="check" aria-hidden="true">✓</span>
+              </button>
+                        </li>
+
+                        <li>
+                            <button role="menuitem" data-theme="rose" style="--c1:#E69DB8;--c2:#fde7ee;--c3:#ffffff;--c4:#80C4E9">
+                <span class="thumb-pall"><span class="sw s1"></span><span class="sw s2"></span><span class="sw s3"></span><span class="sw s4"></span></span>
+                <span class="meta"><strong>Rose</strong><small>Švelni rožinė</small></span>
+                <span class="check" aria-hidden="true">✓</span>
+              </button>
+                        </li>
+
+                        <li>
+                            <button role="menuitem" data-theme="slate" style="--c1:#b664a462;--c2:#262a31ff;--c3:#1c1e22ff;--c4:#60a5fa">
+                <span class="thumb-pall"><span class="sw s1"></span><span class="sw s2"></span><span class="sw s3"></span><span class="sw s4"></span></span>
+                <span class="meta"><strong>Slate</strong><small>Tamsi, neutrali</small></span>
+                <span class="check" aria-hidden="true">✓</span>
+              </button>
+                        </li>
+                    </ul>
+
+                </div>
+                <!-- Language switcher -->
+                <div class="nav-lang">
+                    <!-- noscript/fallback gali vesti į EN pradžią -->
+                    <a id="langSwitch" class="nav-link" href="/en/" hreflang="en" aria-label="Switch language">EN</a>
+                </div>
+            </nav>
+            <!-- Overlay -->
+            <div class="nav-overlay" id="navOverlay" hidden></div>
+        </div>
+    </header>
+
+    <!-- HERO -->
+    <section class="card-hero hero u-stagger" aria-labelledby="contact-hero-title">
+        <div class="container hero-grid">
+            <div class="hero-copy">
+                <h1 id="contact-hero-title" class="display-l u-reveal">PASLAUGOS</h1>
+                <p class="muted u-reveal" style="max-width:70ch">
+                    Trys pagrindinės sritys: „WordPress“ kūrimas, React/React Native programėlės ir UI/UX dizainas. Galiu pradėti nuo nulio arba prisijungti prie esamo projekto ir pagerinti našumą, UX bei išleidimą.
+                </p>
+            </div>
+            <figure class="hero-portrait u-reveal">
+                <img src="../img/avatar-porfolio.webp" alt="Gabrielė mojuoja – Frontend programuotoja" width="360" height="500" loading="eager" decoding="sync" fetchpriority="high">
+            </figure>
+        </div>
+    </section>
+
+    <main class="content container u-stagger">
+        <!-- SERVICES GRID -->
+        <section id="services" style="padding: 0;" class="services container">
+            <div class="services-grid page-services u-stagger">
+                <!-- 1) WordPress -->
+                <article class="service card u-reveal">
+                    <div class="about-ico" aria-hidden="true">
+                        <!-- WP icon -->
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><circle cx="12" cy="12" r="9"/><path d="M4 12h16M8 4.5l6.5 15M15.5 4.5L9 19.5"/></svg>
+                    </div>
+                    <h3 class="svc-title">„WordPress“ svetainės ir pritaikymas</h3>
+                    <p class="svc-sub muted">Temos diegimas ir pritaikymas, dizaino atnaujinimai, nauja blokinė/FSE tema ir nuolatiniai patobulinimai.</p>
+
+                    <ul class="tags tags--pill">
+                        <li>Temos adaptacija</li>
+                        <li>Individualūs blokai / pattern'ai</li>
+                        <li>SEO ir greičio optimizacija</li>
+                        <li>FSE, ACF, CPT</li>
+                        <li>Migracija ir perdavimas</li>
+                    </ul>
+
+                    <div class="svc-process">
+                        <span class="chip">1. Analizė</span>
+                        <span class="chip">2. Dizainas</span>
+                        <span class="chip">3. Įgyvendinimas</span>
+                        <span class="chip">4. Testavimas</span>
+                        <span class="chip">5. Paleidimas</span>
+                    </div>
+                </article>
+
+                <!-- 2) React / RN / Figma -->
+                <article class="service card u-reveal">
+                    <div class="about-ico" aria-hidden="true">
+                        <!-- React icon -->
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><circle cx="12" cy="12" r="2"/><ellipse cx="12" cy="12" rx="9" ry="4.5"/><ellipse cx="12" cy="12" rx="9" ry="4.5" transform="rotate(60 12 12)"/><ellipse cx="12" cy="12" rx="9" ry="4.5" transform="rotate(-60 12 12)"/></svg>
+                    </div>
+                    <h3 class="svc-title">React / React Native + Figma</h3>
+                    <p class="svc-sub muted">Kuriu naujas arba prisidedu prie esamų programėlių: dizainas, komponentai, API integracija, optimizavimas ir naujų funkcijų kūrimas.</p>
+
+                    <ul class="tags tags--pill">
+                        <li>Komponentų bibliotekos</li>
+                        <li>API / duomenų integracija</li>
+                        <li>Animacijos ir formos</li>
+                        <li>Našumo optimizacija</li>
+                        <li>Kodo peržiūra ir refaktorius</li>
+                    </ul>
+
+                    <div class="svc-process">
+                        <span class="chip">1. Planavimas</span>
+                        <span class="chip">2. Prototipavimas</span>
+                        <span class="chip">3. Kūrimas</span>
+                        <span class="chip">4. Testavimas</span>
+                        <span class="chip">5. Perdavimas</span>
+                    </div>
+                </article>
+
+                <!-- 3) UI/UX -->
+                <article class="service card u-reveal">
+                    <div class="about-ico" aria-hidden="true">
+                        <!-- UI frame icon -->
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><rect x="4" y="4" width="16" height="16" rx="3"/><path d="M9 4v16M4 9h16"/></svg>
+                    </div>
+                    <h3 class="svc-title">UI/UX dizainas ir prototipavimas</h3>
+                    <p class="svc-sub muted">Greiti prototipai idėjoms patikrinti, aiškūs naudotojo keliai, dizaino sistemos ir sklandus perdavimas programuotojams.</p>
+
+                    <ul class="tags tags--pill">
+                        <li>Wireframe'ai</li>
+                        <li>UI maketai</li>
+                        <li>Dizaino sistema</li>
+                        <li>Prototipai</li>
+                    </ul>
+
+                    <div class="svc-process">
+                        <span class="chip">1. Išgryninimas</span>
+                        <span class="chip">2. Wireframe'ai</span>
+                        <span class="chip">3. UI dizainas</span>
+                        <span class="chip">4. Prototipavimas</span>
+                        <span class="chip">5. Perdavimas</span>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- ASIDE (tik čia, ne header) -->
+        <aside aria-label="Greita informacija" class="sidebar hide-when-mobile u-reveal">
+            <div class="card card--soft profile profile--soft">
+                <div class="avatar-neo-halo">
+                    <img class="avatar-neo" src="../../img/avatar-profile.webp" alt="Gabrielė – profilio nuotrauka" width="72" height="72" loading="lazy" decoding="async" fetchpriority="low">
+                </div>
+                <h3 class="name t-title" style="margin: 0;">GABRIELĖ</h3>
+                <p class="muted">Frontend programuotoja</p>
+                <p class="muted xsmall">Vilnius, Lietuva</p>
+                <div class="badge-aside" style="margin:10px auto 0; display:inline-block;">Atvira naujiems projektams</div>
+
+                <div class="cta-stack" style="margin-top:14px">
+                    <a class="btn" href="mailto:gt1230112301@gmail.com">Parašyti el. laišką</a>
+                    <a class="btn outline" href="../docs/CV.pdf" download>Atsisiųsti CV</a>
+                </div>
+            </div>
+        </aside>
+    </main>
+
+    <!-- KONTAKTO SKYRIUS (atskira forma paslaugų puslapyje) -->
+    <section id="contact-project" class="container" style="padding-block:clamp(24px,6vw,56px)">
+        <div class="content container" style="display:grid;grid-template-columns:minmax(0,1fr);gap:clamp(16px,3vw,24px)">
+            <article>
+                <h2 class="section-title">
+                    <span class="about-ico" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12a7 7 0 0 1-7 7H8l-5 3 2-5a7 7 0 1 1 16-5z"/></svg>
+          </span> Projekto santrauka
+                </h2>
+                <p class="chip" style="margin:1rem 0;">Parašykite apie projektą. Paprastai atrašau per 24 val.</p>
+
+                <form class="contact-form" action="https://formspree.io/f/xeorkyne" method="POST" novalidate>
+                    <input type="text" name="company" class="hp" tabindex="-1" aria-hidden="true">
+
+                    <div class="grid" style="display:grid;grid-template-columns:1fr 1fr;gap:12px">
+                        <label class="fi">
+              <span>Vardas</span>
+              <input type="text" name="name" placeholder="Jūsų vardas" required>
+              <span class="error" aria-live="polite"></span>
+            </label>
+                        <label class="fi">
+              <span>El. paštas</span>
+              <input type="email" name="email" placeholder="vardas@el.pastas.com" required>
+              <span class="error" aria-live="polite"></span>
+            </label>
+                    </div>
+
+                    <div class="grid" style="display:grid;grid-template-columns:1fr 1fr;gap:12px">
+                        <label class="fi">
+              <span>Terminas</span>
+
+              <div class="c-select" data-name="timeline">
+                <button type="button" class="c-select__btn" aria-haspopup="listbox" aria-expanded="false">
+                  Pasirinkti
+                </button>
+                <ul class="c-select__list" role="listbox">
+                  <li role="option" data-value="No preference">Be prioriteto</li>
+                  <li role="option" data-value="ASAP">Kuo greičiau</li>
+                  <li role="option" data-value="2–4 weeks">2–4 savaitės</li>
+                  <li role="option" data-value="1–3 months">1–3 mėn.</li>
+                  <li role="option" data-value="> 3 months">&gt; 3 mėn.</li>
+                </ul>
+                <input type="hidden" name="timeline" value="">
+              </div>
+
+              <span class="error" aria-live="polite"></span>
+            </label>
+                    </div>
+
+                    <label class="fi fi-full">
+            <span>Projekto aprašymas</span>
+            <textarea name="message" rows="7" placeholder="Apimtis, tikslai, nuorodos, technologijos (jei yra)..." required></textarea>
+            <span class="error" aria-live="polite"></span>
+          </label>
+
+                    <label class="fi fi-full">
+            <span>Nuorodos (neprivaloma)</span>
+            <input type="url" name="links" placeholder="https://figma.com/file/... arba https://github.com/...">
+          </label>
+
+                    <input type="text" name="_gotcha" style="display:none">
+
+                    <button type="submit" class="btn-pill">Siųsti santrauką</button>
+                    <p class="form-note" role="status" aria-live="polite"></p>
+                </form>
+            </article>
+        </div>
+    </section>
+
+    <!-- FOOTER (kompaktinis) -->
+    <footer class="site-footer" role="contentinfo">
+        <div class="footer-in container">
+            <div class="footer-top">
+                <!-- Brand / About -->
+                <section>
+                    <a class="brand" href="/lt/">
+                        <span class="icon" aria-hidden="true">GT</span>
+                        <span aria-label="Gabrielė Tamaševičiūtė">Gabrielė · Codeart</span>
+                    </a>
+                    <p class="brand-note">Front-end kūrėja ir dizainerė. Kuriu švarius, greitus ir prieinamus UI.</p>
+                    <div class="socials" aria-label="Socialiniai saitai">
+                        <a class="soc" href="#" aria-label="GitHub" title="GitHub">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 19c-4 1.5-4-2.5-6-3m12 6v-3.87a3.37 3.37 0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0018 3.77 5.07 5.07 0 0017.91 1S16.73.65 14 2.48a13.38 13.38 0 00-5 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 005 3.77a5.44 5.44 0 00-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 009 18.13V22"/></svg>
+                        </a>
+                        <a class="soc" href="#" aria-label="LinkedIn" title="LinkedIn">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-4 0v7h-4v-7a6 6 0 016-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+                        </a>
+                        <a class="soc" href="#" aria-label="El. paštas" title="El. paštas">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 4h16v16H4z"/><path d="M22 6L12 13 2 6"/></svg>
+                        </a>
+                    </div>
+                </section>
+
+                <!-- Quick links -->
+                <nav class="footer-card" aria-labelledby="flinks">
+                    <h3 id="flinks" class="footer-title">Trumpi saitai</h3>
+                    <ul class="footer-list">
+                        <li><a class="footer-link" href="/porfolio-2025/lt/home.html">Pagrindinis</a></li>
+                        <li><a class="footer-link" href="/porfolio-2025/lt/about.html">Apie</a></li>
+                        <li><a class="footer-link" href="/porfolio-2025/lt/portfolio.html">Portfolio</a></li>
+                        <li><a class="footer-link" href="/porfolio-2025/lt/blog.html">Tinklaraštis</a></li>
+                        <li><a class="footer-link" href="/porfolio-2025/lt/contact.html">Kontaktai</a></li>
+                        <li><a class="footer-link" href="../docs/CV.pdf" download>CV / Reziumė</a></li>
+                    </ul>
+                </nav>
+
+                <!-- Newsletter / CTA -->
+                <section class="footer-card" aria-labelledby="fnews">
+                    <h3 id="fnews" class="footer-title">Trumpa žinutė</h3>
+                    <form class="newsletter" action="https://formspree.io/f/xeorkyne" method="POST">
+                        <input class="input" type="email" name="email" placeholder="El. paštas" aria-label="El. paštas" required>
+                        <input class="input" type="text" name="Message" placeholder="Žinutė" aria-label="Žinutė" required>
+                        <input type="text" name="_gotcha" style="display:none">
+                        <!-- honeypot -->
+                        <button class="btn-pill" type="submit">Parašyk 👋</button>
+                        <p class="form-note" role="status" aria-live="polite"></p>
+                        <small class="brand-note">Parašyk — atrašau per 24 val.</small>
+                    </form>
+                </section>
+            </div>
+
+            <div class="footer-bottom">
+                <span>© 2025 Gabrielė · Codeart</span>
+                <div class="mini-nav">
+                    <a href="mailto:gt1230112301@gmail.com">gt1230112301@gmail.com</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            document.querySelectorAll('.c-select').forEach(function(wrap) {
+                const btn = wrap.querySelector('.c-select__btn');
+                const list = wrap.querySelector('.c-select__list');
+                const items = Array.from(list.querySelectorAll('[role="option"]'));
+                const input = wrap.querySelector('input[type="hidden"]');
+
+                function open() {
+                    wrap.setAttribute('aria-open', 'true');
+                    btn.setAttribute('aria-expanded', 'true');
+                }
+
+                function close() {
+                    wrap.removeAttribute('aria-open');
+                    btn.setAttribute('aria-expanded', 'false');
+                    items.forEach(i => i.classList.remove('is-active'));
+                }
+
+                function choose(li) {
+                    items.forEach(i => i.removeAttribute('aria-selected'));
+                    li.setAttribute('aria-selected', 'true');
+                    btn.textContent = li.textContent;
+                    input.value = li.getAttribute('data-value') || li.textContent;
+                    close();
+                    btn.focus();
+                }
+
+                btn.addEventListener('click', () => {
+                    const isOpen = wrap.getAttribute('aria-open') === 'true';
+                    isOpen ? close() : open();
+                });
+
+                list.addEventListener('click', (e) => {
+                    const li = e.target.closest('[role="option"]');
+                    if (li) choose(li);
+                });
+
+                // Keyboard nav
+                wrap.addEventListener('keydown', (e) => {
+                    const isOpen = wrap.getAttribute('aria-open') === 'true';
+                    const idx = items.findIndex(i => i.classList.contains('is-active'));
+                    if (e.key === 'Escape') {
+                        close();
+                        return;
+                    }
+                    if (!isOpen && (e.key === 'ArrowDown' || e.key === 'Enter' || e.key === ' ')) {
+                        e.preventDefault();
+                        open();
+                        return;
+                    }
+                    if (!isOpen) return;
+                    if (e.key === 'ArrowDown' || e.key === 'ArrowUp') {
+                        e.preventDefault();
+                        let next = idx + (e.key === 'ArrowDown' ? 1 : -1);
+                        if (next < 0) next = items.length - 1;
+                        if (next >= items.length) next = 0;
+                        items.forEach(i => i.classList.remove('is-active'));
+                        items[next].classList.add('is-active');
+                        items[next].scrollIntoView({
+                            block: 'nearest'
+                        });
+                    }
+                    if (e.key === 'Enter') {
+                        e.preventDefault();
+                        choose(items[idx >= 0 ? idx : 0]);
+                    }
+                });
+
+                document.addEventListener('click', (e) => {
+                    if (!wrap.contains(e.target)) close();
+                });
+            });
+        });
+        document.addEventListener('DOMContentLoaded', function() {
+            var forms = document.querySelectorAll('form[action^="https://formspree.io/"]');
+            if (!forms || !forms.length) return;
+
+            var icons = {
+                spinner: '<svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="3" opacity=".25"/><path class="svg-spin" d="M12 3a9 9 0 0 1 9 9" fill="none" stroke="currentColor" stroke-width="3"/></svg>',
+                check: '<svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6L9 17l-5-5" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>',
+                cross: '<svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><path d="M18 6L6 18M6 6l12 12" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"/></svg>'
+            };
+
+            forms.forEach(function(form) {
+                var btn = form.querySelector('button[type="submit"]');
+                var note = form.querySelector('.form-note');
+
+                function setError(field, msg) {
+                    if (!field) return;
+                    var wrap = field.closest('.fi');
+                    if (!wrap) return;
+                    var err = wrap.querySelector('.error');
+                    if (!err) return;
+
+                    if (msg) {
+                        wrap.classList.add('invalid');
+                        err.textContent = msg;
+                    } else {
+                        wrap.classList.remove('invalid');
+                        err.textContent = '';
+                    }
+                }
+
+                function validate() {
+                    var ok = true;
+
+                    var name = form.querySelector('input[name="name"]');
+                    var email = form.querySelector('input[name="email"]');
+                    var budget = form.querySelector('select[name="budget"]');
+                    var timeline = form.querySelector('select[name="timeline"]');
+                    var msg = form.querySelector('textarea[name="message"], input[name="Message"]');
+
+                    if (name && !name.value.trim()) {
+                        setError(name, 'Please enter your name.');
+                        ok = false;
+                    } else setError(name, '');
+
+                    var re = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
+                    if (email && !email.value.trim()) {
+                        setError(email, 'Email is required.');
+                        ok = false;
+                    } else if (email && !re.test(email.value.trim())) {
+                        setError(email, 'Enter a valid email.');
+                        ok = false;
+                    } else setError(email, '');
+
+                    if (budget && !budget.value) {
+                        setError(budget, 'Select a budget.');
+                        ok = false;
+                    } else setError(budget, '');
+                    if (timeline && !timeline.value) {
+                        setError(timeline, 'Select a timeline.');
+                        ok = false;
+                    } else setError(timeline, '');
+
+                    if (msg && (!msg.value.trim() || msg.value.trim().length < 10)) {
+                        setError(msg, 'Please describe your project (10+ chars).');
+                        ok = false;
+                    } else setError(msg, '');
+
+                    if (!ok) {
+                        var firstInvalid = form.querySelector('.fi.invalid input, .fi.invalid textarea, .fi.invalid select');
+                        if (firstInvalid) firstInvalid.focus();
+                    }
+                    return ok;
+                }
+
+                function setBtnState(stateClass, htmlText, noteText, noteKind) {
+                    if (!btn) return;
+                    btn.classList.remove('is-sending', 'is-ok', 'is-err');
+                    if (stateClass) btn.classList.add(stateClass);
+                    btn.innerHTML = htmlText;
+
+                    if (note) {
+                        note.className = 'form-note';
+                        note.textContent = '';
+                        if (noteText) {
+                            note.textContent = noteText;
+                            if (noteKind) note.classList.add(noteKind);
+                        }
+                    }
+                }
+
+                form.addEventListener('input', function(e) {
+                    var el = e.target;
+                    if (el && (el.matches('input') || el.matches('textarea') || el.matches('select'))) {
+                        setError(el, '');
+                    }
+                });
+
+                form.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    if (!validate()) return;
+
+                    // Honeypot
+                    var hp = form.querySelector('input[name="hp"], input[name="company"], input[name="_gotcha"]');
+                    if (hp && hp.value) return;
+
+                    if (btn) {
+                        btn.disabled = true;
+                        setBtnState('is-sending', icons.spinner + ' Sending…');
+                    }
+
+                    fetch(form.action, {
+                            method: 'POST',
+                            body: new FormData(form),
+                            headers: {
+                                'Accept': 'application/json'
+                            }
+                        })
+                        .then(function(res) {
+                            if (res.ok) {
+                                form.reset();
+                                setBtnState('is-ok', icons.check + ' Sent', 'Thanks! Your brief was sent. I will get back to you within 24 hours.', 'ok');
+                            } else {
+                                return res.json().then(function(data) {
+                                    var msg = 'Could not send. Please try again.';
+                                    if (data && data.errors && data.errors[0] && typeof data.errors[0].message === 'string') {
+                                        msg = data.errors[0].message;
+                                    }
+                                    setBtnState('is-err', icons.cross + ' Try again', msg, 'err');
+                                }).catch(function() {
+                                    setBtnState('is-err', icons.cross + ' Try again', 'Could not send. Please try again.', 'err');
+                                });
+                            }
+                        })
+                        .catch(function() {
+                            setBtnState('is-err', icons.cross + ' Try again', 'Network error. Check your connection and try again.', 'err');
+                        })
+                        .finally(function() {
+                            if (btn) {
+                                setTimeout(function() {
+                                    btn.disabled = false;
+                                    setBtnState('', 'Send brief →');
+                                }, 6000);
+                            }
+                        });
+                });
+            });
+        });
+    </script>
+
+
+</body>
+
+</html>

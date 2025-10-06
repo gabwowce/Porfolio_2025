@@ -1,0 +1,407 @@
+<!doctype html>
+<html lang="lt">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+
+    <title>Gabrielė – Apie mane</title>
+    <meta name="description" content="Apie Gabrielę: front-end programuotoja ir dizainerė Vilniuje. Patirtis, įgūdžiai, vertybės ir darbo principai.">
+    <meta name="robots" content="index,follow">
+
+    <!-- Canonical + hreflang -->
+    <link rel="canonical" href="https://gabwowce.github.io/porfolio-2025/lt/about.html">
+    <link rel="alternate" href="https://gabwowce.github.io/porfolio-2025/lt/about.html" hreflang="lt">
+    <link rel="alternate" href="https://gabwowce.github.io/porfolio-2025/en/about.html" hreflang="en">
+    <link rel="alternate" href="https://gabwowce.github.io/porfolio-2025/en/about.html" hreflang="x-default">
+
+    <!-- Ikonos / tema -->
+    <link rel="icon" href="../img/favicon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="../img/apple-touch-icon.png">
+    <meta name="theme-color" content="#ffe9d6">
+
+    <!-- Open Graph / X -->
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="lt_LT">
+    <meta property="og:title" content="Gabrielė – Apie mane">
+    <meta property="og:description" content="Front-end programuotoja ir dizainerė Vilniuje. Patirtis, įgūdžiai, vertybės.">
+    <meta property="og:url" content="https://gabwowce.github.io/porfolio-2025/lt/about.html">
+    <meta property="og:image" content="https://gabwowce.github.io/porfolio-2025/img/og-cover.jpg">
+    <meta name="twitter:card" content="summary_large_image">
+
+    <!-- Preload'ai -->
+    <link rel="preload" href="../fonts/clash/ClashGrotesk-Variable.woff2" as="font" type="font/woff2" crossorigin>
+
+    <!-- CSS/JS (pataisyti keliai, be dvigubų //) -->
+    <script src="../js/script.js" defer></script>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/about.css">
+    <link rel="stylesheet" href="../css/aside.css">
+    <link rel="stylesheet" href="../css/blog.css">
+    <link rel="stylesheet" href="../css/contact-me.css">
+    <link rel="stylesheet" href="../css/footer.css">
+    <link rel="stylesheet" href="../css/hero.css">
+    <link rel="stylesheet" href="../css/header.css">
+    <link rel="stylesheet" href="../css/card.css">
+    <link rel="stylesheet" href="../css/projects.css">
+
+    <!-- JSON-LD: AboutPage + Person -->
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "AboutPage",
+            "name": "Apie mane – Gabrielė",
+            "url": "https://gabwowce.github.io/porfolio-2025/lt/about.html",
+            "inLanguage": "lt",
+            "primaryImageOfPage": "https://gabwowce.github.io/porfolio-2025/img/og-cover.jpg"
+        }
+    </script>
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "Person",
+            "name": "Gabrielė Tamaševičiūtė",
+            "jobTitle": "Front-end programuotoja",
+            "url": "https://gabwowce.github.io/porfolio-2025/lt/about.html",
+            "knowsLanguage": ["lt", "en"],
+            "address": {
+                "@type": "PostalAddress",
+                "addressLocality": "Vilnius",
+                "addressCountry": "LT"
+            }
+        }
+    </script>
+</head>
+
+
+<body>
+    <!-- HEADER (be aside) -->
+    <header class="site-header">
+        <div class="container header-in">
+            <a id="brand" class="brand" href="/lt/">
+                <span class="icon" aria-hidden="true">GT</span>
+                <span aria-label="Gabrielė Tamaševičiūtė">Gabrielė · Codeart</span>
+            </a>
+            <!-- Hamburger -->
+            <button class="hamburger" id="navToggle" aria-label="Atverti meniu" aria-controls="primaryNav" aria-expanded="false">
+        <span class="hamburger__bar" aria-hidden="true"></span>
+        <span class="hamburger__bar" aria-hidden="true"></span>
+        <span class="hamburger__bar" aria-hidden="true"></span>
+      </button>
+
+            <nav class="main-nav">
+                <button class="nav-close" id="navClose" aria-label="Uždaryti meniu">✕</button>
+                <a class="nav-link" href="index.html">Pagrindinis</a>
+                <a class="nav-link active" href="about.html">Apie</a>
+                <a class="nav-link" href="portfolio.html">Portfolio</a>
+                <a class="nav-link" href="services.html">Paslaugos</a>
+                <a class="nav-link" href="blog.html">Tinklaraštis</a>
+                <a class="nav-link" href="contact.html">Kontaktai</a>
+                <!-- Theme dropdown -->
+                <div class="nav-theme" id="themeMenu">
+                    <button id="themeBtn" class="nav-link theme-btn" aria-haspopup="true" aria-expanded="false">
+            Tema <span class="swatch" aria-hidden="true"></span>
+          </button>
+                    <ul class="theme-list" role="menu" aria-label="Pasirinkite temą">
+                        <li>
+                            <button role="menuitem" data-theme="cream" style="--c1:#362f27;--c2:#ffe9d6;--c3:#ffffffff;--c4:#ffaa5fff">
+                <span class="thumb-pall">
+                  <span class="sw s1"></span><span class="sw s2"></span>
+                  <span class="sw s3"></span><span class="sw s4"></span>
+                </span>
+                <span class="meta">
+                  <strong>Cream</strong><small>Šilta, redakcinė</small>
+                </span>
+                <span class="check" aria-hidden="true">✓</span>
+              </button>
+                        </li>
+
+                        <li>
+                            <button role="menuitem" data-theme="ocean" style="--c1:#476eae;--c2:#e6efff;--c3:#ffffff;--c4:#FE7743">
+                <span class="thumb-pall"><span class="sw s1"></span><span class="sw s2"></span><span class="sw s3"></span><span class="sw s4"></span></span>
+                <span class="meta"><strong>Ocean</strong><small>Švari mėlyna</small></span>
+                <span class="check" aria-hidden="true">✓</span>
+              </button>
+                        </li>
+
+                        <li>
+                            <button role="menuitem" data-theme="forest" style="--c1:#5F8B4C;--c2:#e9f6ef;--c3:#ffffff;--c4:#FF9A9A">
+                <span class="thumb-pall"><span class="sw s1"></span><span class="sw s2"></span><span class="sw s3"></span><span class="sw s4"></span></span>
+                <span class="meta"><strong>Forest</strong><small>Gaivi žalia</small></span>
+                <span class="check" aria-hidden="true">✓</span>
+              </button>
+                        </li>
+
+                        <li>
+                            <button role="menuitem" data-theme="rose" style="--c1:#E69DB8;--c2:#fde7ee;--c3:#ffffff;--c4:#80C4E9">
+                <span class="thumb-pall"><span class="sw s1"></span><span class="sw s2"></span><span class="sw s3"></span><span class="sw s4"></span></span>
+                <span class="meta"><strong>Rose</strong><small>Švelni rožinė</small></span>
+                <span class="check" aria-hidden="true">✓</span>
+              </button>
+                        </li>
+
+                        <li>
+                            <button role="menuitem" data-theme="slate" style="--c1:#b664a462;--c2:#262a31ff;--c3:#1c1e22ff;--c4:#60a5fa">
+                <span class="thumb-pall"><span class="sw s1"></span><span class="sw s2"></span><span class="sw s3"></span><span class="sw s4"></span></span>
+                <span class="meta"><strong>Slate</strong><small>Tamsi, neutrali</small></span>
+                <span class="check" aria-hidden="true">✓</span>
+              </button>
+                        </li>
+                    </ul>
+
+                </div>
+                <!-- Language switcher -->
+                <div class="nav-lang">
+                    <!-- noscript/fallback gali vesti į EN pradžią -->
+                    <a id="langSwitch" class="nav-link" href="/en/" hreflang="en" aria-label="Switch language">EN</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- HERO -->
+    <section class="card-hero hero u-stagger">
+        <div class="container hero-grid">
+            <div class="hero-copy">
+                <h2 class="display-l u-reveal">APIE <br/><span style="font-weight:300">MANE</span></h2>
+            </div>
+            <figure class="hero-portrait u-reveal">
+                <img src="../img/avatar-sitting3.webp" alt="Gabrielė – Frontend programuotoja" width="360" height="500" loading="eager" decoding="sync" fetchpriority="high">
+            </figure>
+        </div>
+    </section>
+
+    <main class="content container">
+        <section class="about-main u-stagger">
+            <!-- About me -->
+            <article class="card u-reveal">
+                <h2 class="section-title">
+                    <span class="about-ico" aria-hidden="true">
+            <!-- bolt -->
+            <svg viewBox="0 0 24 24"><path d="M13 2 3 14h7l-1 8 10-12h-7l1-8z"/></svg>
+          </span> Apie mane
+                </h2>
+                <p class="lead">
+                    Programuoti pradėjau 2023 m. Per tą laiką išbandžiau daug – nuo „desktop“ programų iki duomenų analitikos – ir supratau, kad labiausiai žavi frontend. Kryptingai auginu meistriškumą, kartu formuoju ir UI/UX žinias, kad produktai būtų nuoseklūs nuo A iki
+                    Z. Esu atsakinga, organizuota, aiškiai bendrauju ir prisiimu atsakomybę — smalsi iš prigimties ir nepasimetu stresinėse situacijose.
+                </p>
+            </article>
+
+            <!-- Values -->
+            <article class="card values-card u-reveal">
+                <h2 class="section-title">
+                    <span class="about-ico" aria-hidden="true">
+            <!-- grid -->
+            <svg viewBox="0 0 24 24"><path d="M3 3h8v8H3V3zm10 0h8v8h-8V3zM3 13h8v8H3v-8zm10 0h8v8h-8v-8z"/></svg>
+          </span> Vertybės
+                </h2>
+
+                <div class="chips">
+                    <span class="chip"><b>Aiškumas:</b> tiksliai apibrėžtos užduotys, suderėti lūkesčiai.</span>
+                    <span class="chip"><b>Struktūra:</b> darbą skaidau žingsniais.</span>
+                    <span class="chip"><b>Patikimumas:</b> ką pažadu — padarau.</span>
+                    <span class="chip"><b>Komunikacija:</b> greiti atsakymai, aiški būsena.</span>
+                    <span class="chip"><b>Kodo kokybė:</b> pernaudojami komponentai, skaidri struktūra, testai.</span>
+                    <span class="chip"><b>Atsakomybė:</b> man rūpi rezultatas.</span>
+                </div>
+            </article>
+
+            <!-- Soft skills -->
+            <article class="card skills-card u-reveal">
+                <h2 class="section-title">
+                    <span class="about-ico" aria-hidden="true">
+            <!-- chat -->
+            <svg viewBox="0 0 24 24"><path d="M21 15a4 4 0 0 1-4 4H9l-6 4V7a4 4 0 0 1 4-4h10a4 4 0 0 1 4 4z"/></svg>
+          </span> Minkštieji įgūdžiai
+                </h2>
+
+                <ul class="tags tags--pill">
+                    <li style="font-size: 1rem;">Prisitaikanti</li>
+                    <li style="font-size: 1rem;">Dėmesys detalėms</li>
+                    <li style="font-size: 1rem;">Kritinis mąstymas</li>
+                    <li style="font-size: 1rem;">Gebėjimas derinti prioritetus</li>
+                    <li style="font-size: 1rem;">Multitaskingas</li>
+                    <li style="font-size: 1rem;">Komandinis darbas</li>
+                    <li style="font-size: 1rem;">Problemų sprendimas</li>
+                    <li style="font-size: 1rem;">Komunikacija</li>
+                </ul>
+            </article>
+
+            <!-- Laiko juosta -->
+            <article class="card timeline-card u-reveal">
+                <h2 class="section-title">
+                    <span class="about-ico" aria-hidden="true">
+            <svg viewBox="0 0 24 24"
+                 fill="none" stroke="currentColor"
+                 stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <!-- korpusas -->
+              <rect x="3" y="7" width="18" height="13" rx="2"></rect>
+              <!-- rankena -->
+              <path d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path>
+              <!-- siūlė per vidurį -->
+              <path d="M3 12h18"></path>
+            </svg>
+          </span> Patirtis
+                </h2>
+                <ol class="timeline-list">
+                    <li>
+                        <span class="t-bullet"></span>
+                        <div class="t-row">
+                            <h3>Žiniatinklio ir mobiliųjų programų kūrėja · Laisvai samdoma</h3>
+                            <p class="muted">2025 kov. – dabar · Vilnius · React, Next.js, TypeScript, Tailwind, WordPress, Figma</p>
+                        </div>
+                    </li>
+                    <li>
+                        <span class="t-bullet"></span>
+                        <div class="t-row">
+                            <h3>Jaunesnioji programuotoja · UVS</h3>
+                            <p class="muted">2024 birž. – dabar · Vilnius · C#/.NET, WPF (XAML), UI prieinamumas</p>
+                        </div>
+                    </li>
+                    <li>
+                        <span class="t-bullet"></span>
+                        <div class="t-row">
+                            <h3>Planuotoja · Girteka Europe West</h3>
+                            <p class="muted">2021 spal. – 2023 rugp. · Vilnius · Planavimas, prioritetai, komunikacija</p>
+                        </div>
+                    </li>
+                    <li>
+                        <span class="t-bullet"></span>
+                        <div class="t-row">
+                            <h3>Administratorė · UAB „Jarinta“</h3>
+                            <p class="muted">2021 kov. – 2021 rugs. · Vilnius</p>
+                        </div>
+                    </li>
+                </ol>
+
+                <hr class="timeline-divider" aria-hidden="true">
+
+                <h2 class="section-title">
+                    <span class="about-ico" aria-hidden="true">
+            <!-- cap -->
+            <svg viewBox="0 0 24 24"><path d="M12 3 2 8l10 5 10-5-10-5zm0 7.5L5 8m14 0-7 2.5V21"/></svg>
+          </span> Išsilavinimas
+                </h2>
+                <ul class="edu-list">
+                    <li>
+                        <div class="t-row">
+                            <h3>Vilniaus kolegija — Programų sistemos
+                                <span class="pill">Vyksta</span>
+                            </h3>
+                            <p class="muted">2023–2027 · Vilnius</p>
+                        </div>
+                    </li>
+                </ul>
+            </article>
+        </section>
+
+        <!-- ASIDE (tik čia, ne header'yje) -->
+        <aside aria-label="Greita informacija" class="sidebar u-stagger">
+            <div class="card card--soft profile profile--soft u-reveal">
+                <div class="avatar-neo-halo">
+                    <img class="avatar-neo" src="../../img/avatar-profile.webp" alt="Gabrielė – profilio nuotrauka" width="72" height="72" loading="lazy" decoding="async" fetchpriority="low">
+                </div>
+                <h3 class="name t-title" style="margin: 0;">GABRIELĖ</h3>
+                <p class="muted">Frontend programuotoja</p>
+                <p class="muted xsmall">Vilnius, Lietuva</p>
+                <div class="badge-aside" style="margin:10px auto 0; display:inline-block;">Atvira naujiems projektams</div>
+
+                <div class="cta-stack" style="margin-top:14px">
+                    <a class="btn" href="mailto:gt1230112301@gmail.com">Parašyti el. laišką</a>
+                    <a class="btn outline" href="../docs/CV.pdf" download>Atsisiųsti CV</a>
+                </div>
+            </div>
+
+            <div class="card u-reveal">
+                <h4>Pagrindiniai įgūdžiai</h4>
+                <div class="tags">
+                    <span class="tag">React</span><span class="tag">Next.js</span>
+                    <span class="tag">TypeScript</span><span class="tag">Tailwind</span>
+                    <span class="tag">React Native</span><span class="tag">Expo</span>
+                    <span class="tag">WordPress</span><span class="tag">REST API</span>
+                    <span class="tag">Figma</span>
+                </div>
+            </div>
+
+            <div class="card u-reveal">
+                <h4>Kalbos</h4>
+                <div class="lang-row"><span>Lietuvių</span><span class="muted">Gimtoji</span></div>
+                <div class="lang-row"><span>Anglų</span><span class="muted">B2</span></div>
+                <div class="lang-row"><span>Rusų</span><span class="muted">B2</span></div>
+            </div>
+        </aside>
+    </main>
+
+    <footer class="site-footer" role="contentinfo">
+        <section class="cta-contact">
+            <div class="container footer-card-flex">
+                <div class="cta-contact__text">
+                    <h3>Nori sukurti ką nors puikaus?</h3>
+                    <p>Parašyk man savo idėja!</p>
+                </div>
+                <a class="btn-pill" href="/porfolio-2025/lt/contact.html">Susisiekime →</a>
+            </div>
+        </section>
+
+        <div class="footer-in container">
+            <div class="footer-top">
+                <!-- Brand / About -->
+                <section>
+                    <a class="brand" href="/lt/">
+                        <span class="icon" aria-hidden="true">GT</span>
+                        <span aria-label="Gabrielė Tamaševičiūtė">Gabrielė · Codeart</span>
+                    </a>
+                    <p class="brand-note">Front-end kūrėja ir dizainerė. Kuriu švarius, greitus ir prieinamus UI.</p>
+                    <div class="socials" aria-label="Socialiniai saitai">
+                        <a class="soc" href="#" aria-label="GitHub" title="GitHub">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 19c-4 1.5-4-2.5-6-3m12 6v-3.87a3.37 3.37 0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0018 3.77 5.07 5.07 0 0017.91 1S16.73.65 14 2.48a13.38 13.38 0 00-5 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 005 3.77a5.44 5.44 0 00-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 009 18.13V22"/></svg>
+                        </a>
+                        <a class="soc" href="#" aria-label="LinkedIn" title="LinkedIn">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-4 0v7h-4v-7a6 6 0 016-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+                        </a>
+                        <a class="soc" href="#" aria-label="El. paštas" title="El. paštas">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 4h16v16H4z"/><path d="M22 6L12 13 2 6"/></svg>
+                        </a>
+                    </div>
+                </section>
+
+                <!-- Quick links -->
+                <nav class="footer-card" aria-labelledby="flinks">
+                    <h3 id="flinks" class="footer-title">Trumpi saitai</h3>
+                    <ul class="footer-list">
+                        <li><a class="footer-link" href="/porfolio-2025/lt/home.html">Pagrindinis</a></li>
+                        <li><a class="footer-link" href="/porfolio-2025/lt/about.html">Apie</a></li>
+                        <li><a class="footer-link" href="/porfolio-2025/lt/portfolio.html">Portfolio</a></li>
+                        <li><a class="footer-link" href="/porfolio-2025/lt/blog.html">Tinklaraštis</a></li>
+                        <li><a class="footer-link" href="/porfolio-2025/lt/contact.html">Kontaktai</a></li>
+                        <li><a class="footer-link" href="../docs/CV.pdf" download>CV / Reziumė</a></li>
+                    </ul>
+                </nav>
+
+                <!-- Newsletter / CTA -->
+                <section class="footer-card" aria-labelledby="fnews">
+                    <h3 id="fnews" class="footer-title">Trumpa žinutė</h3>
+                    <form class="newsletter" action="https://formspree.io/f/xeorkyne" method="POST">
+                        <input class="input" type="email" name="email" placeholder="El. paštas" aria-label="El. paštas" required>
+                        <input class="input" type="text" name="Message" placeholder="Žinutė" aria-label="Žinutė" required>
+                        <input type="text" name="_gotcha" style="display:none">
+                        <!-- honeypot -->
+                        <button class="btn-pill" type="submit">Parašyk 👋</button>
+                        <p class="form-note" role="status" aria-live="polite"></p>
+                        <small class="brand-note">Parašyk — atrašau per 24 val.</small>
+                    </form>
+                </section>
+            </div>
+
+            <div class="footer-bottom">
+                <span>© 2025 Gabrielė · Codeart</span>
+                <div class="mini-nav">
+                    <a href="mailto:gt1230112301@gmail.com">gt1230112301@gmail.com</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+
+
+</html>
