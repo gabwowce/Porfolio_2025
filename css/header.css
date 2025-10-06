@@ -388,7 +388,7 @@ body.nav-open .hamburger__bar:nth-child(3) {
 }
 
 /* Rodyti tik mobile (jei reikia) */
-@media (min-width: 1024px) {
+@media (min-width: 1280px) {
   .hamburger {
     display: none;
   }
@@ -414,7 +414,7 @@ body:not(.nav-open) .nav-overlay {
   display: none;
 }
 /* Drawer menu (mobile) */
-@media (max-width: 1024px) {
+@media (max-width: 1280px) {
   .main-nav {
     position: fixed;
     top: 0; /* buvo top: var(--header-h) */
