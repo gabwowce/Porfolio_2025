@@ -1,0 +1,181 @@
+.score {
+  padding: 1rem;
+  text-align: center;
+}
+
+.back-bnt {
+  position: absolute;
+  top: 24px;
+  left: 200px;
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+.back-bnt img {
+  width: 70px;
+  height: 70px;
+}
+/* nematyti, kol tuščias */
+#status {
+  display: none;
+}
+
+/* rodyti ir taikyti stilių tik kai ne tuščias */
+#status:not(:empty) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+
+  padding: 0.875rem 1.1rem;
+  margin-bottom: 1rem;
+
+  font-size: 1.15rem;
+  font-weight: 700;
+  letter-spacing: 0.2px;
+  color: var(--card-text);
+
+  background: var(--secondary-bg);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  box-shadow: var(--shadow);
+}
+
+/* variacijos veiks tik kai yra tekstas */
+#status.status--ok {
+  border-color: var(--ok);
+}
+#status.status--warn {
+  border-color: var(--warn);
+}
+
+@media (max-width: 600px) {
+  #status:not(:empty) {
+    font-size: 1rem;
+  }
+}
+
+.game-board {
+  display: grid;
+  grid-template-columns: repeat(
+    10,
+    1fr
+  ); /* Pasirinkti vienodą plotį visoms stulpeliams */
+  grid-template-rows: repeat(10, 1fr);
+  gap: 2px;
+  background-color: #2e2e2e;
+  position: absolute; /* Naudojame absoliučią padėtį */
+  top: 100px; /* Nustatykite pagal pageidaujamą vietą */
+  left: 701px; /* Nustatykite pagal pageidaujamą vietą */
+  z-index: 0; /* Padėkite po kitais elementais */
+}
+
+.game-board div {
+  width: 50px;
+  height: 50px;
+  border-radius: 5px;
+  background-color: #444;
+}
+
+.game-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* lenta su tarpu apačioje */
+#gameGrid {
+  margin-bottom: 24px;
+}
+
+/* figūrėlių juosta – po lenta, turi savo aukštį */
+#pieceContainer {
+  position: relative;
+  display: flex;
+  gap: 5rem;
+  justify-content: center;
+  align-items: center;
+  min-height: 140px; /* rezervuoja vietą, kad niekas neužliptų */
+  user-select: none;
+}
+
+/* kai NEvilki – tebūnie sraute */
+#pieceContainer > div {
+  position: static;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(
+    10,
+    1fr
+  ); /* Pasirinkti vienodą plotį visoms stulpeliams */
+  grid-template-rows: repeat(10, 1fr);
+  gap: 2px;
+  background-color: #2e2e2e;
+}
+
+.grid div {
+  width: 50px;
+  height: 50px;
+  border-radius: 5px;
+  background-color: #444;
+}
+
+.pieces {
+  margin-top: 30px;
+  display: flex;
+  gap: 20px;
+}
+
+.grid div {
+  width: 50px;
+  height: 50px;
+  border-radius: 5px;
+  background-color: #444; /* Pradinė spalva */
+  position: relative; /* Padės animacijoms */
+  transition: background-color 0.5s ease; /* Pakeitimas tik spalvos animacijai */
+}
+
+@keyframes fadeOut {
+  0% {
+    transform: scale(1); /* Pradinė dydžio vertė */
+  }
+  40% {
+    transform: scale(0.8); /* Sumažėjimas iki 80% */
+  }
+  60% {
+    transform: scale(0.6); /* Toliau mažinkite dydį */
+  }
+  80% {
+    transform: scale(0.3); /* Dydis sumažėja iki 30% */
+  }
+  100% {
+    background-color: transparent; /* Spalva išnyksta */
+    opacity: 0; /* Paslėpta būsena */
+    transform: scale(0); /* Susitraukia iki 0 */
+  }
+}
+
+.fade-out {
+  animation: fadeOut 0.3s ease-in-out forwards;
+}
+/* virš visko – gaudo tik pelės poziciją, ne įvykius */
+#dragLayer {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  pointer-events: none;
+}
+.drag-ghost {
+  position: fixed;
+  transform: translate3d(0, 0, 0);
+}
+.body-dragging .grid div {
+  transition: none !important;
+} /* išjungiam perėjimus vilkymo metu */
+/* paslepia originalą vilkymo metu, bet palieka vietą (be layout šuolio) */
+.drag-hidden {
+  visibility: hidden;
+}

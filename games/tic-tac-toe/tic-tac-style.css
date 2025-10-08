@@ -1,0 +1,251 @@
+/* ---- Kintamųjų „tiltas“ iš temų ---- */
+:root {
+  --fg: var(--c1, #2b241d);
+}
+
+/* ---- Lentos blokas ---- */
+main.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+
+/* kas kieno eilė – kapsulė */
+.current-turn {
+  font-weight: 700;
+  font-size: clamp(16px, 2.2vw, 24px);
+
+  text-align: center;
+
+  padding: 24px 12px;
+}
+
+/* 3×3 lenta – prisitaikanti */
+.game-board {
+  margin: 6px 0 0;
+  display: grid;
+  grid-template-columns: repeat(3, min(130px, 28vw));
+  grid-template-rows: repeat(3, min(130px, 28vw));
+  gap: 12px;
+  justify-content: center;
+}
+
+/* langeliai – švarūs „card“ stiliaus */
+.cell {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font: 900 clamp(22px, 6vw, 34px) / 1.1 system-ui, Segoe UI, Roboto, Arial;
+  color: var(--fg);
+  cursor: pointer;
+  transition: transform 0.06s ease, box-shadow 0.15s ease,
+    border-color 0.15s ease;
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.02), 0 10px 28px rgba(0, 0, 0, 0.04);
+}
+.cell:hover {
+  border-color: color-mix(in srgb, var(--fg) 18%, transparent);
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.02), 0 14px 36px rgba(0, 0, 0, 0.07);
+}
+.cell:active {
+  transform: scale(0.985);
+}
+
+/* tinklelio „linijas“ imituojam subtiliu vidiniu šešėliu */
+.cell {
+  box-shadow: inset 0 0 0 2px transparent,
+    /* vieta linijoms */ 0 1px 0 rgba(0, 0, 0, 0.02),
+    0 10px 28px rgba(0, 0, 0, 0.04);
+}
+.game-board .cell:nth-child(-n + 3) {
+  /* viršutinė eilė */
+  box-shadow: inset 0 2px 0 color-mix(in srgb, var(--fg) 20%, transparent),
+    0 1px 0 rgba(0, 0, 0, 0.02), 0 10px 28px rgba(0, 0, 0, 0.04);
+}
+.game-board .cell:nth-child(3n + 1) {
+  /* kairė */
+  box-shadow: inset 2px 0 0 color-mix(in srgb, var(--fg) 20%, transparent),
+    0 1px 0 rgba(0, 0, 0, 0.02), 0 10px 28px rgba(0, 0, 0, 0.04);
+}
+.game-board .cell:nth-child(3n) {
+  /* dešinė */
+  box-shadow: inset -2px 0 0 color-mix(in srgb, var(--fg) 20%, transparent),
+    0 1px 0 rgba(0, 0, 0, 0.02), 0 10px 28px rgba(0, 0, 0, 0.04);
+}
+.game-board .cell:nth-last-child(-n + 3) {
+  /* apačia */
+  box-shadow: inset 0 -2px 0 color-mix(in srgb, var(--fg) 20%, transparent),
+    0 1px 0 rgba(0, 0, 0, 0.02), 0 10px 28px rgba(0, 0, 0, 0.04);
+}
+
+/* ---- Modal (vardų langas) — „kortelė“ kaip visam saite ---- */
+.popup {
+  position: fixed;
+  inset: 0;
+  z-index: 50;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: color-mix(in srgb, #000 45%, transparent);
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.25s ease, visibility 0s 0.25s;
+}
+.popup.show {
+  visibility: visible;
+  opacity: 1;
+  transition: opacity 0.25s ease;
+}
+
+.popup-content {
+  width: min(92vw, 520px);
+  background: var(--card);
+  color: var(--fg);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 18px 18px 14px;
+  position: relative;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.18);
+}
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 12px;
+  background: none;
+  border: 0;
+  font-size: 20px;
+  cursor: pointer;
+  color: var(--fg);
+  opacity: 0.7;
+}
+.close-btn:hover {
+  opacity: 1;
+}
+
+/* forma */
+.playerForm {
+  display: grid;
+  gap: 10px;
+}
+.playerForm label {
+  font-size: 14px;
+  opacity: 0.9;
+}
+.playerForm input[type="text"] {
+  background: #fff;
+  color: var(--fg);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 10px 12px;
+  font: inherit;
+  outline: none;
+}
+.playerForm input[type="text"]:focus {
+  border-color: color-mix(in srgb, var(--accent) 55%, var(--border));
+  box-shadow: 0 0 0 3px color-mix(in srgb, var(--accent) 22%, transparent);
+}
+.playerForm input[type="checkbox"] {
+  accent-color: var(--accent);
+}
+
+/* mygtukas — „pill“ su akcentu */
+.playerForm button {
+  justify-self: start;
+  border: 0;
+  border-radius: 999px;
+  padding: 10px 18px;
+  font-weight: 800;
+  letter-spacing: 0.2px;
+  color: #fff;
+  background: color-mix(in srgb, var(--accent) 92%, #000 0%);
+  box-shadow: 0 10px 28px color-mix(in srgb, var(--accent) 35%, transparent);
+  cursor: pointer;
+  transition: transform 0.05s ease, box-shadow 0.15s ease, filter 0.15s ease;
+}
+.playerForm button:hover {
+  filter: brightness(1.03);
+  box-shadow: 0 14px 36px color-mix(in srgb, var(--accent) 45%, transparent);
+}
+.playerForm button:active {
+  transform: translateY(1px);
+}
+
+.red-text {
+  color: color-mix(in srgb, var(--accent) 70%, #c00);
+}
+
+/* Kortelės turinys */
+.game-sidebar .card {
+  padding: clamp(16px, 2.4vw, 24px);
+}
+.game-sidebar .card h2 {
+  margin: 0 0 10px;
+}
+.game-sidebar .card ol {
+  margin: 0 0 14px 1.2rem;
+  line-height: 1.55;
+}
+.game-sidebar .card ol li {
+  margin: 4px 0;
+}
+.game-sidebar .card ol li::marker {
+  color: var(--accent, #476eae);
+  font-weight: 600;
+}
+
+/* HUD eilutė ir mygtukai */
+.game-sidebar .hud {
+  margin-top: 8px;
+  padding: 12px;
+  border: 1px solid var(--border, #e6e6e6);
+  border-radius: 12px;
+  background: color-mix(in srgb, var(--card, #fff) 92%, var(--accent, #476eae));
+  display: grid;
+  gap: 10px;
+}
+.game-sidebar .stat {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.game-sidebar .btns {
+  display: flex;
+  gap: 8px;
+}
+.game-sidebar .btn-pill {
+  padding: 10px 16px;
+  font-weight: 600;
+}
+
+/* Setup forma (inline, slankiai) */
+.setup {
+  display: grid;
+  gap: 10px;
+  margin-top: 12px;
+  padding: 12px;
+  border: 1px dashed var(--border, #e6e6e6);
+  border-radius: 12px;
+  background: var(--card, #fff);
+  transition: max-height 0.25s ease, opacity 0.2s ease;
+}
+.setup.is-hidden {
+  display: none;
+}
+.setup label {
+  font-size: 0.95rem;
+  color: var(--muted, #6b7280);
+}
+.setup input[type="text"] {
+  padding: 10px 12px;
+  border: 1px solid var(--border, #e5e7eb);
+  border-radius: 10px;
+  background: var(--bg, #fff);
+}
+.setup .check {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}

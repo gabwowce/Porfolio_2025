@@ -49,6 +49,7 @@
   background: var(--text);
   color: var(--bg);
 }
+
 .icon {
   font-size: 2rem;
   font-weight: 700;
@@ -59,7 +60,6 @@
   justify-self: end;
   display: flex;
   gap: 0.4rem;
-  flex-wrap: wrap;
 }
 
 .nav-link {
@@ -509,4 +509,10 @@ body:not(.nav-open) .nav-overlay {
 /* No-scroll kai atidaryta */
 body.nav-open {
   overflow: hidden;
+}
+
+@media (min-width: 1280px) {
+  .themeBtn {
+    display: none;
+  }
 }

@@ -1,0 +1,112 @@
+.game-button {
+  padding: 0;
+  margin: 10px;
+  font-size: 16px;
+  cursor: pointer;
+  border: 0;
+  background: none;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+.game-selection {
+  margin: 0 200px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.game img {
+  width: 100%;
+  height: auto;
+  transition: transform 0.6s;
+}
+.game:hover img {
+  transform: scale(1.1);
+}
+
+.game {
+  display: flex;
+  flex-direction: column;
+}
+.game-name {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(73, 72, 72, 0.5);
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+  display: none;
+  font-size: 18px;
+}
+
+button:hover .game-name {
+  display: block;
+}
+
+/* Games nav */
+.game-link {
+  --pad: 12px;
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  font-weight: 500;
+  gap: 8px;
+  padding: 8px calc(var(--pad) + 14px) 8px calc(var(--pad) + 28px);
+  background: var(--card);
+  color: var(--text);
+  border-radius: 999px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+}
+
+/* 🎮 piktograma kairėje */
+.game-link::before {
+  content: "🎮";
+  position: absolute;
+  left: var(--pad);
+  top: 43%;
+  transform: translateY(-50%);
+  font-size: 18px;
+  filter: drop-shadow(0 1px 0 rgba(0, 0, 0, 0.15));
+  transition: transform 0.2s ease;
+}
+
+/* hover/active būsenos */
+.game-link:hover {
+  transform: translateY(-1px);
+}
+.game-link:hover::before {
+  transform: translateY(-50%) rotate(-16deg);
+}
+.game-link:hover::after {
+  opacity: 0.9;
+  transform: translateY(-50%) translateX(0);
+}
+.game-link:active {
+  transform: translateY(0);
+}
+
+/* aktyvus puslapis (jei taikai aria-current) */
+.game-link[aria-current="page"] {
+  outline: 2px solid color-mix(in srgb, var(--accent) 55%, #0000);
+  outline-offset: 2px;
+}
+
+/* mažiau judesio prieinamumui */
+@media (prefers-reduced-motion: reduce) {
+  .game-link,
+  .game-link::before,
+  .game-link::after {
+    transition: none;
+    animation: none;
+  }
+}
+
+#rules-title {
+  margin: 0;
+}

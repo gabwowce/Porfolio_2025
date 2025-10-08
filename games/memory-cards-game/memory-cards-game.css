@@ -1,0 +1,147 @@
+.game-board {
+  margin: clamp(50px, 8vw, 100px) auto;
+  display: grid;
+  justify-self: center;
+  grid-template-columns: repeat(4, 120px);
+  gap: 0.5rem;
+}
+
+.g-card {
+  width: 120px;
+  height: 120px;
+  background-color: #33333317;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  color: white;
+  cursor: pointer;
+  position: relative;
+  perspective: 1000px;
+  border: 1px solid #3333330e;
+}
+
+.g-card-inner {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+}
+
+.g-card.flipped .g-card-inner {
+  transform: rotateY(180deg);
+}
+
+.g-card-front,
+.g-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 8px;
+}
+
+.g-card-front {
+  background-color: #333;
+}
+
+.g-card-back {
+  background: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: rotateY(180deg);
+}
+
+.g-card img {
+  width: 90%;
+  height: 90%;
+  object-fit: cover;
+  border-radius: 8px;
+}
+.hud {
+  display: grid;
+  gap: 10px;
+}
+.stat {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#restart {
+  margin-top: 6px;
+}
+
+/* ————— Sidebar card content ————— */
+.game-sidebar .card {
+  padding: clamp(16px, 2.4vw, 24px);
+}
+
+.game-sidebar .card h2 {
+  margin: 0 0 10px;
+  line-height: 1.15;
+  letter-spacing: -0.01em;
+}
+
+.game-sidebar .card ol {
+  margin: 0 0 14px 1.25rem;
+  padding: 0;
+  line-height: 1.55;
+}
+.game-sidebar .card ol li {
+  margin: 4px 0;
+}
+.game-sidebar .card ol li::marker {
+  color: var(--accent, #476eae);
+  font-weight: 600;
+}
+
+/* HUD blokas */
+.game-sidebar .card .hud {
+  margin-top: 8px;
+  padding: 12px;
+  border-radius: 12px;
+  border: 1px solid var(--border, #e6e6e6);
+  background: color-mix(in srgb, var(--card, #fff) 92%, var(--accent, #476eae));
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.6);
+  display: grid;
+  gap: 8px;
+}
+
+/* Stat eilutės */
+.game-sidebar .card .stat {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 6px 0;
+  border-bottom: 1px dashed color-mix(in srgb, var(--border, #e6e6e6) 80%, #000);
+}
+.game-sidebar .card .stat:last-child {
+  border-bottom: 0;
+}
+
+.game-sidebar .card .stat span {
+  color: var(--muted, #6b7280);
+}
+.game-sidebar .card .stat strong {
+  font-variant-numeric: tabular-nums;
+  letter-spacing: 0.02em;
+}
+
+/* Mygtukas */
+.game-sidebar .card .btn-pill {
+  margin-top: 6px;
+  padding: 10px 16px;
+  font-weight: 600;
+  border: 1px solid color-mix(in srgb, var(--accent, #476eae) 40%, #000);
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
+  transition: transform 0.08s ease, box-shadow 0.2s ease, background 0.2s ease;
+}
+.game-sidebar .card .btn-pill:hover {
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
+}
+.game-sidebar .card .btn-pill:active {
+  transform: translateY(1px);
+}
