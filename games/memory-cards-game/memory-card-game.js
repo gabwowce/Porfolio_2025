@@ -150,9 +150,9 @@ function keepOpen() {
   secondCard.removeEventListener("click", flipCard);
   matchedPairs++;
 
-  announce(
-    `Rasta pora: ${firstCard.dataset.name}. Porų: ${matchedPairs}/${totalPairs}.`
-  );
+  // announce(
+  //   `Rasta pora: ${firstCard.dataset.name}. Porų: ${matchedPairs}/${totalPairs}.`
+  // );
 
   resetTurn();
 
