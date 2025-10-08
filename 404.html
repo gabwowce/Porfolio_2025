@@ -7,7 +7,7 @@
         // jei kelyje jau yra /en/ arba /lt/ – nieko nedaryti
         if (/\/(en|lt)(\/|$)/.test(location.pathname)) return;
 
-        // rasti projekto bazinį kelią (pvz., /porfolio-2025/)
+        // rasti projekto bazinį kelią (pvz., /portfolio-2025/)
         var parts = location.pathname.split('/').filter(Boolean);
         var base = '/' + (parts.length ? parts[0] + '/' : '');
 
